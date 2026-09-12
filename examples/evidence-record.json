@@ -1,0 +1,13 @@
+{
+  "kind": "SYNTHETIC_TEMPLATE",
+  "platform": "UNSPECIFIED",
+  "version": "UNSPECIFIED",
+  "input_label": "synthetic-only",
+  "input_sha256": null,
+  "method": "Describe observation and independent check",
+  "claim": "No game claim",
+  "limitations": [
+    "Template only; no actual input or result"
+  ],
+  "evidence_level": "NOT_RUN"
+}

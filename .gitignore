@@ -1,0 +1,24 @@
+# Default deny: adding a file requires an explicit policy review.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/LICENSE
+!/CONTRIBUTING.md
+!/SECURITY.md
+!/PUBLICATION_MANIFEST.json
+!/docs/
+/docs/*
+!/docs/status.md
+!/docs/pipeline.md
+!/docs/reproduce.md
+!/docs/provenance.md
+!/docs/publication-policy.md
+!/tools/
+/tools/*
+!/tools/fingerprint.py
+!/tools/check_layout.py
+!/tools/check_publication.py
+!/examples/
+/examples/*
+!/examples/evidence-record.json
