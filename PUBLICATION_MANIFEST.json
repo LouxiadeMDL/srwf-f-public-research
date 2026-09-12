@@ -1,9 +1,9 @@
 {
-  "review_date": "2026-09-12",
+  "review_date": "2026-09-13",
   "scope": "Original utilities and rewritten documentation only; no inherited private history",
   "files": {
     ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
-    ".gitignore": "5589bac2dc1431fbe4acdb46c27835f8f0ede056c9452caabd5577551306ce1b",
+    ".gitignore": "6b5fc7b2cb6b95d9147b059e010fa1217f671e2595e21239c3f3c1c12128b926",
     "CONTRIBUTING.md": "eaf572eeeb0596bf61bd0f60e799fb2db684f043f8365324793413c1a0c3fe55",
     "docs/pipeline.md": "6af6f4d3d2d196319ab56626d8be9f7c87d407c7fb5c51c824ebb527029d749e",
     "docs/provenance.md": "30a3f651bf36bb70c2e6e4785b3c744dc909ad83f6ef123aaa7f7afd488a0100",
@@ -12,10 +12,11 @@
     "docs/status.md": "63a31da8876a9efb13603a2b068342641d0a555de6c3b8a9473ea9e83498a565",
     "examples/evidence-record.json": "9e006ca2a6c2199ba52d62fe9295d74aa6704e2c64d2f0af0928b1b25fae617b",
     "LICENSE": "68d4e9ecad930e7b1c94ac15bcc044f2211139b42fc394ca5d58a3a018c9f594",
-    "README.md": "4215ec35a8547460b659d2058c4bb4f7058f492a680e93b2a8081b3e100be516",
+    "README.md": "b4f4eb3afda31eaa4a42b06363c3a80fa3bb1b4938fca1b3ae438044c824af2d",
     "SECURITY.md": "57593740d1e5ad7be7206a6cd31bd8504784453d5c736751090a22ee8dcfcffa",
     "tools/check_layout.py": "ee44b882efb55b04271fbb4dfab0aeac93291b5a6fc190140aaedadf8c0aef93",
     "tools/check_publication.py": "ceab5a59ad4c4fbef9312a520c3ec6d967ed14cf145f463998169baeb57b56cd",
-    "tools/fingerprint.py": "7fc2f5ce9a920897e640fba8a4bdde59b0f3ec1e30ed211a52cf01a511cd59da"
+    "tools/fingerprint.py": "7fc2f5ce9a920897e640fba8a4bdde59b0f3ec1e30ed211a52cf01a511cd59da",
+    "docs/2026-09-13-baseline-and-patch-experiment.md": "b81ec63298b7f9fe92b6c19a46b9dfe92bb93b0b9f5d0dabfe22755f743cd564"
   }
 }

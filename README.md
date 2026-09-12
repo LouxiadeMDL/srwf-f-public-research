@@ -15,6 +15,8 @@ This is a research roadmap, not a verified execution graph. In particular, TSR/f
 
 ## Progress and limits
 
+A [2026-09-13 update](docs/2026-09-13-baseline-and-patch-experiment.md) records fresh baseline checks and a failed direct-patch experiment; F2/F3 clean-image inputs remain incomplete.
+
 The publication was assembled on 2026-09-12 from dated research reports. This release re-read the reports; it did not rerun the underlying ROM experiments. See [evidence and status](docs/status.md) and [source provenance](docs/provenance.md).
 
 | Area | What the inspected reports support | What remains open |
