@@ -1,0 +1,9 @@
+glyph_id_hex,stale_or_previous,resolved,resolution
+0x7DF,压 (stale screening hypothesis),搁,KEEP_LATER_CONTEXT_RESULT
+0x878,迷 (stale screening hypothesis),腾,KEEP_LATER_CONTEXT_RESULT
+0x806,棱 (raster-only),梭,REPLACE_IN_REVIEW_LAYER
+0x898,螟 (manual raster),螺,REPLACE_IN_REVIEW_LAYER
+0x885,芙 (manual raster),荚,REPLACE_IN_REVIEW_LAYER
+0x253,进 (temporary inference),增,REJECT_TEMP_INFERENCE
+0x16E,能 (temporary working inference),用,CORRECT_DURING_FULL_CORPUS_SWEEP
+0x1FE/0x27E,当/然 (temporary working inference),根/本,CORRECT_DURING_FULL_CORPUS_SWEEP
