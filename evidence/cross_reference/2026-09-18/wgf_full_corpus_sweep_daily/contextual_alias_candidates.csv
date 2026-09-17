@@ -1,0 +1,2 @@
+glyph_id_hex,primary_unicode,raw_context,normalized_context,status,action
+0x336,难,亲难指挥,亲自指挥,CONTEXTUAL_ALIAS_CANDIDATE,KEEP_PRIMARY_难; normalize only in this fixed context
