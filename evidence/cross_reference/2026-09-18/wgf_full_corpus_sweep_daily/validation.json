@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "pass_count": 15,
+  "fail_count": 0,
+  "checks": [
+    {"check":"frozen_row_count_2816","status":"PASS"},
+    {"check":"frozen_exact_equality_v01_v02","status":"PASS"},
+    {"check":"full_corpus_record_count","status":"PASS","value":104694},
+    {"check":"token_occurrence_count","status":"PASS","value":1871832},
+    {"check":"proposal_no_preexisting_effective_mapping_overlap","status":"PASS","overlap":0},
+    {"check":"daily_full_sweep_promotions_have_nonraw_context","status":"PASS"},
+    {"check":"A_STRONG_has_multiple_distinct_wgf_contexts","status":"PASS","count":354},
+    {"check":"B_SUPPORTED_is_single_context_only","status":"PASS","count":4},
+    {"check":"checkpoint01_no_overlap_with_current_or_v02","status":"PASS"},
+    {"check":"contextual_alias_does_not_change_primary","status":"PASS"},
+    {"check":"no_raw_only_promotion","status":"PASS"},
+    {"check":"current_effective_mapping_count_after_daily","status":"PASS","value":1108},
+    {"check":"remaining_unresolved_count_consistent","status":"PASS","value":1708},
+    {"check":"promotion_ids_unique","status":"PASS"},
+    {"check":"checkpoint01_vs_full_sweep_no_overlap","status":"PASS"}
+  ]
+}
