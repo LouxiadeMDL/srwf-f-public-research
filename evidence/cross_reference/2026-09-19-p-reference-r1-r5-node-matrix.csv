@@ -1,0 +1,6 @@
+node,role,status,key_evidence,next_use
+P-R1,PSF token/control semantic reference,CLOSED_FOR_DECLARED_SCOPE,"profile-aware grammar; handler/width/terminator/dynamic-injection contract",A08/A09 reference
+P-R2,PSF-SSF semantic homolog matrix,CLOSED_FOR_DECLARED_SCOPE_WITH_EXPLICIT_UNKNOWNS,"semantic-event mapping; no opcode-number inheritance",cross-platform discipline
+P-R3,PSF runtime token/control tracer,CLOSED_FOR_REAL_RUNTIME_TRACE_SCOPE,"2 sessions;59 tokens;299 events;0 anomaly",runtime-gate template
+P-R4,PSF variable-length relocation/repack,CLOSED_FOR_BMESS0_STRUCTURAL_VARLEN_REPACK_SCOPE_WITH_RESOURCE_RESERVATIONS,"BMESS0 identity rebuild;5/5 positive;100/100 fuzz;7/7 negative",owner-aware varlen template
+P-R5,runtime record-consumer stable ID,CLOSED_FOR_DECLARED_RUNTIME_STABLE_ID_SCOPE_WITH_EVIDENCE_CLASSES,"SLPS source rebinding;22/22 static token byte matches;persistent-vs-ephemeral ID split",SSF stable-ID design

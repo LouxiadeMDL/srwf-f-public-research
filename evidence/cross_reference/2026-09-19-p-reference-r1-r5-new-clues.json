@@ -1,0 +1,93 @@
+{
+  "date": "2026-09-19",
+  "project": "SRWF F",
+  "scope": "F_ONLY",
+  "p_reference_program_status": "CLOSED_THROUGH_PLANNED_P_R5_WITH_SCOPED_RESERVATIONS",
+  "p_blocks_a": false,
+  "new_clues": [
+    {
+      "id": "PR-CLUE-01",
+      "title": "Parser grammar is runtime-profile-aware",
+      "status": "CONFIRMED",
+      "implication_for_a": "Bind SSF token/control meaning to parser state/profile before semantic promotion."
+    },
+    {
+      "id": "PR-CLUE-02",
+      "title": "F8 performs runtime dynamic source injection in PSF",
+      "status": "REAL_RUNTIME_CONFIRMED",
+      "runtime_observations": 4,
+      "implication_for_a": "Search for dynamic source switching and re-entry into the normal SSF render path."
+    },
+    {
+      "id": "PR-CLUE-03",
+      "title": "FE reaches the GPU upload path",
+      "status": "REAL_RUNTIME_CONFIRMED",
+      "loadimage_va": "0x80109924",
+      "loadimage_hits": 2,
+      "implication_for_a": "Trace control consequence through renderer and video-memory transfer, not call adjacency only."
+    },
+    {
+      "id": "PR-CLUE-04",
+      "title": "FF terminator is a handler return contract",
+      "status": "REAL_RUNTIME_CONFIRMED",
+      "implication_for_a": "Distinguish parser exit semantics from offline byte-boundary parsing."
+    },
+    {
+      "id": "PR-CLUE-05",
+      "title": "Runtime source pointers can be rebound to persistent file offsets",
+      "status": "CONFIRMED",
+      "slps_session_starts": ["0x2570B", "0x25729"],
+      "static_token_byte_matches": "22/22",
+      "implication_for_a": "Define SSF stable IDs with resource, file range, owner, runtime consumer and evidence class."
+    },
+    {
+      "id": "PR-CLUE-06",
+      "title": "Persistent and ephemeral runtime text need separate IDs",
+      "status": "CONFIRMED",
+      "implication_for_a": "Do not force dynamically generated SSF text into disk-record identity models."
+    },
+    {
+      "id": "PR-CLUE-07",
+      "title": "BMESS0 supports owner-aware structural variable-length repack",
+      "status": "CLOSED_FOR_BMESS0_STRUCTURAL_SCOPE",
+      "counts": {
+        "logical_slots": 384,
+        "unique_cpe_spans": 383,
+        "leaf_references": 18640,
+        "referenced_text_records": 15972,
+        "unreferenced_quoted_candidates": 55
+      },
+      "validation": {
+        "positive_tests": "5/5",
+        "actual_source_fuzz": "100/100",
+        "negative_tests": "7/7"
+      },
+      "implication_for_a": "Prove each SSF resource owner/container separately before variable-length relocation."
+    },
+    {
+      "id": "PR-CLUE-08",
+      "title": "Cross-platform inheritance unit is semantic event, not opcode number",
+      "status": "CONFIRMED_REFERENCE_RULE",
+      "implication_for_a": "Use PSF as semantic/method reference only; never inherit PS implementation numbers into Saturn."
+    }
+  ],
+  "runtime_summary": {
+    "complete_sessions": 2,
+    "tokens": 59,
+    "events": 299,
+    "anomalies": 0,
+    "observed_controls": ["F0", "F1", "F4", "F5", "F7", "F8", "FC", "FD", "FE", "FF"]
+  },
+  "final_package_sha256": {
+    "P-R1": "3f3777a3367c68cc7a880c44c6ff5442e02dfb811fb073d26910a23b1a1a5262",
+    "P-R2": "a1b73a0b4438bba1c83c6301b92e2466250ae40768101501e3729925ee62b837",
+    "P-R3": "cf6ced8b9bb4073e7a5758dc8db4c8872ca866cd2466ba16a162ef659113347c",
+    "P-R4": "f8781b46c017518508b271548ef5eff12b0dde87cafc006576772f5ee002f3d8",
+    "P-R5": "fa5b7e1ab318d83288b2e84367c78016bbcb670c7683984241e49a6adf7371e6",
+    "P-R1-R5-closeout": "24ab06eb4ca69d9ee68052bf69717ee7fbe5e2e9c2be24a1162ac76a1627a77b"
+  },
+  "publication": {
+    "public_safe": true,
+    "excluded": ["ROM/ISO/BIN", "raw CPU trace", "commercial assets", "dialogue dumps", "legacy unknown executables", "private workspace data"]
+  }
+}
