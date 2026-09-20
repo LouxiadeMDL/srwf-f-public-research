@@ -30,3 +30,22 @@ Future updates must add dated evidence rather than silently replacing historical
 ## Later review decision
 
 The inspected R6 review decision (S6) accepts 20 conditional function/variant relations and four call-context relations with reservations, retains 18 unknown game queries and records a user pause. The frozen 0/32 is a capability-acceptance measure, **not a project progress percentage**. Research remains paused under that decision; publishing this repository does not resume it.
+
+
+## 2026-09-21 A16 production-scale seal
+
+A later reviewed A16 evidence package advances the public-safe process record beyond the earlier historical snapshot above without rewriting it.
+
+For **Saturn F RevB / F only**, A16 records a production-scale Episode 1 engineering validation built around a Saturn-to-PS Japanese record bridge, record-specific WGF translation references, pre-translation domain/episode classification, deterministic cumulative SCEDATA rebuilding, and exact-hash runtime checks in both Mednafen and SSF.
+
+The sealed tested candidate is identified by:
+
+- Track1 SHA-256: `daa62054b6e2a567e03e047d883d81e7f421f7ee3f813bb68efba641c1a0693c`
+- embedded SCEDATA SHA-256: `77e7a257dd01c62e8bfc370ef2f9bbc32af8481cbdece59d06d093e3735ed590`
+- CUE SHA-256: `9b940aa2afea650e86f786623cb4ab3982741cd5cdb59564112cc5ec5d32a870`
+
+Both emulator runs reached Episode 1 clear and Intermission with normal exit, matched process identity and unchanged candidate identity. The seal remains explicitly limited to the tested engineering scope; it is not a claim of release-quality Chinese, complete font coverage, whole-game runtime coverage or hardware-Saturn validation.
+
+A16 also records a visible fixed-length authoring artifact, a conservative native-mapping evidence audit, and an Episode 1 production-coverage analysis. The final production decision is **hybrid native reuse plus selective font extension**, with font-bank ownership/capacity left for the next read-only gate.
+
+See `docs/2026-09-21-a16-complete-retrospective-and-seal.md` and `evidence/cross_reference/2026-09-21-a16-final-seal.json`.
