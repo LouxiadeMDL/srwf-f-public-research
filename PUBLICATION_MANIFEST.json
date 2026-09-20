@@ -1,5 +1,5 @@
 {
-  "review_date": "2026-09-20",
+  "review_date": "2026-09-21",
   "scope": "Original utilities and rewritten/public-safe documentation and machine-readable summaries only; no inherited private history",
   "files": {
     ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
@@ -9,7 +9,7 @@
     "docs/provenance.md": "30a3f651bf36bb70c2e6e4785b3c744dc909ad83f6ef123aaa7f7afd488a0100",
     "docs/publication-policy.md": "5d2d87f4d2f11ab14fcfdaa562ab13de78ef10ca387805f94cc39001ac227538",
     "docs/reproduce.md": "f024abe6947f9d02a76242acfabd11dadb1f05bdb6bb57951d9c8aa5215c3351",
-    "docs/status.md": "63a31da8876a9efb13603a2b068342641d0a555de6c3b8a9473ea9e83498a565",
+    "docs/status.md": "50f293478dffe63080e0dbf6e1a2774da5dae77c976ffc6d9f1f50c9e589894b",
     "docs/2026-09-13-baseline-and-patch-experiment.md": "b81ec63298b7f9fe92b6c19a46b9dfe92bb93b0b9f5d0dabfe22755f743cd564",
     "docs/2026-09-19-p-reference-r1-r5-summary-new-clues.md": "fd696bcd874884474e147550b4b89d7dbb70146c9093c31343e3eaab7655adef",
     "docs/2026-09-20-a14-pre-formal-translation-batch.md": "59c8712d264f6689e34d426d8ef07a62efffc0c7a0f8a6999a272f200c7fa0b1",
@@ -27,6 +27,8 @@
     "tools/check_dic_codec_vectors.py": "aa9f9851a91d0c466f13c888064d1ba8ef3bfe650cc35662b05554200549c659",
     "tools/check_layout.py": "ee44b882efb55b04271fbb4dfab0aeac93291b5a6fc190140aaedadf8c0aef93",
     "tools/check_publication.py": "ceab5a59ad4c4fbef9312a520c3ec6d967ed14cf145f463998169baeb57b56cd",
-    "tools/fingerprint.py": "7fc2f5ce9a920897e640fba8a4bdde59b0f3ec1e30ed211a52cf01a511cd59da"
+    "tools/fingerprint.py": "7fc2f5ce9a920897e640fba8a4bdde59b0f3ec1e30ed211a52cf01a511cd59da",
+    "docs/2026-09-21-a16-complete-retrospective-and-seal.md": "1bccace566cb77276526fb00a1892352fc1f71c754f284e7dccad565ca6d4397",
+    "evidence/cross_reference/2026-09-21-a16-final-seal.json": "be6a2e7f85745499a7d554f8205de1b2b0593d7bafcf6312946d6633bcabc3d0"
   }
 }
