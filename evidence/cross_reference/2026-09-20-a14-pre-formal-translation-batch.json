@@ -1,0 +1,51 @@
+{
+  "record_id": "SRWF_F_A14_PRE_FORMAL_TRANSLATION_BATCH_PUBLIC_20260920",
+  "record_date": "2026-09-20",
+  "scope": "Super Robot Wars F only / Saturn F RevB / public-safe summary",
+  "private_package": {
+    "name": "A14_PRE_FORMAL_TRANSLATION_BATCH_20260920.zip",
+    "sha256": "481dcd62798fec7b836d9587eed44ddad44c597cb18a1a0650141f274554c953",
+    "published_here": false
+  },
+  "authority": {
+    "plain_records": 6388,
+    "record_join_missing": 0,
+    "raw_hash_mismatch": 0,
+    "storage_decode_errors": 0,
+    "reference_exact_records": 3623
+  },
+  "private_native_whitelist_summary": {
+    "rows": 1336,
+    "preferred_unique_mappings": 1330,
+    "duplicate_unicode_hold_rows": 6,
+    "preferred_cjk_unified_ideographs": 1105,
+    "mapping_payload_published": false
+  },
+  "batch01": {
+    "engineering_rows": 51,
+    "distinct_modified_streams": 51,
+    "record_roundtrip_pass": 51,
+    "control_preservation_pass": 51,
+    "stream_capacity_pass": 52,
+    "stream_redecode_pass": 52,
+    "stream_deterministic_pass": 52,
+    "external_codec_strict_redecode_pass": 52,
+    "minimum_capacity_slack_bytes": 10,
+    "translation_payload_published": false
+  },
+  "holds": {
+    "untranslated_plain": 6337,
+    "dynamic_preserve_outside_batch01": 1146,
+    "unsupported_control": 95,
+    "total_candidate_records": 7629
+  },
+  "validation": {
+    "primary_pass": 29,
+    "primary_fail": 0,
+    "independent_pass": 117,
+    "independent_fail": 0
+  },
+  "status": "PASS_FOR_ENGINEERING_BATCH01_SCOPE_WITH_RESERVATIONS",
+  "no_binary_write": true,
+  "next_boundary": "Formal candidate requires linguistically reviewed/approved translation rows; scope changes need a new gate."
+}
