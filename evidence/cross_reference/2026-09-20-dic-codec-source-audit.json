@@ -29,7 +29,8 @@
   "external_provenance": {
     "asakim_statement": {
       "claim": "Although the code is labelled for DIC.BIN, the same code can also process Saturn scenario/story text.",
-      "treatment": "external_researcher_claim"
+      "treatment": "public_external_researcher_claim",
+      "source_visibility": "public"
     },
     "public_corroboration": [
       {
