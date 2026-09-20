@@ -1,0 +1,49 @@
+{
+  "record_id": "SRWF_F_DIC_A10_A14_CROSSCHECK_20260920",
+  "record_date": "2026-09-20",
+  "scope": "Super Robot Wars F only / 52 tested Saturn F RevB SCEDATA streams",
+  "sources": {
+    "dic_comp": {
+      "size_bytes": 15856,
+      "sha256": "8fed6eafc947f67a11f0c00346af956745ab811f34f5f3b5c6c16193c2cde8b7",
+      "redistributed": false
+    },
+    "dic_dec": {
+      "size_bytes": 12976,
+      "sha256": "99458e895dfe15f331cdf6feddefd95b9c65acd27bf94c070095a50a9654c787",
+      "redistributed": false
+    },
+    "a10_compressor": {
+      "sha256": "8390b1cfa7994f11f3db7ae1972e6a13d1220151de7cbda36644f20f51ab70a9"
+    },
+    "a10_independent_decoder": {
+      "sha256": "21b05790a999ad44541358caf69b8d4becb921f5944098e62b4aa15347dec850"
+    }
+  },
+  "results": {
+    "streams": 52,
+    "a10_strict_baseline_decode_exact": 52,
+    "dic_comp_to_a10_strict_decode_exact": 52,
+    "a10_recompress_redecode_exact": 52,
+    "a10_recompress_deterministic": 52,
+    "legacy_dic_dec_exact": 51,
+    "legacy_self_roundtrip_exact": 51,
+    "streams_with_extended_256": 1,
+    "extended_256_operations": 2
+  },
+  "legacy_decoder_observation": {
+    "affected_streams": 1,
+    "mechanism": "8-bit extended length wraps mathematical 256 to 0",
+    "observed_output_shortfall_bytes": 512,
+    "return_code_still_success": true,
+    "strict_acceptance_authority": false
+  },
+  "status": "PASS_FOR_TESTED_52_STREAM_SCOPE_WITH_LEGACY_DECODER_RESERVATIONS",
+  "not_promoted": [
+    "BMESS codec identity",
+    "all SRW F resources",
+    "Unicode mapping",
+    "renderer behavior",
+    "byte-identical cross-compressor output"
+  ]
+}
