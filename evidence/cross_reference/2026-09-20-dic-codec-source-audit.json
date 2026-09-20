@@ -1,0 +1,96 @@
+{
+  "record_id": "SRWF_F_DIC_CODEC_SOURCE_AUDIT_20260920",
+  "record_date": "2026-09-20",
+  "source_review_date": "2026-09-12",
+  "scope": "Super Robot Wars F only",
+  "publication": {
+    "tool_source_in_repository": false,
+    "treatment": "metadata_and_rewritten_source_audit_only",
+    "status_label": "EXTERNAL_INDEPENDENT_CODEC_REFERENCE"
+  },
+  "sources": [
+    {
+      "name": "dic-comp.c",
+      "role": "compressor",
+      "source_comment_scope": "SRW F DIC.BIN",
+      "lines": 494,
+      "size_bytes": 15856,
+      "sha256": "8fed6eafc947f67a11f0c00346af956745ab811f34f5f3b5c6c16193c2cde8b7"
+    },
+    {
+      "name": "dic-dec.c",
+      "role": "decompressor",
+      "source_comment_scope": "SRW F DIC.BIN",
+      "lines": 392,
+      "size_bytes": 12976,
+      "sha256": "99458e895dfe15f331cdf6feddefd95b9c65acd27bf94c070095a50a9654c787"
+    }
+  ],
+  "external_provenance": {
+    "asakim_statement": {
+      "claim": "Although the code is labelled for DIC.BIN, the same code can also process Saturn scenario/story text.",
+      "treatment": "external_researcher_claim"
+    },
+    "public_corroboration": [
+      {
+        "source": "SegaXtreme — Translating Super Robot Wars F",
+        "url": "https://segaxtreme.net/threads/translating-super-robot-wars-f.25557/",
+        "observations": [
+          "Public discussion identifies Saturn SCEDATA.BIN scenario text as compressed.",
+          "A 2025-03-17 post credits abridgewater with a text de/recompressor that works with the game."
+        ],
+        "identity_note": "This record does not assert that the publicly mentioned abridgewater tool is identical to the reviewed dic-comp.c/dic-dec.c sources."
+      }
+    ]
+  },
+  "codec": {
+    "control_bit_order": "MSB_FIRST",
+    "literal": {
+      "control_prefix": "1",
+      "payload": "literal_byte"
+    },
+    "short_backref": {
+      "control_prefix": "00xx",
+      "length_rule": "xx+2",
+      "length_min": 2,
+      "length_max": 5,
+      "offset_bits": 8,
+      "window_bytes": 256
+    },
+    "long_backref": {
+      "control_prefix": "01",
+      "packed16_endian": "big",
+      "backref_bits": 13,
+      "length_bits": 3,
+      "window_bytes": 8192,
+      "ordinary_length_rule": "low3+2",
+      "ordinary_length_min": 3,
+      "ordinary_length_max": 9,
+      "extended_when_low3_zero": true,
+      "extended_length_rule": "ext+1 when ext != 0",
+      "extended_length_min": 2,
+      "extended_length_max": 256,
+      "eod_when_extended_zero": true
+    },
+    "max_match_bytes": 256,
+    "compressor_search": "naive_greedy_longest_match"
+  },
+  "validation": {
+    "required_equivalence": "decode(original) == decode(encode(decode(original)))",
+    "compressed_byte_identity_required": false
+  },
+  "legacy_source_caveats": [
+    "possible uint8_t wrap at extended match length 256",
+    "truncated/EOF input may be treated too permissively as EOD",
+    "insufficient back-reference lower-bound validation",
+    "greedy compressor may not reproduce original compressed bytes"
+  ],
+  "not_established_by_source_audit_alone": [
+    "all Saturn F resources use identical codec/framing",
+    "SCEDATA record boundaries",
+    "post-decompression token/control semantics",
+    "glyph or Unicode identity",
+    "renderer behavior",
+    "byte-identical recompression"
+  ]
+}
