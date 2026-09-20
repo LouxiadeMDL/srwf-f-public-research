@@ -32,6 +32,7 @@ The complete Saturn script-to-screen path is **not established** by this public 
 ## Start here
 
 - [Research status and dated observations](docs/status.md)
+- [DIC codec source audit and Saturn scenario-text provenance](docs/2026-09-20-dic-codec-source-audit.md)
 - [Pipeline questions and technical route](docs/pipeline.md)
 - [Reproduction guide](docs/reproduce.md)
 - [Evidence provenance and hashes](docs/provenance.md)
