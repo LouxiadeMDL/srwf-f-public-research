@@ -11,7 +11,7 @@ Two C sources were reviewed as an external codec reference:
 - `dic-comp.c` — source comment identifies it as compression code for SRW F `DIC.BIN`.
 - `dic-dec.c` — source comment identifies it as decompression code for SRW F `DIC.BIN`.
 
-Asakim separately stated that, despite the `DIC.BIN` label, the same code can also process **Saturn scenario/story text**. That statement is recorded here as external researcher provenance, not as a substitute for local binary/runtime validation.
+Asakim has publicly stated that, despite the `DIC.BIN` label, the same code can also process **Saturn scenario/story text**. That public statement is recorded here as external researcher provenance, not as a substitute for local binary/runtime validation.
 
 There is also public corroboration that Saturn `SCEDATA.BIN` contains compressed scenario text and that an SRW F text de/recompressor exists and works with the game. In the public SegaXtreme thread **“Translating Super Robot Wars F”**, `longsun_zhao` discussed Saturn `SCEDATA.BIN` compression and later credited `abridgewater` with a text de/recompressor that works with the game:
 
@@ -127,7 +127,7 @@ It does **not by itself** establish:
 - renderer behavior;
 - byte-identical recompression.
 
-Asakim's statement raises Saturn scenario-text applicability from an unattributed guess to an **external researcher claim**, and the SegaXtreme thread supplies independent public corroboration that Saturn scenario text is compressed and that a working SRW F text de/recompressor exists. Project-canonical use should still be tied to exact resource/version fingerprints and independent roundtrip/runtime evidence.
+Asakim's public statement raises Saturn scenario-text applicability from an unattributed guess to a **public external researcher claim**, and the SegaXtreme thread supplies independent public corroboration that Saturn scenario text is compressed and that a working SRW F text de/recompressor exists. Project-canonical use should still be tied to exact resource/version fingerprints and independent roundtrip/runtime evidence.
 
 ## Publication treatment
 
