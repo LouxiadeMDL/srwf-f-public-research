@@ -22,7 +22,7 @@
     "evidence/cross_reference/2026-09-20-dic-codec-source-audit.json": "8c11b940dcd92fec664a703aa8ccd8680b7637a9a819b6d6c0ae93d540e07c8a",
     "examples/evidence-record.json": "9e006ca2a6c2199ba52d62fe9295d74aa6704e2c64d2f0af0928b1b25fae617b",
     "LICENSE": "68d4e9ecad930e7b1c94ac15bcc044f2211139b42fc394ca5d58a3a018c9f594",
-    "README.md": "0fad1bcffb73f85b247bf9c589474e7b1afcc12469381180a4e8b49af6bbe2f7",
+    "README.md": "b74059f7e386c2df15a7a203367b09e8e055bd572035a021187f1a542ec22ba3",
     "SECURITY.md": "57593740d1e5ad7be7206a6cd31bd8504784453d5c736751090a22ee8dcfcffa",
     "tools/check_dic_codec_vectors.py": "aa9f9851a91d0c466f13c888064d1ba8ef3bfe650cc35662b05554200549c659",
     "tools/check_layout.py": "ee44b882efb55b04271fbb4dfab0aeac93291b5a6fc190140aaedadf8c0aef93",
