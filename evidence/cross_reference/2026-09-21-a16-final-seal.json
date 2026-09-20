@@ -1,0 +1,68 @@
+{
+  "schema": "SRWF_F_PUBLIC_A16_FINAL_SEAL_v1",
+  "date": "2026-09-21",
+  "scope": "Super Robot Wars F ONLY / Saturn F RevB",
+  "status": "CLOSED_SEALED",
+  "public_safe": true,
+  "runtime_candidate": {
+    "track1_sha256": "daa62054b6e2a567e03e047d883d81e7f421f7ee3f813bb68efba641c1a0693c",
+    "embedded_scedata_sha256": "77e7a257dd01c62e8bfc370ef2f9bbc32af8481cbdece59d06d093e3735ed590",
+    "cue_sha256": "9b940aa2afea650e86f786623cb4ab3982741cd5cdb59564112cc5ec5d32a870"
+  },
+  "alignment": {
+    "translation_master_records": 7629,
+    "plain_records": 6388,
+    "high_confidence_ssf_psf_rows": 5507,
+    "ambiguous_exact_text_rows": 227,
+    "no_exact_psf_match_rows": 654
+  },
+  "runtime": {
+    "engines": [
+      "Mednafen",
+      "SSF"
+    ],
+    "mednafen_manifest": "42/42",
+    "ssf_manifest": "37/37",
+    "episode1_flow_to_intermission": true,
+    "candidate_identity_after_exit": "UNCHANGED"
+  },
+  "layout_v2_static": {
+    "engineering_rows": 63,
+    "padding_rows_relocated": 58,
+    "padding_bytes_relocated": 699,
+    "stream1_compressed_bytes": 6770,
+    "stream1_fixed_allocation_bytes": 7152,
+    "stream1_remaining_slack_bytes": 382,
+    "runtime_performed": false
+  },
+  "mapping_audit": {
+    "released_preferred_mappings": 1330,
+    "observed_storage_tokens": 1364,
+    "new_token_candidates": 94,
+    "potential_new_unicode_values": 93,
+    "new_canonical_unicode_promotions": 0
+  },
+  "episode1_coverage": {
+    "semantic_rows": 77,
+    "unique_visible_unicode": 468,
+    "visible_scalar_occurrences": 1927,
+    "existing_preferred": 231,
+    "orthographic_proposals": 103,
+    "new_positional_reference": 6,
+    "duplicate_token_policy": 2,
+    "reference_table_only_not_released": 38,
+    "not_covered_by_audited_maps": 88,
+    "control_mismatch_rows": 12,
+    "lower_bound_over_budget_rows": 11
+  },
+  "production_architecture": "HYBRID_NATIVE_REUSE_PLUS_SELECTIVE_FONT_EXTENSION",
+  "next_node": "A17-01_SSF_REVB_FONT_BANK_OWNERSHIP_AND_CAPACITY",
+  "excluded_from_publication": [
+    "ROM/BIN/disc-track payloads",
+    "commercial assets and font payloads",
+    "dialogue dumps",
+    "saves and recordings",
+    "private paths and account data",
+    "third-party tables or code without rights review"
+  ]
+}
