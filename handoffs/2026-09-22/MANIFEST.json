@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-22",
+  "scope": "Exact reviewed new handoff packet; no source payloads",
+  "files": {
+    "docs/2026-09-22-cross-game-research-handoff.md": "2a9bc68d37d4bf7d8e6167548e66a40fe03982a44398a0c46c83ba89e87de1d8",
+    "tools/build_handoff_catalog.py": "59dfa320b761fc63436f13d788ea85d8162fc8c2b451894360e72599c088c6b3",
+    "handoffs/2026-09-22/claims.json": "c4ca263c3ffd42570d15257fce953af56a9e79a23d27a5f8df066904b0870928",
+    "handoffs/2026-09-22/database_catalog.json": "2a958aa7e37f2e78d4676f8514b5d91f83338cde2c1590f2fe81ffff96243451",
+    "handoffs/2026-09-22/inventory_summary.json": "8f19956a613e1bef88f8049bca5810d2f3146c208a7cfd71fe6579970951dd54",
+    "handoffs/2026-09-22/leads.json": "2f7f2a030edccc9b36ae777a64bead6f0fbb3fa10d91464354013aa56785fef3",
+    "handoffs/2026-09-22/README.md": "270887e47d44309b2a240a203c2b558c65e2d21aeb1a6ad7902869c6ccf38908",
+    "handoffs/2026-09-22/sources.json": "876b47d058f9df5101118426d45f221acaadc0e1f3f0c8f36e44bf964bd2ff9e",
+    "handoffs/2026-09-22/verification.json": "c3893f150c506355e1d6b1f190c33fbd646ba2805663f4e1d1a2a98274ec93bb"
+  }
+}

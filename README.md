@@ -33,6 +33,7 @@ The complete Saturn script-to-screen path is **not established by the original p
 
 ## Start here
 
+- [2026-09-22 cross-game handoff, download and queryable metadata](docs/2026-09-22-cross-game-research-handoff.md)
 - [Research status and dated observations](docs/status.md)
 - [A14 pre-formal translation batch update](docs/2026-09-20-a14-pre-formal-translation-batch.md)
 - [DIC codec A14 cross-check](docs/2026-09-20-dic-codec-a14-crosscheck.md)

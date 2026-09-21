@@ -1,0 +1,954 @@
+[
+  {
+    "id": "DB-01",
+    "name": "CROSS_GAME_TO_T1.sqlite",
+    "sha256": "d3bbf2557cc940ddb62ac9110163d5d000aff4c3d60d44dce5ca3006cc21df48",
+    "size": 33812480,
+    "integrity": "ok",
+    "role": "C_LINE_HANDOFF_DATABASE",
+    "tables": [
+      {
+        "name": "archive_members",
+        "rows": 173
+      },
+      {
+        "name": "bounded_checks",
+        "rows": 8
+      },
+      {
+        "name": "c_line_field_comparison",
+        "rows": 151
+      },
+      {
+        "name": "code_maps",
+        "rows": 8469
+      },
+      {
+        "name": "config_fields",
+        "rows": 3776
+      },
+      {
+        "name": "config_tables",
+        "rows": 706
+      },
+      {
+        "name": "dialogue_examples",
+        "rows": 239
+      },
+      {
+        "name": "documents",
+        "rows": 121
+      },
+      {
+        "name": "extraction_comparisons",
+        "rows": 12
+      },
+      {
+        "name": "extraction_files",
+        "rows": 24
+      },
+      {
+        "name": "extraction_notes",
+        "rows": 4
+      },
+      {
+        "name": "extraction_ranges",
+        "rows": 8
+      },
+      {
+        "name": "extraction_tokens",
+        "rows": 217
+      },
+      {
+        "name": "handoff_notices",
+        "rows": 8
+      },
+      {
+        "name": "handoff_packets",
+        "rows": 7
+      },
+      {
+        "name": "handoff_review_findings",
+        "rows": 9
+      },
+      {
+        "name": "handoff_source_catalog",
+        "rows": 18
+      },
+      {
+        "name": "handoff_source_files",
+        "rows": 2586
+      },
+      {
+        "name": "ips_records",
+        "rows": 11615
+      },
+      {
+        "name": "legacy_rows",
+        "rows": 3208
+      },
+      {
+        "name": "lookup_rows",
+        "rows": 5457
+      },
+      {
+        "name": "reference_lines",
+        "rows": 32485
+      },
+      {
+        "name": "run_sources",
+        "rows": 134
+      },
+      {
+        "name": "search",
+        "rows": 35704
+      },
+      {
+        "name": "search_config",
+        "rows": 1
+      },
+      {
+        "name": "search_content",
+        "rows": 35704
+      },
+      {
+        "name": "search_data",
+        "rows": 931
+      },
+      {
+        "name": "search_docsize",
+        "rows": 35704
+      },
+      {
+        "name": "search_idx",
+        "rows": 551
+      },
+      {
+        "name": "sources",
+        "rows": 29
+      }
+    ]
+  },
+  {
+    "id": "DB-02",
+    "name": "external_source_intake.sqlite",
+    "sha256": "bc2bf7cb91c818673a1761f3765b65229287dc54a4dd8de4e081cb00b21f8ae7",
+    "size": 684032,
+    "integrity": "ok",
+    "role": "TOPIC_OR_STAGE_DATABASE",
+    "tables": [
+      {
+        "name": "catalog",
+        "rows": 18
+      },
+      {
+        "name": "files",
+        "rows": 2586
+      },
+      {
+        "name": "notices",
+        "rows": 4
+      }
+    ]
+  },
+  {
+    "id": "DB-03",
+    "name": "cross_game_extraction.sqlite",
+    "sha256": "082e3e766541e5821c937add5742c631e3f91738355bec3fe03fe6ad2b11fcd7",
+    "size": 29966336,
+    "integrity": "ok",
+    "role": "FAILED_FIRST_RUN_NOT_DELIVERABLE",
+    "tables": [
+      {
+        "name": "archive_members",
+        "rows": 173
+      },
+      {
+        "name": "bounded_checks",
+        "rows": 8
+      },
+      {
+        "name": "c_line_field_comparison",
+        "rows": 0
+      },
+      {
+        "name": "code_maps",
+        "rows": 8469
+      },
+      {
+        "name": "config_fields",
+        "rows": 3776
+      },
+      {
+        "name": "config_tables",
+        "rows": 706
+      },
+      {
+        "name": "dialogue_examples",
+        "rows": 239
+      },
+      {
+        "name": "documents",
+        "rows": 121
+      },
+      {
+        "name": "extraction_comparisons",
+        "rows": 0
+      },
+      {
+        "name": "extraction_files",
+        "rows": 0
+      },
+      {
+        "name": "extraction_notes",
+        "rows": 0
+      },
+      {
+        "name": "extraction_ranges",
+        "rows": 0
+      },
+      {
+        "name": "extraction_tokens",
+        "rows": 0
+      },
+      {
+        "name": "ips_records",
+        "rows": 11615
+      },
+      {
+        "name": "legacy_rows",
+        "rows": 3208
+      },
+      {
+        "name": "lookup_rows",
+        "rows": 5457
+      },
+      {
+        "name": "reference_lines",
+        "rows": 32485
+      },
+      {
+        "name": "run_sources",
+        "rows": 0
+      },
+      {
+        "name": "search",
+        "rows": 35704
+      },
+      {
+        "name": "search_config",
+        "rows": 1
+      },
+      {
+        "name": "search_content",
+        "rows": 35704
+      },
+      {
+        "name": "search_data",
+        "rows": 931
+      },
+      {
+        "name": "search_docsize",
+        "rows": 35704
+      },
+      {
+        "name": "search_idx",
+        "rows": 551
+      },
+      {
+        "name": "sources",
+        "rows": 29
+      }
+    ]
+  },
+  {
+    "id": "DB-04",
+    "name": "cross_game_extraction.sqlite",
+    "sha256": "0d00c3eea2ef15f907d07df330d733a7c34e0f6c9dd41fc81884c028aab698a2",
+    "size": 33103872,
+    "integrity": "ok",
+    "role": "R2_FINAL_EXTRACTION",
+    "tables": [
+      {
+        "name": "archive_members",
+        "rows": 173
+      },
+      {
+        "name": "bounded_checks",
+        "rows": 8
+      },
+      {
+        "name": "c_line_field_comparison",
+        "rows": 151
+      },
+      {
+        "name": "code_maps",
+        "rows": 8469
+      },
+      {
+        "name": "config_fields",
+        "rows": 3776
+      },
+      {
+        "name": "config_tables",
+        "rows": 706
+      },
+      {
+        "name": "dialogue_examples",
+        "rows": 239
+      },
+      {
+        "name": "documents",
+        "rows": 121
+      },
+      {
+        "name": "extraction_comparisons",
+        "rows": 12
+      },
+      {
+        "name": "extraction_files",
+        "rows": 24
+      },
+      {
+        "name": "extraction_notes",
+        "rows": 4
+      },
+      {
+        "name": "extraction_ranges",
+        "rows": 8
+      },
+      {
+        "name": "extraction_tokens",
+        "rows": 217
+      },
+      {
+        "name": "ips_records",
+        "rows": 11615
+      },
+      {
+        "name": "legacy_rows",
+        "rows": 3208
+      },
+      {
+        "name": "lookup_rows",
+        "rows": 5457
+      },
+      {
+        "name": "reference_lines",
+        "rows": 32485
+      },
+      {
+        "name": "run_sources",
+        "rows": 134
+      },
+      {
+        "name": "search",
+        "rows": 35704
+      },
+      {
+        "name": "search_config",
+        "rows": 1
+      },
+      {
+        "name": "search_content",
+        "rows": 35704
+      },
+      {
+        "name": "search_data",
+        "rows": 931
+      },
+      {
+        "name": "search_docsize",
+        "rows": 35704
+      },
+      {
+        "name": "search_idx",
+        "rows": 551
+      },
+      {
+        "name": "sources",
+        "rows": 29
+      }
+    ]
+  },
+  {
+    "id": "DB-05",
+    "name": "F_FF_TECH_v0.1.sqlite",
+    "sha256": "3c07ae1235be210f63d0a192831b6f38c6c6bc038831c6def7ec46814ad7784f",
+    "size": 2527232,
+    "integrity": "ok",
+    "role": "TOPIC_OR_STAGE_DATABASE",
+    "tables": [
+      {
+        "name": "config_lines",
+        "rows": 1970
+      },
+      {
+        "name": "cross_checks",
+        "rows": 125
+      },
+      {
+        "name": "evidence",
+        "rows": 542
+      },
+      {
+        "name": "evidence_search",
+        "rows": 542
+      },
+      {
+        "name": "evidence_search_config",
+        "rows": 1
+      },
+      {
+        "name": "evidence_search_data",
+        "rows": 49
+      },
+      {
+        "name": "evidence_search_docsize",
+        "rows": 542
+      },
+      {
+        "name": "evidence_search_idx",
+        "rows": 47
+      },
+      {
+        "name": "findings",
+        "rows": 5
+      },
+      {
+        "name": "guide_events",
+        "rows": 227
+      },
+      {
+        "name": "review_notes",
+        "rows": 9
+      },
+      {
+        "name": "sources",
+        "rows": 10
+      }
+    ]
+  },
+  {
+    "id": "DB-06",
+    "name": "F_FF_REFERENCE.sqlite",
+    "sha256": "1aeff8e305585a75fb7929bd345f4a3942c22bdb3d933fdc966c50bc7e3c0dea",
+    "size": 1703936,
+    "integrity": "ok",
+    "role": "TOPIC_OR_STAGE_DATABASE",
+    "tables": [
+      {
+        "name": "evidence",
+        "rows": 542
+      },
+      {
+        "name": "evidence_search",
+        "rows": 542
+      },
+      {
+        "name": "evidence_search_config",
+        "rows": 1
+      },
+      {
+        "name": "evidence_search_data",
+        "rows": 49
+      },
+      {
+        "name": "evidence_search_docsize",
+        "rows": 542
+      },
+      {
+        "name": "evidence_search_idx",
+        "rows": 47
+      },
+      {
+        "name": "findings",
+        "rows": 5
+      },
+      {
+        "name": "sources",
+        "rows": 10
+      }
+    ]
+  },
+  {
+    "id": "DB-07",
+    "name": "pscb_research_before_new_disc.sqlite",
+    "sha256": "e4909bae5ad866bf3a5b76bac61591c9bb9a8ac5ca85e7a9c15728a21a08b93c",
+    "size": 28672,
+    "integrity": "ok",
+    "role": "PRESERVED_EARLIER_COPY_NOT_FINAL",
+    "tables": [
+      {
+        "name": "cheat_entries",
+        "rows": 11
+      },
+      {
+        "name": "cheat_groups",
+        "rows": 7
+      },
+      {
+        "name": "code_tokens",
+        "rows": 21
+      },
+      {
+        "name": "notes",
+        "rows": 5
+      },
+      {
+        "name": "sources",
+        "rows": 1
+      }
+    ]
+  },
+  {
+    "id": "DB-08",
+    "name": "PSF_SSF_TEXT_SOURCES.sqlite",
+    "sha256": "eb4e6f6d024abd5c00b5946b26720e16f3b3a7a494276ba46ec5830ac8bf3364",
+    "size": 1548288,
+    "integrity": "ok",
+    "role": "TOPIC_OR_STAGE_DATABASE",
+    "tables": [
+      {
+        "name": "literal_comparisons",
+        "rows": 5
+      },
+      {
+        "name": "literal_differences",
+        "rows": 321
+      },
+      {
+        "name": "literal_maps",
+        "rows": 12539
+      },
+      {
+        "name": "source_files",
+        "rows": 335
+      },
+      {
+        "name": "source_notices",
+        "rows": 10
+      }
+    ]
+  },
+  {
+    "id": "DB-09",
+    "name": "WINKYSOFT_F_ENGINE_KNOWLEDGE_BASE_v0.1.sqlite",
+    "sha256": "ef3d301df210e10014952cfa9da81978a848f22a32f43b2643806db4a0f9baa8",
+    "size": 64516096,
+    "integrity": "ok",
+    "role": "SEALED_KNOWLEDGE_BASE_V01",
+    "tables": [
+      {
+        "name": "buffers_layout",
+        "rows": 84
+      },
+      {
+        "name": "codepoints",
+        "rows": 4499
+      },
+      {
+        "name": "control_codes",
+        "rows": 458
+      },
+      {
+        "name": "cross_platform_links",
+        "rows": 194
+      },
+      {
+        "name": "event_opcodes",
+        "rows": 453
+      },
+      {
+        "name": "evidence_conflicts",
+        "rows": 6
+      },
+      {
+        "name": "functions_consumers",
+        "rows": 316
+      },
+      {
+        "name": "glyph_font",
+        "rows": 367
+      },
+      {
+        "name": "parse_events",
+        "rows": 5301
+      },
+      {
+        "name": "renderer",
+        "rows": 52
+      },
+      {
+        "name": "resources",
+        "rows": 320
+      },
+      {
+        "name": "source_lines",
+        "rows": 332237
+      },
+      {
+        "name": "sources_files",
+        "rows": 5302
+      },
+      {
+        "name": "structures_fields",
+        "rows": 19988
+      },
+      {
+        "name": "text_formats",
+        "rows": 760
+      },
+      {
+        "name": "workbook_cells",
+        "rows": 154726
+      }
+    ]
+  },
+  {
+    "id": "DB-10",
+    "name": "WINKYSOFT_F_ENGINE_KNOWLEDGE_BASE_v0.1.sqlite",
+    "sha256": "53723b6b3adee2fc5bb61457b1280c59068ab031dbe251010027a5b32b5c2787",
+    "size": 55263232,
+    "integrity": "ok",
+    "role": "PRESERVED_EARLIER_COPY_NOT_FINAL",
+    "tables": [
+      {
+        "name": "buffers_layout",
+        "rows": 83
+      },
+      {
+        "name": "codepoints",
+        "rows": 2707
+      },
+      {
+        "name": "control_codes",
+        "rows": 458
+      },
+      {
+        "name": "cross_platform_links",
+        "rows": 193
+      },
+      {
+        "name": "event_opcodes",
+        "rows": 453
+      },
+      {
+        "name": "evidence_conflicts",
+        "rows": 3
+      },
+      {
+        "name": "functions_consumers",
+        "rows": 314
+      },
+      {
+        "name": "glyph_font",
+        "rows": 367
+      },
+      {
+        "name": "parse_events",
+        "rows": 5299
+      },
+      {
+        "name": "renderer",
+        "rows": 52
+      },
+      {
+        "name": "resources",
+        "rows": 318
+      },
+      {
+        "name": "source_lines",
+        "rows": 332164
+      },
+      {
+        "name": "sources_files",
+        "rows": 5289
+      },
+      {
+        "name": "structures_fields",
+        "rows": 12129
+      },
+      {
+        "name": "text_formats",
+        "rows": 753
+      },
+      {
+        "name": "workbook_cells",
+        "rows": 82273
+      }
+    ]
+  },
+  {
+    "id": "DB-11",
+    "name": "WINKYSOFT_F_ENGINE_KNOWLEDGE_BASE_v0.1.sqlite",
+    "sha256": "09afbe6bd30d918fb9dd70d5b5e47580044db43988c26a98629d4eadad9499fe",
+    "size": 64434176,
+    "integrity": "ok",
+    "role": "PRESERVED_EARLIER_COPY_NOT_FINAL",
+    "tables": [
+      {
+        "name": "buffers_layout",
+        "rows": 83
+      },
+      {
+        "name": "codepoints",
+        "rows": 4499
+      },
+      {
+        "name": "control_codes",
+        "rows": 458
+      },
+      {
+        "name": "cross_platform_links",
+        "rows": 193
+      },
+      {
+        "name": "event_opcodes",
+        "rows": 453
+      },
+      {
+        "name": "evidence_conflicts",
+        "rows": 3
+      },
+      {
+        "name": "functions_consumers",
+        "rows": 314
+      },
+      {
+        "name": "glyph_font",
+        "rows": 367
+      },
+      {
+        "name": "parse_events",
+        "rows": 5299
+      },
+      {
+        "name": "renderer",
+        "rows": 52
+      },
+      {
+        "name": "resources",
+        "rows": 318
+      },
+      {
+        "name": "source_lines",
+        "rows": 332237
+      },
+      {
+        "name": "sources_files",
+        "rows": 5295
+      },
+      {
+        "name": "structures_fields",
+        "rows": 19988
+      },
+      {
+        "name": "text_formats",
+        "rows": 758
+      },
+      {
+        "name": "workbook_cells",
+        "rows": 154726
+      }
+    ]
+  },
+  {
+    "id": "DB-12",
+    "name": "cross_game_technical_reference_20260912.sqlite",
+    "sha256": "8bf8204dc5c0ad0eedc7c069572d693da551d1da28cd1c6318134ede946b243b",
+    "size": 29937664,
+    "integrity": "ok",
+    "role": "TOPIC_OR_STAGE_DATABASE",
+    "tables": [
+      {
+        "name": "archive_members",
+        "rows": 173
+      },
+      {
+        "name": "bounded_checks",
+        "rows": 8
+      },
+      {
+        "name": "code_maps",
+        "rows": 8469
+      },
+      {
+        "name": "config_fields",
+        "rows": 3776
+      },
+      {
+        "name": "config_tables",
+        "rows": 706
+      },
+      {
+        "name": "dialogue_examples",
+        "rows": 239
+      },
+      {
+        "name": "documents",
+        "rows": 121
+      },
+      {
+        "name": "ips_records",
+        "rows": 11615
+      },
+      {
+        "name": "legacy_rows",
+        "rows": 3208
+      },
+      {
+        "name": "lookup_rows",
+        "rows": 5457
+      },
+      {
+        "name": "reference_lines",
+        "rows": 32485
+      },
+      {
+        "name": "search",
+        "rows": 35704
+      },
+      {
+        "name": "search_config",
+        "rows": 1
+      },
+      {
+        "name": "search_content",
+        "rows": 35704
+      },
+      {
+        "name": "search_data",
+        "rows": 931
+      },
+      {
+        "name": "search_docsize",
+        "rows": 35704
+      },
+      {
+        "name": "search_idx",
+        "rows": 551
+      },
+      {
+        "name": "sources",
+        "rows": 29
+      }
+    ]
+  },
+  {
+    "id": "DB-13",
+    "name": "f_ff_document_sources.sqlite",
+    "sha256": "a3259c76c8d069c80e223fc0acdc9adbbdf24d21bc96006b75acb459da6be906",
+    "size": 16384,
+    "integrity": "ok",
+    "role": "TOPIC_OR_STAGE_DATABASE",
+    "tables": [
+      {
+        "name": "code_transcriptions",
+        "rows": 5
+      },
+      {
+        "name": "document_claims",
+        "rows": 10
+      },
+      {
+        "name": "documents",
+        "rows": 4
+      }
+    ]
+  },
+  {
+    "id": "DB-14",
+    "name": "pscb_research.sqlite",
+    "sha256": "b401410ffc92f748b3c4fdc681f5e845b1e58f2848bdf1f561c0ce019064cf66",
+    "size": 65536,
+    "integrity": "ok",
+    "role": "TOPIC_OR_STAGE_DATABASE",
+    "tables": [
+      {
+        "name": "cheat_entries",
+        "rows": 11
+      },
+      {
+        "name": "cheat_groups",
+        "rows": 7
+      },
+      {
+        "name": "code_tokens",
+        "rows": 21
+      },
+      {
+        "name": "disc_comparisons",
+        "rows": 39
+      },
+      {
+        "name": "disc_files",
+        "rows": 84
+      },
+      {
+        "name": "disc_images",
+        "rows": 2
+      },
+      {
+        "name": "notes",
+        "rows": 5
+      },
+      {
+        "name": "source_relationships",
+        "rows": 1
+      },
+      {
+        "name": "sources",
+        "rows": 1
+      }
+    ]
+  },
+  {
+    "id": "DB-15",
+    "name": "rom_samples.sqlite",
+    "sha256": "31673ef568f1ae57968f471040aa1dc883acd12beb9046a0df2250572c7a4bd3",
+    "size": 24576,
+    "integrity": "ok",
+    "role": "TOPIC_OR_STAGE_DATABASE",
+    "tables": [
+      {
+        "name": "rom_samples",
+        "rows": 2
+      }
+    ]
+  },
+  {
+    "id": "DB-16",
+    "name": "srw4_research.sqlite",
+    "sha256": "a59d3aefc48ceb67c865409856fb02deb52fa6dfc962eabe6eaa5f20e14ae33e",
+    "size": 65536,
+    "integrity": "ok",
+    "role": "TOPIC_OR_STAGE_DATABASE",
+    "tables": [
+      {
+        "name": "codebooks",
+        "rows": 64
+      },
+      {
+        "name": "patch_artifacts",
+        "rows": 3
+      },
+      {
+        "name": "project_metadata",
+        "rows": 6
+      },
+      {
+        "name": "research_notes",
+        "rows": 5
+      },
+      {
+        "name": "rom_locations",
+        "rows": 22
+      },
+      {
+        "name": "source_files",
+        "rows": 28
+      }
+    ]
+  }
+]

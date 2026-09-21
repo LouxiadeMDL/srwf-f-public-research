@@ -1,9 +1,9 @@
 {
-  "review_date": "2026-09-21",
+  "review_date": "2026-09-22",
   "scope": "Original utilities and rewritten/public-safe documentation and machine-readable summaries only; no inherited private history",
   "files": {
     ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
-    ".gitignore": "6b5fc7b2cb6b95d9147b059e010fa1217f671e2595e21239c3f3c1c12128b926",
+    ".gitignore": "c05e8fdd950ff44b00e95311711bc449d334e87ca5c82f68b3a1b4971b2ec311",
     "CONTRIBUTING.md": "eaf572eeeb0596bf61bd0f60e799fb2db684f043f8365324793413c1a0c3fe55",
     "docs/pipeline.md": "6af6f4d3d2d196319ab56626d8be9f7c87d407c7fb5c51c824ebb527029d749e",
     "docs/provenance.md": "30a3f651bf36bb70c2e6e4785b3c744dc909ad83f6ef123aaa7f7afd488a0100",
@@ -22,13 +22,24 @@
     "evidence/cross_reference/2026-09-20-dic-codec-source-audit.json": "8c11b940dcd92fec664a703aa8ccd8680b7637a9a819b6d6c0ae93d540e07c8a",
     "examples/evidence-record.json": "9e006ca2a6c2199ba52d62fe9295d74aa6704e2c64d2f0af0928b1b25fae617b",
     "LICENSE": "68d4e9ecad930e7b1c94ac15bcc044f2211139b42fc394ca5d58a3a018c9f594",
-    "README.md": "b74059f7e386c2df15a7a203367b09e8e055bd572035a021187f1a542ec22ba3",
+    "README.md": "87b97ccbf335025ce6fb5d5693300d530752c0573781292d598f50cca7d53c20",
     "SECURITY.md": "57593740d1e5ad7be7206a6cd31bd8504784453d5c736751090a22ee8dcfcffa",
     "tools/check_dic_codec_vectors.py": "aa9f9851a91d0c466f13c888064d1ba8ef3bfe650cc35662b05554200549c659",
     "tools/check_layout.py": "ee44b882efb55b04271fbb4dfab0aeac93291b5a6fc190140aaedadf8c0aef93",
     "tools/check_publication.py": "ceab5a59ad4c4fbef9312a520c3ec6d967ed14cf145f463998169baeb57b56cd",
     "tools/fingerprint.py": "7fc2f5ce9a920897e640fba8a4bdde59b0f3ec1e30ed211a52cf01a511cd59da",
     "docs/2026-09-21-a16-complete-retrospective-and-seal.md": "1bccace566cb77276526fb00a1892352fc1f71c754f284e7dccad565ca6d4397",
-    "evidence/cross_reference/2026-09-21-a16-final-seal.json": "be6a2e7f85745499a7d554f8205de1b2b0593d7bafcf6312946d6633bcabc3d0"
-  }
+    "evidence/cross_reference/2026-09-21-a16-final-seal.json": "be6a2e7f85745499a7d554f8205de1b2b0593d7bafcf6312946d6633bcabc3d0",
+    "docs/2026-09-22-cross-game-research-handoff.md": "2a9bc68d37d4bf7d8e6167548e66a40fe03982a44398a0c46c83ba89e87de1d8",
+    "tools/build_handoff_catalog.py": "59dfa320b761fc63436f13d788ea85d8162fc8c2b451894360e72599c088c6b3",
+    "handoffs/2026-09-22/claims.json": "c4ca263c3ffd42570d15257fce953af56a9e79a23d27a5f8df066904b0870928",
+    "handoffs/2026-09-22/database_catalog.json": "2a958aa7e37f2e78d4676f8514b5d91f83338cde2c1590f2fe81ffff96243451",
+    "handoffs/2026-09-22/inventory_summary.json": "8f19956a613e1bef88f8049bca5810d2f3146c208a7cfd71fe6579970951dd54",
+    "handoffs/2026-09-22/leads.json": "2f7f2a030edccc9b36ae777a64bead6f0fbb3fa10d91464354013aa56785fef3",
+    "handoffs/2026-09-22/README.md": "270887e47d44309b2a240a203c2b558c65e2d21aeb1a6ad7902869c6ccf38908",
+    "handoffs/2026-09-22/sources.json": "876b47d058f9df5101118426d45f221acaadc0e1f3f0c8f36e44bf964bd2ff9e",
+    "handoffs/2026-09-22/verification.json": "c3893f150c506355e1d6b1f190c33fbd646ba2805663f4e1d1a2a98274ec93bb",
+    "handoffs/2026-09-22/MANIFEST.json": "9234a2507fb07e5fe6b08768d197c01026b99d314f960de5657e3052903f0bf7"
+  },
+  "handoff_note": "New 2026-09-22 packet reviewed separately; preexisting checker findings retained."
 }

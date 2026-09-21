@@ -1,0 +1,24 @@
+{
+  "date": "2026-09-22",
+  "status": "PASS_FOR_NEW_HANDOFF_PACKET_ONLY",
+  "file_metadata_count": 10816,
+  "selected_local_files_hashed": 42,
+  "databases_integrity_ok": 16,
+  "database_pre_post_hash_equal": 16,
+  "historical_identity_checks_passed": 6,
+  "zip_selected_reports_read": 7,
+  "source_roms_rehashed_this_turn": false,
+  "public_runtime_reports_replayed_this_turn": false,
+  "raw_research_databases_distributed": false,
+  "source_ids_valid": true,
+  "global_repository_publication_check": "PREEXISTING_FAILURES_PRESERVED_NOT_CLAIMED_PASS",
+  "baseline_commit": "fd87fc5465ba55e94e5044f58adb15b70c20c3af",
+  "baseline_findings": [
+    "gitignore digest differs from old manifest",
+    "five September 18 files absent from old manifest",
+    "two DIC report files trigger broad suspicious-pattern rule"
+  ],
+  "no_source_files_relocated_or_deleted": true,
+  "no_harness_or_emulator_started": true,
+  "evidence_rule": "metadata/hash/report review is distinct from source semantics or runtime proof"
+}

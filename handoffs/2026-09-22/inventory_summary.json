@@ -1,0 +1,17 @@
+{
+  "file_count": 10816,
+  "bytes": 14631270321,
+  "categories": {
+    "source_or_definition_requires_rights_review": 426,
+    "archive_requires_member_review": 128,
+    "document_or_data_not_automatically_public": 6123,
+    "legacy_binary_or_tool_database_restricted": 14,
+    "game_or_disc_resource_restricted": 151,
+    "other_unreviewed": 3957,
+    "research_database_requires_row_review": 17
+  },
+  "scan": "Workspace filesystem metadata only; no recursive inspection of all archive members.",
+  "excluded": "This handoff output, Git internals, dependency directories and links/junctions.",
+  "errors": 0,
+  "semantic_review": "SELECTED_REPORTS_ONLY"
+}

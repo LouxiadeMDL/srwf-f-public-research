@@ -1,0 +1,234 @@
+[
+  {
+    "id": "CL-01",
+    "domain": "PSF/PSFF historical sources",
+    "title": "天空寺正文已追回",
+    "result": "11381 bytes; CP932; original body SHA matches the 2026-09-13 receipt.",
+    "limitations": "PS FF weapon/code examples; not renderer source or universal PS/SS text format.",
+    "source_ids": [
+      "SRC-022",
+      "SRC-023",
+      "SRC-024"
+    ],
+    "evidence_class": "CURRENT_BODY_HASH_AND_ARCHIVE_RECEIPT"
+  },
+  {
+    "id": "CL-02",
+    "domain": "PSF tools",
+    "title": "修改器字段已有成果",
+    "result": "46 read fields: unit 13, pilot 24, weapon 9; 151 historical byte samples; 327 MDB records.",
+    "limitations": "Not a full 327-record ROM mapping; tool read width is not automatically game-consumer semantics.",
+    "source_ids": [
+      "SRC-026"
+    ],
+    "evidence_class": "HISTORICAL_REPORT_REVIEWED_NOT_RERUN"
+  },
+  {
+    "id": "CL-03",
+    "domain": "PSF/PSFF/SSFF definitions",
+    "title": "BNE2 技术库",
+    "result": "1970 configuration lines: PSF 813, PSFF 1042, SSFF 115.",
+    "limitations": "Author definitions, not 1970 verified game fields; conflicting widths and scope retained.",
+    "source_ids": [
+      "SRC-011",
+      "SRC-016"
+    ],
+    "evidence_class": "CURRENT_DB_COUNTS_AND_HISTORICAL_REPORT"
+  },
+  {
+    "id": "CL-04",
+    "domain": "PSFF tools",
+    "title": "低11位读取与地址算式",
+    "result": "Bounded editor disassembly supports low + ((high & 7) << 8); one weapon address sample agrees with the current-image mapping used by the report.",
+    "limitations": "Special third-slot override and six-index address discrepancy remain; not game-runtime mask proof.",
+    "source_ids": [
+      "SRC-016"
+    ],
+    "evidence_class": "HISTORICAL_REPORT_REVIEWED_NOT_RERUN"
+  },
+  {
+    "id": "CL-05",
+    "domain": "PSFF BOSS MOD",
+    "title": "Z/ZZ 两案例",
+    "result": "Recipient records retained; donor-like first fields, independently changed stats and mixed/reordered weapon references.",
+    "limitations": "Not whole-record copying; not proof of new animation/dialogue assets or end-to-end game consumer.",
+    "source_ids": [
+      "SRC-029"
+    ],
+    "evidence_class": "HISTORICAL_REPORT_REVIEWED_NOT_RERUN"
+  },
+  {
+    "id": "CL-06",
+    "domain": "PSF JP/WGF",
+    "title": "已选择字段及文本资源差分",
+    "result": "151 same-offset field samples equal; BMESS0 identical; SLPS and SCEDATA differ.",
+    "limitations": "Bounded sample/file facts; not all objects or all resource semantics.",
+    "source_ids": [
+      "SRC-014"
+    ],
+    "evidence_class": "CURRENT_DB_COUNTS_AND_HISTORICAL_REPORT"
+  },
+  {
+    "id": "CL-07",
+    "domain": "PSFF4/WGF F",
+    "title": "SCEDATA 局部对应窗口",
+    "result": "705784-byte WGF window at target delta +0x1B5370; DLC differs 27316 bytes, 610 differs 28734 bytes.",
+    "limitations": "Byte alignment, not translation percentage, dialogue identity or direct version ancestry.",
+    "source_ids": [
+      "SRC-028"
+    ],
+    "evidence_class": "HISTORICAL_REPORT_REVIEWED_NOT_RERUN"
+  },
+  {
+    "id": "CL-08",
+    "domain": "PSFF4 variants",
+    "title": "BMESS1 小范围差异入口",
+    "result": "3570 differing bytes lie within [0x25264B,0x25353C); these are logical-file offsets.",
+    "limitations": "The range is not yet bound to a named unit or dialogue owner.",
+    "source_ids": [
+      "SRC-028"
+    ],
+    "evidence_class": "HISTORICAL_REPORT_REVIEWED_NOT_RERUN"
+  },
+  {
+    "id": "CL-09",
+    "domain": "PSCB JP/Chinese",
+    "title": "9资源对照与相同块",
+    "result": "9 selected files differ; 13321 unique aligned 256-byte content anchors.",
+    "limitations": "Anchors are not dialogue/function counts; nonaligned movement may be missed.",
+    "source_ids": [
+      "SRC-014"
+    ],
+    "evidence_class": "CURRENT_DB_COUNTS_AND_HISTORICAL_REPORT"
+  },
+  {
+    "id": "CL-10",
+    "domain": "SFC SRW4",
+    "title": "候选token导出",
+    "result": "8 ranges and 217 candidate tokens can be reassembled to original bytes.",
+    "limitations": "Not full Chinese export or universal token-width proof; not PS/SS opcodes.",
+    "source_ids": [
+      "SRC-014"
+    ],
+    "evidence_class": "CURRENT_DB_COUNTS_AND_HISTORICAL_REPORT"
+  },
+  {
+    "id": "CL-11",
+    "domain": "PSF/PSFF/SSF sources",
+    "title": "来源字面映射与冲突",
+    "result": "335 source identities, 12539 literal-map rows, 5 comparisons, 321 difference rows.",
+    "limitations": "Counts are source literals, not verified Unicode; no majority-vote normalization.",
+    "source_ids": [
+      "SRC-033",
+      "SRC-034"
+    ],
+    "evidence_class": "CURRENT_DB_COUNTS_AND_HISTORICAL_REPORT"
+  },
+  {
+    "id": "CL-12",
+    "domain": "Cross-game knowledge",
+    "title": "主题知识库",
+    "result": "5302 source appearances, 332237 text lines, 154726 nonempty workbook cells, 13 topic categories.",
+    "limitations": "Duplicate provenance retained; semantic review PARTIAL; 6 encrypted members and 2 decode failures remain.",
+    "source_ids": [
+      "SRC-037",
+      "SRC-041"
+    ],
+    "evidence_class": "CURRENT_DB_COUNTS_AND_HISTORICAL_REPORT"
+  },
+  {
+    "id": "CL-13",
+    "domain": "PSF/PSCB",
+    "title": "BMESS Closure A",
+    "result": "Shared archive-consumer family established within declared static scope; PSF 384 slots/383 CPE spans, PSCB 399 CPE spans.",
+    "limitations": "No automatic runtime, Unicode, complete graph semantics or renderer closure.",
+    "source_ids": [
+      "SRC-040"
+    ],
+    "evidence_class": "HISTORICAL_REPORT_REVIEWED_NOT_RERUN"
+  },
+  {
+    "id": "CL-14",
+    "domain": "PS4S",
+    "title": "指定资源提取",
+    "result": "SYSTEM.CNF, SLPS_001.96 and DAT/STAYDAT.BIN extracted and independently read back; 57 ISO file entries.",
+    "limitations": "Historical extraction proof, not complete script/engine reverse engineering.",
+    "source_ids": [
+      "SRC-027"
+    ],
+    "evidence_class": "HISTORICAL_REPORT_REVIEWED_NOT_RERUN"
+  },
+  {
+    "id": "CL-15",
+    "domain": "SS F Korean",
+    "title": "新增数据轨的目标目录字段",
+    "result": "SCEDATA/DIC target directory LBA fields point into new third data track; BMESS rearranged near the front.",
+    "limitations": "Target full files were not validated by that historical probe; PS F Korean release not verified.",
+    "source_ids": [
+      "SRC-025"
+    ],
+    "evidence_class": "HISTORICAL_REPORT_REVIEWED_NOT_RERUN"
+  },
+  {
+    "id": "CL-16",
+    "domain": "PS F P-R1..R5",
+    "title": "计划内节点封板",
+    "result": "Closeout archive hash reverified; source/report evidence covers profile-aware grammar, runtime trace, structural BMESS0 repack and stable IDs.",
+    "limitations": "No raw trace replay this turn; P-R4 is not variable-length disc runtime; PS values do not transfer to SS.",
+    "source_ids": [
+      "SRC-001",
+      "SRC-003",
+      "SRC-005",
+      "SRC-006",
+      "SRC-007",
+      "SRC-009",
+      "PUB-P"
+    ],
+    "evidence_class": "CURRENT_SEAL_HASH_AND_HISTORICAL_SCOPE"
+  },
+  {
+    "id": "CL-17",
+    "domain": "SS F RevB",
+    "title": "DIC codec交叉测试",
+    "result": "Published A14 report: external compressor -> strict decoder 52/52; legacy decoder 51/52, one stream 512 bytes short.",
+    "limitations": "Current review of a dated public report, not new codec execution; not BMESS format proof.",
+    "source_ids": [
+      "PUB-DIC"
+    ],
+    "evidence_class": "DATED_PUBLIC_REPORT_REVIEW"
+  },
+  {
+    "id": "CL-18",
+    "domain": "SS F RevB / PSF / WGF",
+    "title": "A16记录桥与工程运行",
+    "result": "Published A16: 5507 exact SS-to-PS rows; WGF reference joined after identity binding; 113 cumulative engineering edits and Episode 1 dual-emulator review.",
+    "limitations": "Raw runtime archives not revalidated this turn; 0/77 semantic rows directly fully encodable with current mappings; no final full-game translation.",
+    "source_ids": [
+      "PUB-A16"
+    ],
+    "evidence_class": "DATED_PUBLIC_REPORT_REVIEW"
+  },
+  {
+    "id": "CL-19",
+    "domain": "PSFF3 candidate",
+    "title": "跨度及启动头保留问题",
+    "result": "IMG extends 2203 sectors beyond CCD/SUB described coverage; five ISO resource extents occupy the extra tail.",
+    "limitations": "Candidate version/lineage/runtime viability unresolved; no header repair, truncation or structure diff initiated.",
+    "source_ids": [
+      "SRC-035"
+    ],
+    "evidence_class": "HISTORICAL_REPORT_REVIEWED_NOT_RERUN"
+  },
+  {
+    "id": "CL-20",
+    "domain": "Coordination",
+    "title": "R2→XREA→C线交接已完成",
+    "result": "Dated delivery receipt accepts bounded bytes/static findings with reservations; handoff DB identity matches.",
+    "limitations": "Old 18 UNKNOWN and alias questions not cleared by this handoff; do not override later branch-specific results.",
+    "source_ids": [
+      "SRC-012",
+      "SRC-013"
+    ],
+    "evidence_class": "CURRENT_DB_IDENTITY_AND_DATED_RECEIPT"
+  }
+]

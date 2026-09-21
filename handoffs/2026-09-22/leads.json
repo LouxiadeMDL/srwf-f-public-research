@@ -1,0 +1,131 @@
+[
+  {
+    "id": "LEAD-01",
+    "priority": "P0",
+    "domain": "All",
+    "status": "REQUIRED_SCOPE_GUARD",
+    "title": "身份与地址域",
+    "next_check": "Require platform/game/build hash/resource/coordinate domain for every join; do not infer title from a mixed archive parent.",
+    "source_ids": [
+      "SRC-011",
+      "SRC-026"
+    ],
+    "last_search_note": "Historical searches dated 2026-09-12/13 unless the cited public report is later; not re-searched in this handoff."
+  },
+  {
+    "id": "LEAD-02",
+    "priority": "P1",
+    "domain": "PSFF4/WGF F",
+    "status": "STRUCTURAL_OWNER_UNKNOWN",
+    "title": "场景差分窗口",
+    "next_check": "Inspect record owner/index/consumer around SCEDATA delta +0x1B5370 and BMESS1 [0x25264B,0x25353C); do not call these known dialogue edits.",
+    "source_ids": [
+      "SRC-028"
+    ],
+    "last_search_note": "Historical searches dated 2026-09-12/13 unless the cited public report is later; not re-searched in this handoff."
+  },
+  {
+    "id": "LEAD-03",
+    "priority": "P1",
+    "domain": "PSFF",
+    "status": "CONSUMER_CHAIN_PARTIAL",
+    "title": "武器到动画和台词",
+    "next_check": "Join editor/config definitions to current SLPS_019.24 table base/stride and actual resource consumer; preserve width conflicts.",
+    "source_ids": [
+      "SRC-016",
+      "SRC-026",
+      "SRC-029"
+    ],
+    "last_search_note": "Historical searches dated 2026-09-12/13 unless the cited public report is later; not re-searched in this handoff."
+  },
+  {
+    "id": "LEAD-04",
+    "priority": "P1",
+    "domain": "SS F RevB",
+    "status": "NEXT_NODE_FROM_A16_NOT_STARTED_HERE",
+    "title": "字体bank与容量",
+    "next_check": "Follow the A16 sealed font ownership/capacity question read-only; do not equate unreleased mappings with missing glyphs.",
+    "source_ids": [
+      "PUB-A16"
+    ],
+    "last_search_note": "Historical searches dated 2026-09-12/13 unless the cited public report is later; not re-searched in this handoff."
+  },
+  {
+    "id": "LEAD-05",
+    "priority": "P2",
+    "domain": "PSFF historical",
+    "status": "BODY_RECOVERED_RELATION_PARTIAL",
+    "title": "katami / 天空寺",
+    "next_check": "Compare recovered code grid with up0298/up0163 per source; do not assume common provenance or publish unknown-license full tables.",
+    "source_ids": [
+      "SRC-022",
+      "SRC-023",
+      "SRC-033"
+    ],
+    "last_search_note": "Historical searches dated 2026-09-12/13 unless the cited public report is later; not re-searched in this handoff."
+  },
+  {
+    "id": "LEAD-06",
+    "priority": "P2",
+    "domain": "English F",
+    "status": "TOOL_ARTIFACTS_NOT_ACQUIRED_IN_SEARCH_SCOPE",
+    "title": "英文导出器与大表",
+    "next_check": "Find abridgewater de/recompressor, Arc Impulse dumper and author spreadsheet; verify identity before equating with dic-comp.c/dic-dec.c.",
+    "source_ids": [
+      "SRC-033",
+      "PUB-DIC"
+    ],
+    "last_search_note": "Historical searches dated 2026-09-12/13 unless the cited public report is later; not re-searched in this handoff."
+  },
+  {
+    "id": "LEAD-07",
+    "priority": "P2",
+    "domain": "SS F Korean / PS F / PSCB",
+    "status": "DISTINCT_PROJECTS",
+    "title": "韩文线索",
+    "next_check": "Keep Korean SS target extents separate from YZZL and PSF; match CB source pins/file preimages, not entire-track compatibility.",
+    "source_ids": [
+      "SRC-025",
+      "SRC-033"
+    ],
+    "last_search_note": "Historical searches dated 2026-09-12/13 unless the cited public report is later; not re-searched in this handoff."
+  },
+  {
+    "id": "LEAD-08",
+    "priority": "HOLD",
+    "domain": "PSFF3 candidate",
+    "status": "IDENTITY_AND_COVERAGE_UNRESOLVED",
+    "title": "3.x候选尾部",
+    "next_check": "Resolve IMG/CCD/SUB span and nonstandard header without repair; author/version naming remains provisional.",
+    "source_ids": [
+      "SRC-035"
+    ],
+    "last_search_note": "Historical searches dated 2026-09-12/13 unless the cited public report is later; not re-searched in this handoff."
+  },
+  {
+    "id": "LEAD-09",
+    "priority": "P2",
+    "domain": "SFC4/PS4S",
+    "status": "CROSS_ENGINE_TRANSFER_UNPROVEN",
+    "title": "事件解码参考",
+    "next_check": "Use existing opcode descriptions as behavioral hypotheses; independently establish PS4S/F resource owners and runtime semantics.",
+    "source_ids": [
+      "SRC-011",
+      "SRC-027",
+      "SRC-037"
+    ],
+    "last_search_note": "Historical searches dated 2026-09-12/13 unless the cited public report is later; not re-searched in this handoff."
+  },
+  {
+    "id": "LEAD-10",
+    "priority": "P0",
+    "domain": "Publication",
+    "status": "BASELINE_WARNINGS_PRESERVED",
+    "title": "旧发布清单告警",
+    "next_check": "Maintain this packet's separate allowlist; old manifest omissions and pattern alerts require a separate reviewed amendment, not silent repair.",
+    "source_ids": [
+      "PUB-POLICY"
+    ],
+    "last_search_note": "Historical searches dated 2026-09-12/13 unless the cited public report is later; not re-searched in this handoff."
+  }
+]

@@ -23,3 +23,18 @@
 /examples/*
 !/examples/evidence-record.json
 !/docs/2026-09-13-baseline-and-patch-experiment.md
+# Reviewed 2026-09-22 metadata-only handoff; retain default deny.
+!/docs/2026-09-22-cross-game-research-handoff.md
+!/tools/build_handoff_catalog.py
+!/handoffs/
+/handoffs/*
+!/handoffs/2026-09-22/
+/handoffs/2026-09-22/*
+!/handoffs/2026-09-22/README.md
+!/handoffs/2026-09-22/claims.json
+!/handoffs/2026-09-22/leads.json
+!/handoffs/2026-09-22/sources.json
+!/handoffs/2026-09-22/database_catalog.json
+!/handoffs/2026-09-22/inventory_summary.json
+!/handoffs/2026-09-22/verification.json
+!/handoffs/2026-09-22/MANIFEST.json

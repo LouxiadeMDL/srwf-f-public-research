@@ -1,0 +1,328 @@
+[
+  {
+    "id": "SRC-001",
+    "name": "P-R1_PSF_TOKEN_CONTROL_SEMANTIC_REFERENCE_v1.0_FINAL.zip",
+    "size": 30326,
+    "sha256": "3f3777a3367c68cc7a880c44c6ff5442e02dfb811fb073d26910a23b1a1a5262",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-002",
+    "name": "P-R1_PSF_TOKEN_CONTROL_SEMANTIC_REFERENCE_v1.0_PHASE1_RESULTS.zip",
+    "size": 40107,
+    "sha256": "6aed45cec47ee25004a0c15d09941fd34eda5208a974ed9cb0dd8f324861ba70",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-003",
+    "name": "P-R2_PSF_SSF_CONTROL_HOMOLOG_MATRIX_v0.1_FINAL.zip",
+    "size": 28894,
+    "sha256": "a1b73a0b4438bba1c83c6301b92e2466250ae40768101501e3729925ee62b837",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-004",
+    "name": "P-R3_PSF_RUNTIME_TOKEN_CONTROL_TRACER_v0.1_PRE_RUNTIME_CAPTURE.zip",
+    "size": 33153,
+    "sha256": "7a236cb11bd4d0ffcdd6653c755a04db9b971160ba2b24e9d93df8173a0b5a44",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-005",
+    "name": "P-R4_PSF_VARIABLE_LENGTH_REPACK_RESEARCH_v0.1_FINAL.zip",
+    "size": 39294,
+    "sha256": "f8781b46c017518508b271548ef5eff12b0dde87cafc006576772f5ee002f3d8",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-006",
+    "name": "P-R5.REPORT.md",
+    "size": 1755,
+    "sha256": "6c6a3e4b021885ce11899fe852a5f047a96128be13a2c737487d40a6353b230e",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-007",
+    "name": "P-R5_PSF_RUNTIME_RECORD_CONSUMER_STABLE_ID_v0.1_FINAL.zip",
+    "size": 24317,
+    "sha256": "fa5b7e1ab318d83288b2e84367c78016bbcb670c7683984241e49a6adf7371e6",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-008",
+    "name": "P_BMESS_CHRIS_RUNTIME_V3_20260919.zip",
+    "size": 12844,
+    "sha256": "61a6fcf39658b55372a9cb3ff04c2cd0d45f39fabd9d3734c91e0f9ff9870c23",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-009",
+    "name": "P_REFERENCE_PROGRAM_R1_R5_CLOSEOUT_20260919_FINAL.zip",
+    "size": 3048681,
+    "sha256": "24ab06eb4ca69d9ee68052bf69717ee7fbe5e2e9c2be24a1162ac76a1627a77b",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-010",
+    "name": "P_SCEDATA_GRACE_RUNTIME_V2_20260919.zip",
+    "size": 12163,
+    "sha256": "387fd2f44bf10693e27085f645ddb103ef194cdafb5b4148d50da0a4ca772ef1",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-011",
+    "name": "REPORT.md",
+    "size": 6384,
+    "sha256": "a51714348a5bdfc9f56efb6b9a9694b183ae0a618b5dd08d732f696ed7c954e3",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-012",
+    "name": "DELIVERY_STATUS.json",
+    "size": 2042,
+    "sha256": "496b3672f1e871316ee3800adbab8eec41b2ee8f540be6193abaf28cb7aa556c",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-013",
+    "name": "FINAL_HANDOFF.json",
+    "size": 2810,
+    "sha256": "2cdf80a75edccefb2870f82568cd2ea51b4acff384d6b7c968a925f996ed4717",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-014",
+    "name": "REPORT.md",
+    "size": 8778,
+    "sha256": "07220612a74ea3cf06dbf301842728e47a890769a415d824d31ca646d646ef2b",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-015",
+    "name": "REPORT.md",
+    "size": 15539,
+    "sha256": "31863528f86b61f525c9299d7983ef77612bc8504d88cebda8acd37d6dddb672",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-016",
+    "name": "REPORT.md",
+    "size": 6981,
+    "sha256": "64e192d8c4255b832b74a0f7a67ff97a0fd480b078d55715604979ce876f80af",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-017",
+    "name": "REPORT.md",
+    "size": 1860,
+    "sha256": "800e2c969c4e2e4a07f5f4c149cfc67de9a23cb74e9e22f7fbbc396f1ff97481",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-018",
+    "name": "REPORT.md",
+    "size": 23393,
+    "sha256": "9e50cc18819219024e66317e3b8eebd8a59ea8f223b2c702bbb586a5bdb09711",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-019",
+    "name": "REPORT.md",
+    "size": 14563,
+    "sha256": "75c7c5ecae3dcb4ba1f46cb78bd497b9517cdb07a3d292dfef64f08246142877",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-020",
+    "name": "REPORT.md",
+    "size": 10487,
+    "sha256": "0f2f27b49209402513e1e658c3fd3136c5170d6259d1b37c3d6b601c4b0f03c7",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-021",
+    "name": "REPORT.md",
+    "size": 11166,
+    "sha256": "e99fa1291b01f9b63d4dbbac975c72915154903c891c8ea44e364a2102b750a7",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-022",
+    "name": "REPORT.md",
+    "size": 3633,
+    "sha256": "aef00ab575beabf74cc33245f566f5125ab260f937ba2411711bda0c00feacc9",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-023",
+    "name": "wayback_srwftenkuuji.body",
+    "size": 11381,
+    "sha256": "d5d6194e7d9b70c77f10e85872979b77ae71bf5c58822b9fc2ae76245834b2df",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-024",
+    "name": "wayback_srwftenkuuji.json",
+    "size": 447,
+    "sha256": "74cd428d1593dcf0e3cda6ffc0deab29ed494a4088dd70a569e1cc1072b12710",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-025",
+    "name": "REPORT.md",
+    "size": 10203,
+    "sha256": "75f0c63657295b099c6c85e917583e66e89a4da5eeec532948ee56d29fa54038",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-026",
+    "name": "REPORT.md",
+    "size": 15682,
+    "sha256": "cc07e0bfb6a12371d1659b6d70b7c02858a6d5aa263376a6c44d01b31ad79b37",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-027",
+    "name": "README.md",
+    "size": 1651,
+    "sha256": "1567c1e1f5a558b68685945c1e258add995b985dec584518d9019a17c32426c8",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-028",
+    "name": "REPORT.md",
+    "size": 13419,
+    "sha256": "615be258c4fa0964102109549d2ed5bd71d74fc2dad315353560d07a8f2935d4",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-029",
+    "name": "REPORT.md",
+    "size": 8425,
+    "sha256": "362fe223c83ab51f1861f2b812eb3bd2093cca253104d5a9d523325309e673c4",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-030",
+    "name": "REPORT.md",
+    "size": 8401,
+    "sha256": "8fce2667daad46287372173b13560a6a7b96e2f9469c92cc31df016f243de97e",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-031",
+    "name": "REPORT.md",
+    "size": 5258,
+    "sha256": "07244c5d3b1e04ec9ec8ada37ad432a4e2e35ec8dae1dbf6c967d21be7c4b083",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-032",
+    "name": "README.md",
+    "size": 1194,
+    "sha256": "65ff4a83e252ba65ae3ecb704806e03d0d87acc7bc319bda8539a842b08e6a69",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-033",
+    "name": "REPORT.md",
+    "size": 10438,
+    "sha256": "0def9064ce1df8f8ae675329cf429d174df0c5d5e01df16d60bb5d44589f26e7",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-034",
+    "name": "RECEIPT.json",
+    "size": 1677,
+    "sha256": "397286c6d18859b2b86a1f3a7032e138ac9241f3f517e041c97a7d06941bdf41",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-035",
+    "name": "REPORT.md",
+    "size": 7835,
+    "sha256": "b77e4fd75ed7bb2cee58abfa56935f0fa493fcfe3f6470c60853c74592a41b16",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-036",
+    "name": "REPORT.md",
+    "size": 1921,
+    "sha256": "c983710534fe00498a3178965f264d10663443f7411d04ab66eb8fb6a22aedcb",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-037",
+    "name": "T1_SUBMISSION_SUMMARY.md",
+    "size": 4100,
+    "sha256": "3cda85386f80a5e618671092dfc537de65cf1f6c0dd8553cf928062df14b4f4b",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-038",
+    "name": "REPORT.md",
+    "size": 9762,
+    "sha256": "d82310ac68245119e495c04be75d7bc89561059c6c3eb6aacee6e201d0120e5c",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-039",
+    "name": "REPORT.md",
+    "size": 4651,
+    "sha256": "edcf17d63075382746e0df643bed33373e2ef44abc35ff293f2188678b90d27e",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-040",
+    "name": "CLOSURE_A_BMESS_FINAL_REPORT.md",
+    "size": 5302,
+    "sha256": "653d55a5081e3b971a0391052d51d5e1f1abd0dc2576d8e130ab47e78468f788",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-041",
+    "name": "FINAL_SUMMARY.json",
+    "size": 4518,
+    "sha256": "fb078ad313ba6858d290d8f9d665ef79f3d3b4946daa389783dd0684b71fddca",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "SRC-042",
+    "name": "README.md",
+    "size": 4548,
+    "sha256": "508aa2ec148d79a948962ac5cc8a1ba32dbb944fa3f58b43ca0ef84b0b844e90",
+    "read_level": "FULL_FILE_HASHED_NOT_FULL_SEMANTIC_REVIEW"
+  },
+  {
+    "id": "PUB-P",
+    "name": "2026-09-19-p-reference-r1-r5-summary-new-clues.md",
+    "size": 9176,
+    "sha256": "fd696bcd874884474e147550b4b89d7dbb70146c9093c31343e3eaab7655adef",
+    "read_level": "DATED_PUBLIC_REPORT_REVIEW",
+    "url": "https://github.com/LouxiadeMDL/srwf-f-public-research/blob/fd87fc5465ba55e94e5044f58adb15b70c20c3af/docs/2026-09-19-p-reference-r1-r5-summary-new-clues.md"
+  },
+  {
+    "id": "PUB-DIC",
+    "name": "2026-09-20-dic-codec-a14-crosscheck.md",
+    "size": 4310,
+    "sha256": "8dab6029987acbceadb400db5465d238fbedea35058d973db644c7141047f29b",
+    "read_level": "DATED_PUBLIC_REPORT_REVIEW",
+    "url": "https://github.com/LouxiadeMDL/srwf-f-public-research/blob/fd87fc5465ba55e94e5044f58adb15b70c20c3af/docs/2026-09-20-dic-codec-a14-crosscheck.md"
+  },
+  {
+    "id": "PUB-A16",
+    "name": "2026-09-21-a16-complete-retrospective-and-seal.md",
+    "size": 12681,
+    "sha256": "1bccace566cb77276526fb00a1892352fc1f71c754f284e7dccad565ca6d4397",
+    "read_level": "DATED_PUBLIC_REPORT_REVIEW",
+    "url": "https://github.com/LouxiadeMDL/srwf-f-public-research/blob/fd87fc5465ba55e94e5044f58adb15b70c20c3af/docs/2026-09-21-a16-complete-retrospective-and-seal.md"
+  },
+  {
+    "id": "PUB-POLICY",
+    "name": "publication-policy.md",
+    "size": 1579,
+    "sha256": "5d2d87f4d2f11ab14fcfdaa562ab13de78ef10ca387805f94cc39001ac227538",
+    "read_level": "DATED_PUBLIC_REPORT_REVIEW",
+    "url": "https://github.com/LouxiadeMDL/srwf-f-public-research/blob/fd87fc5465ba55e94e5044f58adb15b70c20c3af/docs/publication-policy.md"
+  }
+]
