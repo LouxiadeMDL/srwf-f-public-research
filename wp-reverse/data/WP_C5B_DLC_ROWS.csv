@@ -1,0 +1,8 @@
+matrix_old_id,guide_item,guide_support,current_target_direct_grant,new_class,status,notes
+10,Sazabi,YES,NOT_FOUND,EXTERNAL_DLC_INTEGRATION_POINT,EXTERNAL_PROTOCOL_HOLD,guide six-machine group
+11,Tallgeese III,YES,NOT_FOUND,EXTERNAL_DLC_INTEGRATION_POINT,EXTERNAL_PROTOCOL_HOLD,guide six-machine group
+12,魔霸,YES,NOT_FOUND,EXTERNAL_DLC_INTEGRATION_POINT,EXTERNAL_PROTOCOL_HOLD,guide six-machine group
+13,Master Asia / Master Gundam,YES,NOT_FOUND,EXTERNAL_DLC_INTEGRATION_POINT,EXTERNAL_PROTOCOL_HOLD,guide six-machine group
+14,Haman / Qubeley,YES,NOT_FOUND,EXTERNAL_DLC_INTEGRATION_POINT,EXTERNAL_PROTOCOL_HOLD,guide six-machine group
+15,Mekibos / 灰羚羊II,YES,NOT_FOUND,EXTERNAL_DLC_INTEGRATION_POINT,EXTERNAL_PROTOCOL_HOLD,guide six-machine group
+16,Shu / 真古兰森,NO_IN_CITED_DLC_LIST,NOT_ESTABLISHED,PROVENANCE_MISMATCH_REMAND,RESEARCH_SEPARATELY,old matrix grouped this with DLC without cited guide support
