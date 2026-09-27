@@ -1,0 +1,23 @@
+{
+  "project": "SRWF_F_WP_REVERSE",
+  "phase": "WP-C5",
+  "source_matrix": "historical 71-item F feature matrix checkpoint",
+  "items_total": 71,
+  "status_counts": {"BOUND": 34, "PARTIAL": 4, "OPEN": 32, "HOLD": 1},
+  "unresolved_total": 37,
+  "unresolved_buckets": {
+    "C5A_EVENT_FLAG_BINDING": 14,
+    "C5B_EXTERNAL_DLC_INTEGRATION": 6,
+    "C5C_REWARD_DATA_EFFECT": 6,
+    "C5D_OPTIONAL_STAGE_BINDING": 2,
+    "C5E_PARTIAL_CHAIN": 6,
+    "C5E_GUIDE_CONFLICT_EFFECT_OPEN": 1,
+    "C5F_NAME_BINDING_HOLD": 1,
+    "C5G_PROVENANCE_REVIEW": 1
+  },
+  "wp_c5b_result": {
+    "six_dlc_rows": "EXTERNAL_DLC_INTEGRATION_POINT / EXTERNAL_PROTOCOL_HOLD",
+    "shu_granzon": "PROVENANCE_MISMATCH_REMAND",
+    "current_target_direct_six_grant_found": false
+  }
+}
