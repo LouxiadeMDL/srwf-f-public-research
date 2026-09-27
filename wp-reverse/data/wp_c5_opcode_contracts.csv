@@ -1,0 +1,10 @@
+opcode,handler,safe_semantic,evidence_class
+C0/0F,0x06021338,"Count selected actor/entity instances inside inclusive map rectangle",TARGET_NATIVE
+C1/00,0x06025DB8,"Create/add runtime pilot in first free pilot slot",TARGET_NATIVE
+C1/02,prior_closed,"Remove runtime pilot",TARGET_NATIVE
+C1/04,0x060260B0,"Bind existing runtime pilot to existing runtime unit definition",TARGET_NATIVE
+C1/05,0x06026130,"Detach pilot from runtime unit while retaining pilot record",TARGET_NATIVE
+C2/00,0x060287A4,"Remove/deactivate runtime unit by definition selector",TARGET_NATIVE
+C2/04,0x06028BC8,"Create/add runtime unit by definition selector",TARGET_NATIVE
+C2/0E,0x06029194,"Increment inventory counter; index0x0E Fatima by cross-data binding",TARGET_NATIVE+CROSS_DATA
+C2/0F,0x060291EC,"Replace runtime unit definition and rebuild derived state",TARGET_NATIVE
