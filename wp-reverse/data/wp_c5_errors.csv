@@ -1,0 +1,3 @@
+error_id,issue,correction,status
+WP-C-ERR-001,"Historical matrix merged Shuu/Granzon into the stage-6 machine-DLC group and treated conditional DLC rows as baseline unresolved features","Official guide lists six conditional machine-DLC groups and places Shuu in later Masoukishin story; six rows become optional-variant references and Shuu/Granzon is removed from baseline DLC canonical",CLOSED
+WP-C-ERR-002,"Historical matrix simplified Gundam-R conditions into normal-vs-hard alternatives","TARGET scene18 producer requires the observed bound path including AB13 clear + AB1B set + selector0x000A at exact X2/Y4 before E9; E9 consumer is one transform+Fatima+200000 block",CLOSED_FOR_BOUND_PATH
