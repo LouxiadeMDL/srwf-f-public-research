@@ -26,7 +26,16 @@ Reverse WP as a modification system:
 - `WP-C2`: root0 semantic closure — pass with policy/runtime holds
 - `WP-C3`: menu/UI number-domain closure — pass with business/lifecycle holds
 - `WP-C4`: name editor/input/serialization — pass with cancel/save-load/second-editor holds
-- `WP-C5`: scenario + guide matrix closure — **active**
+- `WP-C5`: scenario + guide matrix closure — **active; batch 1 closed**
+
+WP-C5 batch 1 adds:
+- native roster primitives for pilot/unit add/remove/bind/detach;
+- native `C0/0F` coordinate-range query;
+- scene18 exact-position transform + Fatima + 200000 chain;
+- Haman Fatima drop binding;
+- delayed Fatima consumer cleanup;
+- optional machine-DLC separation from the baseline target;
+- two new WP-C correction entries.
 
 ## Start here
 
@@ -35,10 +44,11 @@ Reverse WP as a modification system:
 3. `phases/WP-B_VALIDATED_BASELINE.md`
 4. `phases/WP-C_START_CONTRACT.md`
 5. `phases/WP-C0_CONSOLIDATION_REPORT.md`
-6. `data/reference_dataset_registry.csv`
-7. `data/wp_b_validated_claims.csv`
-8. `data/wp_c_phase_map.csv`
-9. `WP_C_STATE.json`
+6. `phases/WP-C5_SCENARIO_GUIDE_MATRIX.md`
+7. `data/wp_c5_opcode_contracts.csv`
+8. `data/wp_c5_status_delta.csv`
+9. `data/wp_c5_errors.csv`
+10. `WP_C_STATE.json`
 
 ## Evidence rule
 
