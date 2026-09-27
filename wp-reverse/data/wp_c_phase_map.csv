@@ -1,0 +1,7 @@
+phase,status,scope,remaining_hold
+WP-C0,COMPLETE,evidence consolidation and authority model,-
+WP-C1,PASS_WITH_SAVE_COLD_BOOT_RESERVATIONS,AB5C/private bank/storage/lifecycle,disk save-load; cold boot; migration; indirect writers
+WP-C2,PASS_WITH_POLICY_AND_RUNTIME_HOLDS,root0 179 runs / 610 bytes mechanism classification,runtime safety; production restore/port policy
+WP-C3,PASS_FOR_NUMBER_DOMAIN_SEPARATION_WITH_BUSINESS_LIFECYCLE_HOLDS,menu/UI namespace separation,full UI lifecycle and some business/action names
+WP-C4,PASS_WITH_CANCEL_SAVELOAD_AND_SECOND_EDITOR_REACHABILITY_HOLDS,name editor/input/serialization,cancel/save-load/second-editor reachability
+WP-C5,ACTIVE,scenario + guide matrix closure,bind guide candidates to target-native script/handler/effect
