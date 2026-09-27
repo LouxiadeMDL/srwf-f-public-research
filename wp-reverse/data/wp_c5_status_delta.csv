@@ -1,0 +1,13 @@
+matrix_id,wp_c5_status,wp_c5_audit,note
+10,OPTIONAL_VARIANT_REFERENCE,REFERENCE_ONLY,"Conditional machine-DLC variant; not an unresolved baseline TARGET function"
+11,OPTIONAL_VARIANT_REFERENCE,REFERENCE_ONLY,"Conditional machine-DLC variant; not an unresolved baseline TARGET function"
+12,OPTIONAL_VARIANT_REFERENCE,REFERENCE_ONLY,"Conditional machine-DLC variant; not an unresolved baseline TARGET function"
+13,OPTIONAL_VARIANT_REFERENCE,REFERENCE_ONLY,"Conditional machine-DLC variant; not an unresolved baseline TARGET function"
+14,OPTIONAL_VARIANT_REFERENCE,REFERENCE_ONLY,"Conditional machine-DLC variant; not an unresolved baseline TARGET function"
+15,OPTIONAL_VARIANT_REFERENCE,REFERENCE_ONLY,"Conditional machine-DLC variant; not an unresolved baseline TARGET function"
+16,REFERENCE_CONFLICT,REMOVE_FROM_BASELINE_CANONICAL,"Shuu/Granzon was merged into the DLC group; source places Shuu under later Masoukishin story"
+21,PARTIAL,DROP_TABLE_BOUND_ITEM_UNRESOLVED,"Zeub uses weighted drop selectors 0x09/0x0A/0x1E; exact Fatima table mapping unresolved"
+27,BOUND,DELAYED_FATIMA_CONSUMER_BOUND,"BE consumer -> C2/0E index0x0E -> clear BE"
+49,BOUND_WITH_NAME_CONFLICT,POSITION_PLOT_TRANSFORM_REWARD_CHAIN_BOUND,"Exact position chain -> unit0001->0009 + Fatima +200000 + flag016F; unit business name conflict preserved"
+50,BOUND,POSITION_FATIMA_REWARD_CHAIN_BOUND,"C0/0F selector0x000A exact (2,4) -> E9 -> Fatima inventory +1"
+66,BOUND,FATIMA_DROP_SELECTOR_BOUND,"scene30/67 Haman/Qubeley records use drop selector0x0D"
