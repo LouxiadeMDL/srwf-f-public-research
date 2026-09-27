@@ -1,0 +1,29 @@
+{
+  "project": "SRWF_F_WP_REVERSE",
+  "phase": "WP-C5B",
+  "status": "PASS_FOR_CURRENT_TARGET_NEGATIVE_BINDING_WITH_EXTERNAL_DLC_PROTOCOL_HOLD",
+  "guide": {
+    "url": "https://kxb4u.com/yzzl/viewthread.php?action=printable&tid=115347",
+    "front_half_dlc_count": 6,
+    "items": ["Sazabi", "Tallgeese III", "灰羚羊II", "Haman", "Master Asia", "魔霸"],
+    "specific_support_method": "external/author-dependent according to guide",
+    "shu_granzon_in_front_half_list": false
+  },
+  "target": {
+    "scene6_title": "エヴァンゲリオン、始動",
+    "scene6_sha256": "ebc58649d929e6662549466fe30b80a878fdd1560280dcede8464ccb29432ead",
+    "scene6_stage_clear": "0x16B7",
+    "direct_six_dlc_grant_found": false,
+    "adjacent_scene_checks": {
+      "scene7": "no reachable C1/00,C1/06,C2/04,C2/05 grant sequence",
+      "scene57": "no reachable create sequence",
+      "scene75": "unit0002/0003 rebuild only",
+      "scene1": "no reachable six-unit create sequence"
+    },
+    "route_1_41_44_42_43_45_1_six_unit_grant_found": false
+  },
+  "matrix_reclassification": {
+    "six_rows": "EXTERNAL_DLC_INTEGRATION_POINT / EXTERNAL_PROTOCOL_HOLD",
+    "shu_granzon": "PROVENANCE_MISMATCH_REMAND"
+  }
+}
