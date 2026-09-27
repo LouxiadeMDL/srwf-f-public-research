@@ -12,7 +12,25 @@
     "WP-C4_NAME_EDITOR_INPUT"
   ],
   "active": "WP-C5_SCENARIO_GUIDE_MATRIX_CLOSURE",
-  "next_primary_subject": "Bind F guide/event candidates to SCEDATA/TSR/BMESS -> opcode/flag/selector -> native handler -> business effect",
+  "wp_c5_batch": 1,
+  "wp_c5_working_counts": {
+    "BOUND": 37,
+    "BOUND_WITH_NAME_CONFLICT": 1,
+    "PARTIAL": 5,
+    "OPEN": 20,
+    "HOLD": 1,
+    "OPTIONAL_VARIANT_REFERENCE": 6,
+    "REFERENCE_CONFLICT": 1
+  },
+  "wp_c5_new_native_contracts": [
+    "C0/0F coordinate rectangle query",
+    "C1/00 add runtime pilot",
+    "C1/04 bind pilot to unit",
+    "C1/05 detach pilot from unit",
+    "C2/00 remove runtime unit",
+    "C2/04 add runtime unit"
+  ],
+  "next_primary_subject": "Resolve weighted drop tables where possible; then bind remaining recruitment/co-pilot consumers using C1 roster primitives",
   "canonical_excludes": ["FF","PSFF","WPFF"],
   "rules": [
     "no unknown EXE",
