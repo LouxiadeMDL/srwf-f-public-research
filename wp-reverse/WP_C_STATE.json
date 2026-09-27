@@ -1,0 +1,24 @@
+{
+  "schema": "SRWF_F_WP_REVERSE_STATE_1",
+  "project": "SRWF_F_WP_REVERSE",
+  "canonical_target": "Saturn F WP/YZZL",
+  "current_phase": "WP-C",
+  "completed": [
+    "WP-B_VALIDATED_LEGACY_BASELINE",
+    "WP-C0_EVIDENCE_CONSOLIDATION"
+  ],
+  "active": "WP-C1_STATE_SAVE_PRIVATE_BANK_CLOSURE",
+  "next_primary_subject": "AB5C full producer/consumer/snapshot/save-lifecycle",
+  "canonical_excludes": [
+    "FF",
+    "PSFF",
+    "WPFF"
+  ],
+  "rules": [
+    "no unknown EXE",
+    "no original ROM/BIN modification",
+    "no guide-only promotion",
+    "no cross-platform raw-offset inheritance"
+  ],
+  "updated": "2026-09-27"
+}

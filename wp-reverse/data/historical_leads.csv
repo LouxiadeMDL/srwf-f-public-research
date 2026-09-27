@@ -1,0 +1,4 @@
+legacy_id,priority,domain,status,title,next_check
+LEAD-01,P0,All,REQUIRED_SCOPE_GUARD,身份与地址域,Require platform/game/build hash/resource/coordinate domain for every join.
+LEAD-03,P1,PSFF,CONSUMER_CHAIN_PARTIAL,武器到动画和台词,Use editor/config only as cross-reference; independently bind F target consumer.
+LEAD-09,P2,SFC4/PS4S,CROSS_ENGINE_TRANSFER_UNPROVEN,事件解码参考,Use opcode descriptions as hypotheses; independently bind Saturn F owners/runtime semantics.

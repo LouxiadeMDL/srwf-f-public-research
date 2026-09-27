@@ -1,0 +1,5 @@
+error_id,class,issue,old,new,phase
+B-ERR-001,B-ERR-C,SCEDATA45 LEVEL_GATE_BOUND 丢失 C0/10 lookup-failure 语义,WP_F_FUNCTION_MATRIX v4 将四个门槛压缩为 LEVEL_GATE_BOUND。,阈值、ID、F4目标与成功路径副作用均VALID；完整条件合同降级为 success-path bound，lookup failure path OPEN。,WP-B
+B-ERR-002,B-ERR-C,SCEDATA18 凯欧20+入口语义缺少 lookup-success 前提,v4写作 C0/10 0x0099 >19 -> 艾尔盖姆5段效果链。,仅在 lookup成功时可读作 pilot byte2>19；lookup失败保留旧accumulator，F4仍可能通过。,WP-B
+B-ERR-003,B-ERR-C,SCEDATA30/67 杰克斯30+入口语义缺少 lookup-success 前提,v4写作 C0/10 0x00CD >29 -> 51/02选择 -> 一支AB1A。,30级数字和选择链正确，但只有 lookup成功路径可直接绑定；失败时旧accumulator可被F4继续比较。,WP-B
+B-ERR-004,B-ERR-G,v4 摘要顶&�� W高达剧情1 错挂到 CONDITION_COST_EFFECT_BOUND,摘要区状态行把 W高达剧情1 置于 CONDITION_COST_EFFECT_BOUND。,详细矩阵实际状态为 LEVEL_CHOICE_PARTIAL_BOUND；v5应统一到同一状态命名，并再附lookup-failure边界。,WP-B

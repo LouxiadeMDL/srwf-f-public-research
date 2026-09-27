@@ -1,0 +1,16 @@
+dataset_id,dataset,role,size_or_count,evidence_class,use_rule
+DS-001,F_FF_TECH_v0.1.sqlite/guide_events,Guide/event reference,227,GUIDE,Business/event candidate only; raw guide text not republished here
+DS-002,F_FF_TECH_v0.1.sqlite/evidence,Mixed technical evidence,542,HISTORICAL,Requires provenance/evidence-level filtering
+DS-003,F_FF_TECH_v0.1.sqlite/config_lines,BNE2/config reference,1970,BNE2_DEFINITION,PSF813/PSFF1042/SSFF115; FF excluded from F canonical
+DS-004,CROSS_GAME_TO_T1.sqlite/dialogue_examples,Dialogue/example index,239,EXTERNAL_DIALOGUE,Candidate alignment only
+DS-005,CROSS_GAME_TO_T1.sqlite/config_fields,Config field index,3776,STATIC_EDITOR_CODE,Cross-data schema support only
+DS-006,CROSS_GAME_TO_T1.sqlite/code_maps,Cross-game code maps,8469,CROSS_PLATFORM_BINARY,No direct Saturn inheritance
+DS-007,CROSS_GAME_TO_T1.sqlite/reference_lines,Historical reference lines,32485,HISTORICAL,Index only; source-specific review required
+DS-008,WINKYSOFT_F_ENGINE_KNOWLEDGE_BASE_v0.1/structures_fields,Engine structure/field corpus,19988,CROSS_PLATFORM_BINARY,Candidate owner/field lookup
+DS-009,WINKYSOFT_F_ENGINE_KNOWLEDGE_BASE_v0.1/event_opcodes,Event opcode corpus,453,CROSS_PLATFORM_BINARY,Behavioral hypothesis/reference only
+DS-010,WINKYSOFT_F_ENGINE_KNOWLEDGE_BASE_v0.1/functions_consumers,Functions/consumers corpus,316,CROSS_PLATFORM_BINARY,Useful for homolog search
+DS-011,SRWF_F_Definition_Reference_v0.1/F_field_definitions,PS F field definitions,1439,BNE2_DEFINITION,DEFINITION_ONLY
+DS-012,SRWF_F_Definition_Reference_v0.1/F_record_labels,PS F record labels,3277,MDB,Cross-data labels only
+DS-013,SRWF_F_Definition_Reference_v0.1/F_value_labels,PS F value labels,864,MDB,Cross-data labels only
+DS-014,F_BMESS_audit_summary_v0.3,RevA/RevB/WP BMESS structural audit,RevA368/RevB384/WP512 logical slots,SATURN_HISTORICAL_DIRECT,Frozen grammar; use for cross-version owner candidates
+DS-015,External Evidence Index v0.2,External evidence fragments,sources20/evidence29/fragments23,EXTERNAL_EVIDENCE,Candidate/source corroboration; no native promotion

@@ -1,0 +1,41 @@
+claim_id,phase,legacy_id,claim,status,evidence_class,evidence_summary,error_id,notes
+WPR-B-001,WP-B,BPRE01-C010-S45-0187,C0/10 failure semantics / level gate,DOWNGRADED,TARGET_NATIVE,scene=45; query=0x0187; success=lookup成功且 runtime pilot record byte2 > 13; failure=condition bit7=1; accumulator保持旧值；紧接F4仍比较旧值; side_effects=set F3; set A2,B-ERR-001,阈值/offset/branch均VALID；只降级完整条件合同。
+WPR-B-002,WP-B,BPRE01-C010-S45-0031,C0/10 failure semantics / level gate,DOWNGRADED,TARGET_NATIVE,scene=45; query=0x0031; success=lookup成功且 runtime pilot record byte2 > 10; failure=condition bit7=1; accumulator保持旧值；可能继承上一查询/之前VM结果; side_effects=set BC; set F4,B-ERR-001,成功路径数字不变；缺少对象不能等价0级。
+WPR-B-003,WP-B,BPRE01-C010-S45-0036,C0/10 failure semantics / level gate,DOWNGRADED,TARGET_NATIVE,scene=45; query=0x0036; success=lookup成功且 runtime pilot record byte2 > 10; failure=condition bit7=1; accumulator保持旧值; side_effects=set A4; set F5,B-ERR-001,成功路径数字不变；失败路径需独立建模。
+WPR-B-004,WP-B,BPRE01-C010-S45-0032,C0/10 failure semantics / level gate,DOWNGRADED,TARGET_NATIVE,scene=45; query=0x0032; success=lookup成功且 runtime pilot record byte2 > 14; failure=condition bit7=1; accumulator保持旧值; side_effects=set A3; set CA; set F6,B-ERR-001,F2..F6聚合需保留旧flag生命周期前提。
+WPR-B-005,WP-B,BPRE01-C010-S72-004A,C0/10 failure semantics / level gate,VALID,TARGET_NATIVE,scene=72; query=0x004A; success=lookup成功且 runtime pilot record byte2 > 22; failure=condition bit7=1; accumulator保持旧值；F4仍比较旧值; side_effects=继续执行下一条C0/10(0x004B),,旧矩阵已明确保留failure semantics；成功路径绑定有效，缺席路径仍OPEN。
+WPR-B-006,WP-B,BPRE01-C010-S72-004B,C0/10 failure semantics / level gate,VALID,TARGET_NATIVE,scene=72; query=0x004B; success=lookup成功且 runtime pilot record byte2 > 19; failure=condition bit7=1; accumulator保持旧值；可能继承0x004A的数值; side_effects=继续进入选择/换场路径,,不能从两条C0/10本身推出‘两人都存在’。
+WPR-B-007,WP-B,BPRE01-C010-S18-0099,C0/10 failure semantics / level gate,DOWNGRADED,TARGET_NATIVE,scene=18; query=0x0099; success=lookup成功且 runtime pilot record byte2 > 19; failure=condition bit7=1; accumulator保持旧值；F4不检查lookup成功; side_effects=对白链；set 0x005C；C0/13 unit0x00CA = 55 55 55,B-ERR-002,效果链字节有效；‘凯欧20+是完整入口条件’不成立，除非另证存在/查询成功。
+WPR-B-008,WP-B,BPRE01-C010-S30-00CD,C0/10 failure semantics / level gate,DOWNGRADED,TARGET_NATIVE,scene=30; query=0x00CD; success=lookup成功且 runtime pilot record byte2 > 29; failure=condition bit7=1; accumulator保持旧值；F4不检查lookup成功; side_effects=进入剧情对白+51/02选择；一支set AB1A,B-ERR-003,30级数字与选择链VALID；完整入口条件需增加lookup-success/presence前提。
+WPR-B-009,WP-B,BPRE01-C010-S67-00CD,C0/10 failure semantics / level gate,DOWNGRADED,TARGET_NATIVE,scene=67; query=0x00CD; success=lookup成功且 runtime pilot record byte2 > 29; failure=condition bit7=1; accumulator保持旧值；F4不检查lookup成功; side_effects=进入剧情对白+51/02选择；一支set AB1A,B-ERR-003,与scene30同类。
+WPR-B-010,WP-B,BPRE02-01,scene45 collector predecessor,VALID/CLOSED,TARGET_NATIVE/CROSS_DATA,Only header slot0 reaches collector; start 0x16F4 has single predecessor 0x16F2; only global BF/00->45 is scene43:0x1A90,,
+WPR-B-011,WP-B,BPRE02-02,Amuro15 upstream gate,CORRECTED: NOT_PRESENT_AS_SCRIPT_LEVEL_GATE,TARGET_NATIVE/CROSS_DATA,No C0/10 selector 0x000A (Amuro historical F ID) or alternate 0x0186 across bound route 1->41->44->42->43->45; scene45 has only 0187/0031/0036/0032,,
+WPR-B-012,WP-B,BPRE02-03,F2 = Amuro15,SUPERSEDED/REJECTED,TARGET_NATIVE/CROSS_DATA,F2 is directly set at scene45:0x172A and reused/tested in other scenes; no Amuro query feeds it,,
+WPR-B-013,WP-B,BPRE02-04,BE producer/consumer,VALID/CLOSED_FOR_TARGET_SCEDATA,TARGET_NATIVE/CROSS_DATA,"Two sets: scene36:0x2553, scene45:0x17B7; only direct test: scene12:0x19AA; lifecycle clears at scene12/30/36/67",,
+WPR-B-014,WP-B,BPRE02-05,C1/0E 02AA is BE reward consumer,SUPERSEDED/REJECTED,TARGET_NATIVE/CROSS_DATA,F1 branch target is exactly 0x19B9 and fallthrough joins there; C1/0E executes on both paths,,
+WPR-B-015,WP-B,BPRE02-06,C1/0E native handler,VALID/HANDLER_BOUND,TARGET_NATIVE/CROSS_DATA,0x060B7C78[0x0E] -> 0x06026604; low9 selector + 2-bit mode synchronized into pilot/unit runtime bitfields,,
+WPR-B-016,WP-B,BPRE02-07,C2/0E 0x0E business semantic,VALID/CROSS_DATA_SEMANTIC,TARGET_NATIVE/CROSS_DATA,inventory counter +1; same index in second TARGET Fatima context; PS F contiguous part map places Fatima at 14th counter,,
+WPR-B-017,WP-B,BPRE02-08,scene45 BE -> Fatima,VALID/PATH_SCOPED_BUSINESS_CLOSED,TARGET_NATIVE/CROSS_DATA,scene45 sets BE; scene12 tests BE and conditionally increments C2/0E index0x0E then clears BE,,
+WPR-B-018,WP-B,BPRE03-001,"CA/02 parser-reachable table count is 140, not raw-hit count 596",CLOSED,BYTE_BOUND,TARGET SCEDATA bounded-parser reachability + syntactic raw scan,,
+WPR-B-019,WP-B,BPRE03-002,CA/02 record stride = 12 bytes,CLOSED,HANDLER_BOUND,0x060223A4 native cursor advance + corpus parse,,
+WPR-B-020,WP-B,BPRE03-003,record[0]/[1] are X/Y coordinates,CLOSED,HANDLER_BOUND,0x06022FB8 map entity write + occupancy indexing,,
+WPR-B-021,WP-B,BPRE03-004,BE16(record[2:4]) low9 = pilot/entity selector; upper7 = level,CLOSED,HANDLER_BOUND,0x060223A4 decode + 0x060278F0 runtime pilot initialization,,
+WPR-B-022,WP-B,BPRE03-005,record byte3 alone is not a full selector; Sety1 selector 0x018E comes from packed word low9,CLOSED,HANDLER_BOUND,scene71 packed word re-decode,,
+WPR-B-023,WP-B,BPRE03-006,BE16(record[4:6]) low9 = unit selector; top4 = weapon upgrade,CLOSED,HANDLER_BOUND,0x060223A4 + 0x0602A64C/0x0602A71C,,
+WPR-B-024,WP-B,BPRE03-007,unit-word bit9 is discarded by CA/02 path; bits10-11 are placement contribution,CLOSED_WITH_CORPUS_RESERVATION,HANDLER_BOUND,"native masks + 1,727-record corpus",,
+WPR-B-025,WP-B,BPRE03-008,record[6] is functional drop/reward selector,CLOSED_WITH_TRANSFORM_RESERVATION,HANDLER_BOUND + CROSS_DATA_SEMANTIC,0x0602A88C transform + runtime +26 + Sety1 0x0D Fatima binding,,
+WPR-B-026,WP-B,BPRE03-009,record[7:9] is signed same-scene secondary-block pointer,CLOSED_NATIVE_ROLE_BUSINESS_OPEN,HANDLER_BOUND,native pointer arithmetic + target validation,,
+WPR-B-027,WP-B,BPRE03-010,five body modifier nibbles are upgrade inputs capped to 10,CLOSED_EXACT_STAT_ORDER_OPEN,HANDLER_BOUND,0x0602A1FC + C0/13 shared helper behavior,,
+WPR-B-028,WP-B,BPRE03-011,record[11] high nibble initializes/overrides runtime unit byte3 bits3..6,CLOSED_BUSINESS_NAME_RESERVED,HANDLER_BOUND + CROSS_DATA_SEMANTIC,0x0602A1FC; historical static unit field 0x07 label 分離変形設定 is DEFINITION_ONLY,,
+WPR-B-029,WP-B,BPRE03-012,table mode and packed placement bits have exact bit routing but not proven AI/side/faction business names,CLOSED_NATIVE_ROUTE_BUSINESS_OPEN,HANDLER_BOUND / UNKNOWN BUSINESS,0x06023548 + 0x06022FB8 + 0x0602A71C,,
+WPR-B-030,WP-B,BPRE03-013,terminator is two-byte condition: record[0]==FF OR record[1]==FF; TARGET uses FF FF,CLOSED,HANDLER_BOUND,0x060223A4 + all reachable tables,,
+WPR-B-031,WP-B,BPRE04-001,AB13 physical storage,CLOSED,TARGET_NATIVE/CROSS_DATA,state+0x1A96 mask0x10 = pilot runtime slot127 byte2,,
+WPR-B-032,WP-B,BPRE04-002,Direct SCEDATA set producers,CLOSED_FOR_DIRECT_D0,TARGET_NATIVE/CROSS_DATA,scene1 0x833 and scene51 0x5F2; both gated by 017B,,,
+WPR-B-033,WP-B,BPRE04-003,AB13 business semantic,HIGH_CONFIDENCE,TARGET_NATIVE/CROSS_DATA,"difficulty/enemy-upgrade state; business label, not native symbol",,
+WPR-B-034,WP-B,BPRE04-004,scene26 effect,CLOSED,TARGET_NATIVE/CROSS_DATA,AB13 selects same entities/positions with materially higher upgrade modifiers,,
+WPR-B-035,WP-B,BPRE04-005,ordinary pilot clear persistence,CLOSED,TARGET_NATIVE/CROSS_DATA,WP loop bound126 skips slot127,,
+WPR-B-036,WP-B,BPRE04-006,fieldwise reconstruction persistence,CLOSED,TARGET_NATIVE/CROSS_DATA,WP BA/0D bound126 skips slot127,,
+WPR-B-037,WP-B,BPRE04-007,raw snapshot/restore persistence,CLOSED_LOCAL_HELPER,TARGET_NATIVE/CROSS_DATA,entire slot127 copied out and restored,,
+WPR-B-038,WP-B,BPRE04-008,actual save/load backend ordering,OPEN,TARGET_NATIVE/CROSS_DATA,local helper contracts do not prove real save/load call order,,
+WPR-B-039,WP-B,BPRE04-009,cold boot initial AB13 value,OPEN,TARGET_NATIVE/CROSS_DATA,prefix zero-fill does not cover slot127,,
+WPR-B-040,WP-B,BPRE04-010,legacy F-FF HACK evidence,INGESTED_WITH_LIMIT,TARGET_NATIVE/CROSS_DATA,cross-data/candidate use only,,

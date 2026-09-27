@@ -1,0 +1,13 @@
+legacy_id,domain,title,result,limitations,evidence_class
+CL-01,PSF/PSFF historical sources,天空寺正文已追回,11381 bytes; CP932; original body SHA matches 2026-09-13 receipt.,PS FF examples only; not Saturn authority.,CURRENT_BODY_HASH_AND_ARCHIVE_RECEIPT
+CL-02,PSF tools,修改器字段已有成果,46 read fields: unit13/pilot24/weapon9; 151 historical byte samples; 327 MDB records.,Not full ROM mapping; tool read width != game consumer semantics.,HISTORICAL_REPORT_REVIEWED_NOT_RERUN
+CL-03,PSF/PSFF/SSFF definitions,BNE2 技术库,1970 configuration lines: PSF813/PSFF1042/SSFF115.,Author definitions; not 1970 verified fields.,CURRENT_DB_COUNTS_AND_HISTORICAL_REPORT
+CL-04,PSFF tools,低11位读取与地址算式,Editor disassembly supports low + ((high & 7) << 8) in bounded scope.,Not game-runtime mask proof; FF reference only.,HISTORICAL_REPORT_REVIEWED_NOT_RERUN
+CL-05,PSFF BOSS MOD,Z/ZZ 两案例,Recipient records retained; donor-like fields + independently changed stats/weapon refs.,Not whole-record copy or end-to-end consumer proof; FF only.,HISTORICAL_REPORT_REVIEWED_NOT_RERUN
+CL-06,PSF JP/WGF,已鉴拹未孵段巳分；3111 same-offset field samples equal; BMESS0 identical; SLPS and SCEDATA differ.,Bounded sample/file facts only.,CURRENT_DB_COUNTS_AND_HISTORICAL_REPORT
+CL-09,PSCB JP/Chinese,资源对照与相同坔,9 selected files differ; 13321 unique aligned 256-byte anchors.,Anchors are not dialogue/function counts.,CURRENT_DB_COUNTS_AND_HISTORICAL_REPORT
+CL-11,PSF/PSFF/SSF sources,本务字面与兲楼；335 source identities; 12539 literal maps; 5 comparisons; 321 differences.,Source literals, not verified Unicode.,CURRENT_DB_COUNTS_AND_HISTORICAL_REPORT
+CL-12,Cross-game knowledge,主题知识库,5302 source appearances; 332237 text lines; 154726 workbook cells.,Duplicate provenance retained; semantic review partial.,CURRENT_DB_COUNTS_AND_HISTORICAL_REPORT
+CL-13,PSF/PSCB,CMSESS Closure A,Shared archive-consumer family established in declared static scope.,No automatic Saturn transfer.,HISTORICAL_REPORT_REVIEWED_NOT_RERUN
+CL-16,PS F P-R1..R5,计刐内的点封板,Profile grammar/runtime trace/BMESS0 repack/stable-ID evidence exists.,PS values do not transfer to Saturn.,CURRENT_SEAL_HASH_AND_HISTORICAL_SCOPE
+CL-17,SS F RevB,DIC codec躤叉测试,External compressor -> strict decoder 52/52; legacy decoder 51/52.,Dated public report; scope-limited.,DATED_PUBLIC_REPORT_REVIEW

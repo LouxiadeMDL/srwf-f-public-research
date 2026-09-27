@@ -1,0 +1,50 @@
+{
+  "project": "SRWF_F_WP_REVERSE",
+  "imports": [
+    {
+      "name": "WP target native evidence",
+      "class": "TARGET_NATIVE",
+      "status": "ACTIVE_AUTHORITY"
+    },
+    {
+      "name": "WP-B validated baseline",
+      "class": "WP_B_VALIDATED",
+      "status": "IMPORTED"
+    },
+    {
+      "name": "F_FF_TECH_v0.1",
+      "class": "GUIDE/BNE2/HISTORICAL",
+      "status": "CATALOGUED_NOT_WHOLESALE_PROMOTED"
+    },
+    {
+      "name": "CROSS_GAME_TO_T1",
+      "class": "CROSS_PLATFORM/HISTORICAL",
+      "status": "CATALOGUED"
+    },
+    {
+      "name": "WINKYSOFT_F_ENGINE_KNOWLEDGE_BASE_v0.1",
+      "class": "CROSS_PLATFORM_BINARY",
+      "status": "CATALOGUED"
+    },
+    {
+      "name": "SRWF_F_Definition_Reference_v0.1",
+      "class": "MDB/BNE2_DEFINITION",
+      "status": "CATALOGUED"
+    },
+    {
+      "name": "External Evidence Index v0.2",
+      "class": "EXTERNAL_EVIDENCE",
+      "status": "CATALOGUED"
+    },
+    {
+      "name": "BMESS structural audit v0.3",
+      "class": "SATURN_HISTORICAL_DIRECT",
+      "status": "CATALOGUED"
+    },
+    {
+      "name": "FF family references",
+      "class": "FF_REFERENCE",
+      "status": "REFERENCE_ONLY"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+rank,evidence_class,meaning,promotion_rule
+1,TARGET_NATIVE,Saturn F WP/YZZL target bytes + native handler + CFG/dataflow,May establish WP physical/native semantics
+2,WP_B_VALIDATED,Renamed validated legacy baseline from current WP reverse audits,May establish bounded claims within documented scope
+3,SATURN_HISTORICAL_DIRECT,Historical Saturn direct-byte reports,Must be rechecked if conflicting with levels 1-2
+4,CROSS_PLATFORM_BINARY,PSF/PSCB/PS4S actual binary/code homolog evidence,Candidate/structural reference only; no Saturn address/opcode inheritance
+5,STATIC_EDITOR_CODE,Legacy/static editor disassembly/read behavior,Candidate semantics only
+6,MDB,PS F MDB database,Cross-data vocabulary/records only
+7,BNE2_DEFINITION,Author configuration definitions,DEFINITION_ONLY unless independently validated
+8,GUIDE,Guide/strategy event information,Business/event candidate only
+9,EXTERNAL_DIALOGUE,External dialogue reference,Scenario/dialogue candidate only
+10,FF_REFERENCE,F Final/PSFF/WPFF,Reference only; excluded from F canonical
+11,HYPOTHESIS,Unverified inference,No promotion

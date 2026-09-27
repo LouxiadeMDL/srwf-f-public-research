@@ -1,0 +1,103 @@
+{
+  "project": "SRWF_F_WP_REVERSE",
+  "package": "WP-C0 public-safe consolidation",
+  "date": "2026-09-27",
+  "committed_files": [
+    {
+      "path": "PROJECT_CHARTER.md",
+      "size": 778,
+      "sha256": "7778808ba7d8456a899b7ede3675c969e8afe835402d903b04fb2e4e96c522ea"
+    },
+    {
+      "path": "README.md",
+      "size": 1342,
+      "sha256": "c81ff59faae2b150e61cd9c218d5f8efdfc6bf5853cef13cff82773615ea1372"
+    },
+    {
+      "path": "SOURCE_AUTHORITY.csv",
+      "size": 1099,
+      "sha256": "beba582914e9ab29f59a33f507f50cec0e10864aec5cdb15d4f7cc4092325767"
+    },
+    {
+      "path": "WP_C_STATE.json",
+      "size": 625,
+      "sha256": "431c2bef49cbabd98db02d1056eba62274862b7735113d2705cdf1e740532dc6"
+    },
+    {
+      "path": "data/historical_claims.csv",
+      "size": 2468,
+      "sha256": "ba829521202aeaab539e50db0455abf0e0f8f2b4d2b70ae307eb6ea300b5975c"
+    },
+    {
+      "path": "data/historical_database_catalog.csv",
+      "size": 4061,
+      "sha256": "2e46e7d411dda523360ba0723da35ace0594fe74fd50aa995b3e1005cb1aea8d"
+    },
+    {
+      "path": "data/historical_leads.csv",
+      "size": 494,
+      "sha256": "d124e294b104e77e6f4b15ac3a7ba40a95ba0c8033b7d6c1d9c3e8c9432134bc"
+    },
+    {
+      "path": "data/import_registry.json",
+      "size": 1187,
+      "sha256": "6d5529a1a4edd6d5781e91eb09bbaef342554e848e35c5ce901cedec289c3e38"
+    },
+    {
+      "path": "data/reference_dataset_registry.csv",
+      "size": 2095,
+      "sha256": "2b4e52adca96bde0628d8b4a440b4f906ec061204af6cde6153c8312b55c2f52"
+    },
+    {
+      "path": "data/source_registry.csv",
+      "size": 3413,
+      "sha256": "cbc8198cd07e0e4926f327814f3be7ab842bfe69d2cd1498d1211a0cd6d4cd5f"
+    },
+    {
+      "path": "data/wp_b_errors.csv",
+      "size": 1138,
+      "sha256": "a65fb1cd2f9c32193af7741c595cb19a8ca924316c83a98b62e026dabd5a6f09"
+    },
+    {
+      "path": "data/wp_b_validated_claims.csv",
+      "size": 8906,
+      "sha256": "a9ccca8573e5632a3f89ca123604d03d4f79322b4fa7fc1b1f375eada01192f6"
+    },
+    {
+      "path": "phases/WP-B_VALIDATED_BASELINE.md",
+      "size": 2298,
+      "sha256": "8b0c15491b53d78f3009ff0ec2bfff76c997a4b0b3271033315a54358885563d"
+    },
+    {
+      "path": "phases/WP-C0_CONSOLIDATION_REPORT.md",
+      "size": 1869,
+      "sha256": "c4db85b9c6ea36249a0d0f8f6a4498dd276e39ec930881f6226696b2bbccf43d"
+    },
+    {
+      "path": "phases/WP-C_START_CONTRACT.md",
+      "size": 3691,
+      "sha256": "7a5e60fe797390afef01a94206179471efdeb6267e2eace3fcb696ea1c3c7c77"
+    },
+    {
+      "path": "provenance/README.md",
+      "size": 579,
+      "sha256": "01bfbc1ef026e74cdd10907d05f4d4d5997237c39712cdd049587570bf2b0221"
+    },
+    {
+      "path": "tools/build_reference_kb.py",
+      "size": 1933,
+      "sha256": "1e490e2d17125750b906078680fdc73213102d85c8ef25a1a34dc513801c2496"
+    }
+  ],
+  "generated_artifacts": [
+    {
+      "path": "data/WP_REVERSE_REFERENCE_KB_v1.sqlite",
+      "size": 57344,
+      "sha256": "2bc11015f9a3cb276c896dd81aa07ab68598164d34780e59b651492a1f8d70a2",
+      "status": "REPRODUCIBLE_NOT_REQUIRED_IN_GIT",
+      "builder": "tools/build_reference_kb.py",
+      "integrity": "ok"
+    }
+  ],
+  "publication_note": "The Git repository commits source CSV/JSON/Markdown and the builder. The SQLite is reproducible and may be generated locally; no game payload is embedded."
+}
