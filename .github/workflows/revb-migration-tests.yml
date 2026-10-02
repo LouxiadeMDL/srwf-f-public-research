@@ -3,7 +3,7 @@ on:
   push:
     branches: ['tool/revb-migration-v01-20261003']
     paths:
-      - 'tools/revb_migrate/**'
+      - 'tools/revb_migrate/*.py'
       - '.github/workflows/revb-migration-tests.yml'
 permissions:
   contents: read
@@ -20,14 +20,14 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           persist-credentials: false
-      - name: Execute synthetic tests only
+      - name: Execute all 40 synthetic tests
         working-directory: tools/revb_migrate
-        run: python test_revb_migrate.py
+        run: python ci_test.py
       - name: Print machine test receipt
         if: always()
         working-directory: tools/revb_migrate
         run: python -c "from pathlib import Path; p=Path('TEST_RESULTS.json'); print(p.read_text(encoding='utf-8') if p.exists() else 'NO_TEST_RECEIPT')"
-      - name: Upload source and test receipt (never ROMs)
+      - name: Upload source, rules and actual receipts (never ROMs)
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -35,6 +35,8 @@ jobs:
           path: |
             tools/revb_migrate/revb_migrate.py
             tools/revb_migrate/test_revb_migrate.py
+            tools/revb_migrate/test_extra.py
+            tools/revb_migrate/ci_test.py
             tools/revb_migrate/README_CN.md
             tools/revb_migrate/TEST_RESULTS.json
             tools/revb_migrate/ACCEPTANCE_MATRIX.json
