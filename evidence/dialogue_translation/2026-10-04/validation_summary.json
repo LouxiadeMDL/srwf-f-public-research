@@ -1,0 +1,40 @@
+{
+  "scope": "F_ONLY / SSF F RevB archived SCEDATA translation draft",
+  "source_records": 7629,
+  "included_records": 7182,
+  "excluded_records": 447,
+  "normal_route_nodes": 50,
+  "normal_story_rows": 6978,
+  "preview_rows": 29,
+  "unassigned_rows": 123,
+  "birthday_candidates": 52,
+  "translation_methods": {
+    "A17_R7P_inherited": 50,
+    "translated_this_pass": 5811,
+    "identical_source_reuse": 1321
+  },
+  "original_undecoded_records": 10,
+  "additional_review_records": 41,
+  "hidden_reference_items": 35,
+  "semantically_linked_candidate_rows": 467,
+  "prior_protagonist_battle_unique_rows": 396,
+  "xlsx_sheets": 63,
+  "checks": {
+    "partition_complete": true,
+    "partition_disjoint": true,
+    "no_empty_cn": true,
+    "original_jp_unchanged": true,
+    "raw_length_consistent": true,
+    "f9_occurrence_counts_preserved": true,
+    "xlsx_crc": true,
+    "xlsx_translations_readback_match": true,
+    "xlsx_formula_error_cells": 0,
+    "sqlite_integrity": "ok"
+  },
+  "runtime_verdict": "NOT_TESTED_THIS_TURN",
+  "full_game_all_resource_coverage": "NOT_CLAIMED",
+  "execution_order": "SOURCE_STORAGE_ORDER / SCRIPT_EVENT_ORDER_NOT_FULLY_BOUND",
+  "video_frame_verification": "NOT_COMPLETED_NO_TIMESTAMPS_INVENTED",
+  "canonical_modified": false,
+  "rom_modified": false
+}
