@@ -1,0 +1,42 @@
+{
+  "scope": "F_ONLY / SSF F RevB integrated story reference",
+  "status": "INTEGRATED_REFERENCE_MASTER / TRANSLATION_DRAFT / RUNTIME_UNVERIFIED",
+  "story_records": 7182,
+  "story_records_with_jp": 7182,
+  "story_records_with_cn": 7182,
+  "normal_route_nodes": 50,
+  "excluded_records": 447,
+  "source_review_rows": 51,
+  "hidden_reference_items": 35,
+  "hidden_ids_exact_across_guide_story_policy": true,
+  "protagonist_video_pages": 543,
+  "protagonist_video_lines": 1002,
+  "protagonist_video_review_pages": 133,
+  "video_story_alignment_counts": {
+    "EXACT_CONTAINMENT_AMBIGUOUS": 161,
+    "EXACT_CONTAINMENT_UNIQUE": 278,
+    "FUZZY_HIGH": 140,
+    "EXACT_CONTEXT_RESOLVED": 41,
+    "HOLD": 313,
+    "FUZZY_MEDIUM": 40,
+    "UNMAPPED": 29
+  },
+  "video_story_high_candidate_lines": 459,
+  "video_story_high_unique_story_records": 282,
+  "video_issue_crosscheck_ids": ["SSF_P04_R0060", "SSF_P22_R0146"],
+  "dynamic_story_records": 1126,
+  "checks": {
+    "record_ids_unique": true,
+    "jp_nonempty": true,
+    "cn_nonempty": true,
+    "story_sqlite_integrity": "ok",
+    "protagonist_sqlite_integrity": "ok",
+    "external_reference_sqlite_integrity": "ok",
+    "master_sqlite_integrity": "ok",
+    "prior_release_crc_ok": true
+  },
+  "runtime_verdict": "NOT_FULLY_TESTED",
+  "full_game_all_resource_coverage": "NOT_CLAIMED",
+  "canonical_modified": false,
+  "rom_modified": false
+}
