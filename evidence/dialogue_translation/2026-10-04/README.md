@@ -61,3 +61,17 @@ The project does **not** claim complete all-resource/all-route runtime coverage 
 External guides are used as scenario/navigation/semantic references only. Target-version ROM/archive records determine source text; script/control-flow determines reachability and conditions; runtime evidence is the final display check.
 
 Full dialogue text, XLSX, SQLite and full ZIP are intentionally not included in this public folder.
+
+## Integrated master addendum
+
+The 2026-10-04 checkpoint has now been cross-integrated with:
+- the 543-page / 1,002-line protagonist event-video reference,
+- the 35-item hidden-elements guide and RouteLocal policy layer,
+- the external PS F / SSF RevA / SSF RevB dialogue-reference layer.
+
+See:
+- `MASTER_INTEGRATION_2026-10-04.md`
+- `master_validation_summary.json`
+- `master_artifact_hashes.txt`
+
+The full integrated XLSX/SQLite/release ZIP remain private/non-public artifacts. Public files contain sanitized research metadata only.
