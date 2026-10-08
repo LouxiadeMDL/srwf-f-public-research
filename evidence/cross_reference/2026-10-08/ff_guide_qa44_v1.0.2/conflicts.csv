@@ -1,0 +1,2 @@
+page_id,topic,source_A,source_A_condition,source_B,source_B_condition,treatment
+FF_PART2A:p0163,フォウ・ムラサメ rescue boundary,Tuzigiri Japanese hidden-pilot DB,SCENE20: バスク撃墜 within 7 turns,SRW Wiki,by end of 8PP,Do not overwrite scan/ROM condition; retain conflict until script/ROM validation
