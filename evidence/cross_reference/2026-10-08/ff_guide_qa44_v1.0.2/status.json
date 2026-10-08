@@ -1,0 +1,14 @@
+{
+  "status": "FF_QA44_WEB_CROSSCHECK_COMPLETE",
+  "date": "2026-10-08",
+  "scope": "SS35 / Saturn F Final guide only",
+  "pages_total": 812,
+  "original_blocking_qa_flags": 44,
+  "blocking_qa_flags_remaining": 0,
+  "qa_resolution_records": 44,
+  "source_conflicts_recorded": 1,
+  "canonical_scope": "PRIMARY_FF_REFERENCE",
+  "publication_scope": "public-safe metadata only",
+  "text_policy": "Original scan transcription is preserved privately. Public material contains fingerprints, normalized metadata, source relationships and non-reconstructive conclusions only.",
+  "exact_text_reservation": "Resolved QA means information-layer ambiguity is processed; it is not a claim of manual glyph-by-glyph transcription of every dense table or prose page."
+}
