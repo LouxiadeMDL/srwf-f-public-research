@@ -15,6 +15,8 @@ This is a research roadmap, not a verified execution graph. In particular, TSR/f
 
 ## Progress and limits
 
+A [2026-10-08 F Final guide QA44 cross-check](evidence/cross_reference/2026-10-08/ff_guide_qa44_v1.0.2/README.md) records a public-safe SS35 guide checkpoint: 812 scan pages in the private corpus, 44/44 information-layer QA records cross-checked against Japanese and Chinese references, with one public-source condition conflict preserved for ROM/script validation. Full scans, OCR text, SQLite/FTS and page images remain private.
+
 A [2026-09-13 update](docs/2026-09-13-baseline-and-patch-experiment.md) records fresh baseline checks and a failed direct-patch experiment; F2/F3 clean-image inputs remain incomplete.
 
 A [2026-09-20 A14 update](docs/2026-09-20-a14-pre-formal-translation-batch.md) records a constrained pre-formal translation dry-run, while a separate [DIC/Saturn cross-check](docs/2026-09-20-dic-codec-a14-crosscheck.md) reports 52/52 strict roundtrips for the external compressor against tested Saturn scenario streams and documents a reproduced 256-byte legacy-decoder defect. The public repository keeps only safe summaries, hashes and synthetic tooling; game-derived text/mapping payloads remain private.
@@ -33,6 +35,7 @@ The complete Saturn script-to-screen path is **not established by the original p
 
 ## Start here
 
+- [2026-10-08 F Final guide QA44 cross-check](evidence/cross_reference/2026-10-08/ff_guide_qa44_v1.0.2/README.md)
 - [2026-09-22 cross-game handoff, download and queryable metadata](docs/2026-09-22-cross-game-research-handoff.md)
 - [Research status and dated observations](docs/status.md)
 - [A14 pre-formal translation batch update](docs/2026-09-20-a14-pre-formal-translation-batch.md)
