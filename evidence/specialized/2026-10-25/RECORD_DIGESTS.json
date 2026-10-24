@@ -1,0 +1,90 @@
+{
+  "schema": "srwf-public-safe-specialized-report-digests-v1",
+  "publication_date": "2026-10-25 Australia/Sydney",
+  "basis": "2026-10-24 read-only source research ledger; no tests re-executed for this publication",
+  "note": "Digest of retained private reports and reported media; no source content, bytes, game image, save, BIOS or patch is published",
+  "entries": [
+    {
+      "id": "SSF-R13",
+      "date": "2026-10-24",
+      "status": "bounded static and natural sample",
+      "track1": "e677506ad012373b71eed8693f40bd394462abdf1f4b3f5c73f916aafd425669",
+      "sources": {
+        "S098": "f9495963cd913e8af8001404addb4fc56826d01d92e7ab5d6354e6fbfd7f4914",
+        "S099": "faa1e377af3d7be45fe24403c0864ef502fde2524f461117c984ac1a8f80973a",
+        "S100": "2ddd4e4987011c9b87a52f7c591f9cd9fb6a3500e2f15818799c68cd69175a6a"
+      }
+    },
+    {
+      "id": "SSF-G3-R4-R5",
+      "dates": [
+        "2026-10-18",
+        "2026-10-19"
+      ],
+      "status": "R4 combat; R5 map icon, separate",
+      "track1": {
+        "R4": "0aa06ec22da9f2bc032099dc2aee8cffd871f43832b64e17d4ada61df589d868",
+        "R5": "b7bb37ffe7f4b718ca4bba32e47df0db68d26b7ab1dbe5793b6706cb2678b4ef"
+      },
+      "sources": {
+        "S121": "a29e1f3a3670c6ba745165ad28f88a6e32513581a4dfa07a60945c24a754e660",
+        "S122": "0c33ff90104bc7f0bfa9414d6815828f92e42e1c298f116c15f36218fff09934",
+        "S123": "454de8946cd331c2d954400b79f7ada07e725917ca4c9d1854634b2fdb320892"
+      }
+    },
+    {
+      "id": "SSFF-S-EXS-V1",
+      "date": "2026-10-18",
+      "status": "bounded four-form pages and two transforms",
+      "track1": "4592b91ed43c00e6facf58a96b255f9930b4a79323960e95bcaa48f298ad22f1",
+      "sources": {
+        "S124": "9249656292a046b19378463b7309e4941f9f3f20b8cd143490957fd773fd89bd",
+        "S125": "9d72a9412d1fda967bb931bd80c7ef8848e0807c01e23c6b8e352ee2042e4367"
+      }
+    },
+    {
+      "id": "SSFF-BD01",
+      "date": "2026-10-14",
+      "status": "bounded ordinary animation and effective HP",
+      "track1": "6cd32afffad06391da48b463263bd109af3a82fb4c6d7bdf8424f00e117bf40e",
+      "sources": {
+        "S126": "081580eb16fae8af84d0b3bd96a9cbf68ef4cef91be9557872a305f9ce2b3ca2"
+      }
+    },
+    {
+      "id": "SSFF-HP-V3",
+      "date": "2026-10-15",
+      "status": "bounded mode0 color window; D8 historical only",
+      "track1": "abbb3e754083888a5d8683d05987601b487e1444b0a5aa777c70e5808a5c12c8",
+      "sources": {
+        "S128": "034b7b84b5f02b5be3c0fc6176a77ce18e9cf3ba32979af30129b585d320760f",
+        "S129": "8eed9d3926d8503d34d3d98bf7c6b89f3ce849bb5211bb5fe6cb7d47076eb537"
+      }
+    },
+    {
+      "id": "SSFF-R15-RC1",
+      "dates": [
+        "2026-10-22",
+        "2026-10-23"
+      ],
+      "status": "five fixes; separate failed-state VDP diagnosis",
+      "track1": "a863fae9ac32e929f6a79c330ea35dd34423aafe58cbdc857e353c5667be4dc8",
+      "sources": {
+        "S107": "a7c9a193bf0f2263e25c951341fe75bb15ebda5ad7a573e2dd35bcb094853032",
+        "S108": "74794f34d0b33e97ddb279330fd691b5c01bc8f73dcdc189f9210d0038fddef4",
+        "S109": "28192a09e7938edd864905ecb861107f07fdd05add8a149676b4fa1a1e8cf15d"
+      }
+    },
+    {
+      "id": "SSFF-R16-RC2",
+      "date": "2026-10-24",
+      "status": "PASS_SCOPED_WINDOW_AND_DEPLOYMENT_LAYOUT",
+      "track1": "b7c042778f6e48d76368406909605ea82924742d6022d86aaab233e0f9489123",
+      "sources": {
+        "S103": "3392f80c418566aecfef003887c0b1d162c9d216c9d4c6bffb72bf949d27b8e5",
+        "S104": "ab9b5d1f11db31bd83864b8458d6cb197a0b309d16c3ca3ab10ccf427da0d8f3",
+        "S105": "c74d9db962920d7040046a6b17d037a899637ae249cd170c0eb15e1b09862df4"
+      }
+    }
+  ]
+}

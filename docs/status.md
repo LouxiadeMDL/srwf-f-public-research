@@ -49,3 +49,9 @@ Both emulator runs reached Episode 1 clear and Intermission with normal exit, ma
 A16 also records a visible fixed-length authoring artifact, a conservative native-mapping evidence audit, and an Episode 1 production-coverage analysis. The final production decision is **hybrid native reuse plus selective font extension**, with font-bank ownership/capacity left for the next read-only gate.
 
 See `docs/2026-09-21-a16-complete-retrospective-and-seal.md` and `evidence/cross_reference/2026-09-21-a16-final-seal.json`.
+
+## 2026-10-25 scoped technical publications
+
+A [specialized F / F Final index](2026-10-25-specialized-ff-f-release-index.md) now records source-dated results from 2026-10-14–24, including SSFF R15/R16, both distinct S/Ex-S branches, battle animation/effective HP BD01/V3, and SSF R13. The files are newly written **public summaries of retained reports**, not new runtime/build executions.
+
+Version inheritance is intentionally limited: R15 did **not** itself resolve all frameless windows; R16 RC2 is the successor. R4 S/Ex-S battles are not presented as new R5 battle runs. V3 color regression does not imply rerunning all earlier D8/MAP/random paths. No all-game, SSF R38, hardware or full-localization pass is claimed.

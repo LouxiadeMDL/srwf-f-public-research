@@ -15,6 +15,10 @@ This is a research roadmap, not a verified execution graph. In particular, TSR/f
 
 ## Progress and limits
 
+### 2026-10-25 specialized Saturn F / F Final studies / 专项研究
+
+The new [public-safe specialized research index](docs/2026-10-25-specialized-ff-f-release-index.md) links separate, dated write-ups for **SSFF R15 RC1 and R16 RC2**, **SSF G3 S/Ex-S R4/R5**, **SSFF S/Ex-S V1**, **BD01 battle animation/effective HP**, **V3 color recovery**, and **SSF R13 native font/layout**. Each note carries its exact version identity, bounded runtime claims and open reservations. The source digests are public; no game image, binary patch, game assets, private test saves or raw capture records are distributed.
+
 A [2026-10-08 F Final guide QA44 cross-check](evidence/cross_reference/2026-10-08/ff_guide_qa44_v1.0.2/README.md) records a public-safe SS35 guide checkpoint: 812 scan pages in the private corpus, 44/44 information-layer QA records cross-checked against Japanese and Chinese references, with one public-source condition conflict preserved for ROM/script validation. Full scans, OCR text, SQLite/FTS and page images remain private.
 
 A [2026-09-13 update](docs/2026-09-13-baseline-and-patch-experiment.md) records fresh baseline checks and a failed direct-patch experiment; F2/F3 clean-image inputs remain incomplete.

@@ -38,3 +38,20 @@
 !/handoffs/2026-09-22/inventory_summary.json
 !/handoffs/2026-09-22/verification.json
 !/handoffs/2026-09-22/MANIFEST.json
+
+# Reviewed 2026-10-25: scoped technical research, default deny retained.
+!/docs/2026-10-25-specialized-ff-f-release-index.md
+!/docs/2026-10-25-ssff-r15-rc1-five-fixes.md
+!/docs/2026-10-25-ssff-r16-rc2-windows.md
+!/docs/2026-10-25-ssf-g3-s-exs-r4-r5.md
+!/docs/2026-10-25-ssff-s-exs-v1.md
+!/docs/2026-10-25-ssff-animation-hp-bd01.md
+!/docs/2026-10-25-ssff-hp-v3-active-palette.md
+!/docs/2026-10-25-ssf-r13-native-font.md
+!/evidence/
+/evidence/*
+!/evidence/specialized/
+/evidence/specialized/*
+!/evidence/specialized/2026-10-25/
+/evidence/specialized/2026-10-25/*
+!/evidence/specialized/2026-10-25/RECORD_DIGESTS.json

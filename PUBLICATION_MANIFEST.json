@@ -1,15 +1,15 @@
 {
-  "review_date": "2026-09-22",
+  "review_date": "2026-10-25",
   "scope": "Original utilities and rewritten/public-safe documentation and machine-readable summaries only; no inherited private history",
   "files": {
     ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
-    ".gitignore": "c05e8fdd950ff44b00e95311711bc449d334e87ca5c82f68b3a1b4971b2ec311",
+    ".gitignore": "d87f6d4a390c17df6d25c29272343fa16b45293085c5a1033f9a5ff0d9e642e5",
     "CONTRIBUTING.md": "eaf572eeeb0596bf61bd0f60e799fb2db684f043f8365324793413c1a0c3fe55",
     "docs/pipeline.md": "6af6f4d3d2d196319ab56626d8be9f7c87d407c7fb5c51c824ebb527029d749e",
     "docs/provenance.md": "30a3f651bf36bb70c2e6e4785b3c744dc909ad83f6ef123aaa7f7afd488a0100",
     "docs/publication-policy.md": "5d2d87f4d2f11ab14fcfdaa562ab13de78ef10ca387805f94cc39001ac227538",
     "docs/reproduce.md": "f024abe6947f9d02a76242acfabd11dadb1f05bdb6bb57951d9c8aa5215c3351",
-    "docs/status.md": "50f293478dffe63080e0dbf6e1a2774da5dae77c976ffc6d9f1f50c9e589894b",
+    "docs/status.md": "25f4a829b013661fdd1ed04ae5a63d5a00115506d60a0027758b8a967d10b378",
     "docs/2026-09-13-baseline-and-patch-experiment.md": "b81ec63298b7f9fe92b6c19a46b9dfe92bb93b0b9f5d0dabfe22755f743cd564",
     "docs/2026-09-19-p-reference-r1-r5-summary-new-clues.md": "fd696bcd874884474e147550b4b89d7dbb70146c9093c31343e3eaab7655adef",
     "docs/2026-09-20-a14-pre-formal-translation-batch.md": "59c8712d264f6689e34d426d8ef07a62efffc0c7a0f8a6999a272f200c7fa0b1",
@@ -22,7 +22,7 @@
     "evidence/cross_reference/2026-09-20-dic-codec-source-audit.json": "8c11b940dcd92fec664a703aa8ccd8680b7637a9a819b6d6c0ae93d540e07c8a",
     "examples/evidence-record.json": "9e006ca2a6c2199ba52d62fe9295d74aa6704e2c64d2f0af0928b1b25fae617b",
     "LICENSE": "68d4e9ecad930e7b1c94ac15bcc044f2211139b42fc394ca5d58a3a018c9f594",
-    "README.md": "87b97ccbf335025ce6fb5d5693300d530752c0573781292d598f50cca7d53c20",
+    "README.md": "03f5334c9fa45fb43ea6bf2c8899543153b52fac8da1e37b5b99b03ace01f291",
     "SECURITY.md": "57593740d1e5ad7be7206a6cd31bd8504784453d5c736751090a22ee8dcfcffa",
     "tools/check_dic_codec_vectors.py": "aa9f9851a91d0c466f13c888064d1ba8ef3bfe650cc35662b05554200549c659",
     "tools/check_layout.py": "ee44b882efb55b04271fbb4dfab0aeac93291b5a6fc190140aaedadf8c0aef93",
@@ -39,7 +39,36 @@
     "handoffs/2026-09-22/README.md": "270887e47d44309b2a240a203c2b558c65e2d21aeb1a6ad7902869c6ccf38908",
     "handoffs/2026-09-22/sources.json": "876b47d058f9df5101118426d45f221acaadc0e1f3f0c8f36e44bf964bd2ff9e",
     "handoffs/2026-09-22/verification.json": "c3893f150c506355e1d6b1f190c33fbd646ba2805663f4e1d1a2a98274ec93bb",
-    "handoffs/2026-09-22/MANIFEST.json": "9234a2507fb07e5fe6b08768d197c01026b99d314f960de5657e3052903f0bf7"
+    "handoffs/2026-09-22/MANIFEST.json": "9234a2507fb07e5fe6b08768d197c01026b99d314f960de5657e3052903f0bf7",
+    "docs/2026-10-25-specialized-ff-f-release-index.md": "10763df9cc58a3712c22ddcec198f91d8e2ce3204c6a363df25f49a83fe29769",
+    "docs/2026-10-25-ssff-r15-rc1-five-fixes.md": "126e315949a639cdf961605a29d3da738eb7ce3d0fe42bd052f7960a85d526eb",
+    "docs/2026-10-25-ssff-r16-rc2-windows.md": "e788fe523857a26b045f79f8cea4c65d226e8b0c2e79972001c048f0de3413fa",
+    "docs/2026-10-25-ssf-g3-s-exs-r4-r5.md": "a90524fe032a3dc8e2565a38d0273c75f433aa0ef354833c09d1d099ddafa1f4",
+    "docs/2026-10-25-ssff-s-exs-v1.md": "00cde411362820d44650a34b3d2c5cda4da77f05ef63eb91f27045096f3ea3ef",
+    "docs/2026-10-25-ssff-animation-hp-bd01.md": "a1468d375b1c0365e40f42219be464d8513f2cbc043ec363237f6d967af59ab4",
+    "docs/2026-10-25-ssff-hp-v3-active-palette.md": "46addcc709bb7f81dcfbaa633e44b3b466ffb925ab7e434288f8831c74e67513",
+    "docs/2026-10-25-ssf-r13-native-font.md": "079bcca5e508265d739488689c5510d52315df5a3475a2638c114f9a1e485bac",
+    "evidence/specialized/2026-10-25/RECORD_DIGESTS.json": "c32a35cbb819a868411efadf20635d53fc50e09f2894ef68ed45a12cb63fbe70"
   },
-  "handoff_note": "New 2026-09-22 packet reviewed separately; preexisting checker findings retained."
+  "handoff_note": "New 2026-09-22 packet reviewed separately; preexisting checker findings retained.",
+  "publication_update_2026_10_25": {
+    "scope": "Publication of rewritten scoped reports from saved 2026-10-14 to 2026-10-24 evidence; no fresh emulator, build or binary tests",
+    "new_paths": [
+      "docs/2026-10-25-specialized-ff-f-release-index.md",
+      "docs/2026-10-25-ssff-r15-rc1-five-fixes.md",
+      "docs/2026-10-25-ssff-r16-rc2-windows.md",
+      "docs/2026-10-25-ssf-g3-s-exs-r4-r5.md",
+      "docs/2026-10-25-ssff-s-exs-v1.md",
+      "docs/2026-10-25-ssff-animation-hp-bd01.md",
+      "docs/2026-10-25-ssff-hp-v3-active-palette.md",
+      "docs/2026-10-25-ssf-r13-native-font.md",
+      "evidence/specialized/2026-10-25/RECORD_DIGESTS.json"
+    ],
+    "updated_paths": [
+      "README.md",
+      "docs/status.md",
+      ".gitignore"
+    ],
+    "retrospective_boundary": "Pre-existing earlier unlisted/changed paths are outside this review; old allowlist/checker reservations are not silently certified."
+  }
 }
