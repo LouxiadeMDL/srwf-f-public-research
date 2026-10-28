@@ -1,0 +1,112 @@
+{
+  "schema": "HVM_CH02_CH09_SAVE_SERIES_V1",
+  "scope": "Read-only reparse; no emulator run; fields in extracted payload",
+  "counter_payload_offset": "0xA0",
+  "counter_SSF_16byte_wrapper_file_offset": "0xB0",
+  "stages": [
+    {
+      "chapter_completed": 2,
+      "record": "SROBOT_F_02",
+      "payload_sha256": "8733c7a0e0ab63b92662079eee796c114fa41ba703285f6bb4a5437ef778b8fb",
+      "payload_bytes": 5632,
+      "checksum_valid": true,
+      "progress": "03 03 02",
+      "next_scene_selector": 3,
+      "turns": 19,
+      "funds": 4915200,
+      "counter": 1,
+      "E2": false
+    },
+    {
+      "chapter_completed": 3,
+      "record": "SROBOT_F_01",
+      "payload_sha256": "d843366cde63bd4901103c350b7b8705681fa649a2537c04d6cef5d2e22a6513",
+      "payload_bytes": 5632,
+      "checksum_valid": true,
+      "progress": "04 04 03",
+      "next_scene_selector": 4,
+      "turns": 30,
+      "funds": 4919300,
+      "counter": 2,
+      "E2": false
+    },
+    {
+      "chapter_completed": 4,
+      "record": "SROBOT_F_01",
+      "payload_sha256": "7a36e86ed441a62667d6c162ab6dce0a0ab48b30a43530e333a17863764d8c12",
+      "payload_bytes": 5632,
+      "checksum_valid": true,
+      "progress": "05 46 04",
+      "next_scene_selector": 70,
+      "turns": 37,
+      "funds": 4821000,
+      "counter": 3,
+      "E2": false
+    },
+    {
+      "chapter_completed": 5,
+      "record": "SROBOT_F_01",
+      "payload_sha256": "c07522a50f6795465fe3d8755382794dc3867b31f0312515fa4c31fea9e81bbc",
+      "payload_bytes": 5632,
+      "checksum_valid": true,
+      "progress": "06 05 46",
+      "next_scene_selector": 5,
+      "turns": 48,
+      "funds": 4022900,
+      "counter": 3,
+      "E2": false
+    },
+    {
+      "chapter_completed": 6,
+      "record": "SROBOT_F_01",
+      "payload_sha256": "137c5d169d16f656605b629f8021ffe02fed82b000749723fd4770f7b84aef39",
+      "payload_bytes": 5632,
+      "checksum_valid": true,
+      "progress": "07 06 05",
+      "next_scene_selector": 6,
+      "turns": 51,
+      "funds": 2110400,
+      "counter": 3,
+      "E2": false
+    },
+    {
+      "chapter_completed": 7,
+      "record": "SROBOT_F_01",
+      "payload_sha256": "f3b90e9d34dd02296fc372169f4f87d544cfdfdd6cfbb82cdd39a1e5bac4593f",
+      "payload_bytes": 5632,
+      "checksum_valid": true,
+      "progress": "08 07 06",
+      "next_scene_selector": 7,
+      "turns": 56,
+      "funds": 2115800,
+      "counter": 4,
+      "E2": false
+    },
+    {
+      "chapter_completed": 8,
+      "record": "SROBOT_F_01",
+      "payload_sha256": "78dbd893d7d3982bd26123c65846a6d1282b9c858e7cb2ed95189c5505bf2e3a",
+      "payload_bytes": 5632,
+      "checksum_valid": true,
+      "progress": "09 08 07",
+      "next_scene_selector": 8,
+      "turns": 66,
+      "funds": 2157800,
+      "counter": 4,
+      "E2": false
+    },
+    {
+      "chapter_completed": 9,
+      "record": "SROBOT_F_01",
+      "payload_sha256": "7ecdc5d6c01402ede48650b16dd4dffb3fa8beb6d7491f2149eeb4309b5a4a35",
+      "payload_bytes": 5632,
+      "checksum_valid": true,
+      "progress": "0a 09 08",
+      "next_scene_selector": 9,
+      "turns": 79,
+      "funds": 2185000,
+      "counter": 4,
+      "E2": true
+    }
+  ]
+}

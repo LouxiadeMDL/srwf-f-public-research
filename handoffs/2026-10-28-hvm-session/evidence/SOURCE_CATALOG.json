@@ -1,0 +1,305 @@
+{
+  "schema": "HVM_SESSION_SOURCE_CATALOG_V1",
+  "date": "2026-10-28",
+  "sources": [
+    {
+      "id": "S01",
+      "file": "HVM04B_H02_Semantics_20261018.zip",
+      "bytes": 50251526,
+      "sha256": "bbcb6dba1ce5c0a000dfa0641eeb887968268690dca1b4f401e7ffdc736c2695",
+      "role": "HVM04恢复与语义后端",
+      "published_original": false,
+      "zip_members": 425,
+      "crc_ok": true
+    },
+    {
+      "id": "S02",
+      "file": "HVM04B_F01_F02_SharedFlag_SaveBridge_20261018 - 副本.zip",
+      "bytes": 17651,
+      "sha256": "b522d8de18f5d2bb0dbde981c98605ec8005749fe9accc0979159faa7ecbd449",
+      "role": "托德与哈曼共享Flag及保存桥接",
+      "published_original": false,
+      "zip_members": 10,
+      "crc_ok": true
+    },
+    {
+      "id": "S03",
+      "file": "HVM_CrossStage_Counter_20261019.zip",
+      "bytes": 34202,
+      "sha256": "1cbf54e22aaff3f520593ead82687cedb0e0f1cb6d8a99c1cf05a7e3ea180c23",
+      "role": "跨关累计生产者消费者",
+      "published_original": false,
+      "zip_members": 8,
+      "crc_ok": true
+    },
+    {
+      "id": "S04",
+      "file": "HVM_CH03_R5_BranchAnalysis_20261020.zip",
+      "bytes": 1479872,
+      "sha256": "12ea75cfdaf77b08a5b6bcfe81d14fe879171dfa76f76ce8734f12f7e79ac649",
+      "role": "第三话击坠/撤退与百分比",
+      "published_original": false,
+      "zip_members": 64,
+      "crc_ok": true
+    },
+    {
+      "id": "S05",
+      "file": "SSF_G3S_R5_Heero_NoHP_Patch_v1.0.zip",
+      "bytes": 1169389,
+      "sha256": "ea45bd326f0f11e56e2e9e08f5ab631c1000b0410e03a02391a4c0aacd928427",
+      "role": "R5定点撤退补丁",
+      "published_original": false,
+      "zip_members": 23,
+      "crc_ok": true
+    },
+    {
+      "id": "S06",
+      "file": "HVM_R5_NOHP_录像存档验收_20261020.zip",
+      "bytes": 9343777,
+      "sha256": "bb7a9106232d9e96debc02c956bad3dd8dcc4c3c48ceab805d52592295962255",
+      "role": "用户补丁录像与存档复核",
+      "published_original": false,
+      "zip_members": 33,
+      "crc_ok": true
+    },
+    {
+      "id": "S07",
+      "file": "HVM_CH02_CH04_AddPoint_Code_20261020.zip",
+      "bytes": 1317433,
+      "sha256": "560be4fc7c6f519428ea5219e2814357b33e2f28325ff363622c2507d46cf226",
+      "role": "第二至第四话加点代码",
+      "published_original": false,
+      "zip_members": 32,
+      "crc_ok": true
+    },
+    {
+      "id": "S08",
+      "file": "HVM_全场景HP与第一话战舰退场_20261021.zip",
+      "bytes": 2237886,
+      "sha256": "a9f146f99580cdbaa82c91f2d0aa3f046cf926011d96dde7c1d5230fd088e553",
+      "role": "HP模板扫描与第一话战舰",
+      "published_original": false,
+      "zip_members": 133,
+      "crc_ok": true
+    },
+    {
+      "id": "S09",
+      "file": "HVM_F01_0016_调用器与共享资源研究_20261021.zip",
+      "bytes": 1032101,
+      "sha256": "ed3e83314e2c391b25464206fb398f21a56b69c098c503ff24a3c40ea0f6d0f4",
+      "role": "7E与0016共享消费者",
+      "published_original": false,
+      "zip_members": 108,
+      "crc_ok": true
+    },
+    {
+      "id": "S10",
+      "file": "HVM04B_F01_0016_IncomingEdgeAudit_20261021.zip",
+      "bytes": 13889,
+      "sha256": "afc5673cc240c4321a67919ace2a3315bd636e2c2db452583543b4f0e4cee094",
+      "role": "直接入边排除",
+      "published_original": false,
+      "zip_members": 9,
+      "crc_ok": true
+    },
+    {
+      "id": "S11",
+      "file": "HVM_0016_入边审计独立复核_20261022.zip",
+      "bytes": 37859,
+      "sha256": "d2e045b8c9de8b9175442b9a4e4380dca0330e2338d0156bba55c77234d1ee80",
+      "role": "入边复核与补充测试",
+      "published_original": false,
+      "zip_members": 30,
+      "crc_ok": true
+    },
+    {
+      "id": "S12",
+      "file": "HVM_隐藏事件说得者控制研究_20261021.zip",
+      "bytes": 1421529,
+      "sha256": "08ca5b24d429a4d11e2d8f82fe58820b61127e2ef6af2155594e7bfe3b49637c",
+      "role": "AnyFriendly四入口",
+      "published_original": false,
+      "zip_members": 40,
+      "crc_ok": true
+    },
+    {
+      "id": "S13",
+      "file": "HVM_蕾茜说得标志与W系范围核对_20261021.zip",
+      "bytes": 19946,
+      "sha256": "34aa882230032c7f1f6b4fd8f75ea38b8cd34fff9cc21eb4b81e993e7dea10b6",
+      "role": "E2与两条奖励路径",
+      "published_original": false,
+      "zip_members": 6,
+      "crc_ok": true
+    },
+    {
+      "id": "S14",
+      "file": "PSF_PSFF_存档重接研究_20261022.zip",
+      "bytes": 7622,
+      "sha256": "406144a47f6038f77487b2cdf7c1dbcb68f092b7d1361c3ae523ad28069d5e08",
+      "role": "PSF/PSFF两张卡目录研究",
+      "published_original": false,
+      "zip_members": 4,
+      "crc_ok": true
+    },
+    {
+      "id": "S15",
+      "file": "SSF_SSFF_双游戏只读验收工具_v1.2_20261014.zip",
+      "bytes": 10165044,
+      "sha256": "8467d959e4916e98d49c9202bdc3e0345a5078c8c292c126bacf4ffc6051f595",
+      "role": "双游戏工具集边界",
+      "published_original": false,
+      "zip_members": 202,
+      "crc_ok": true
+    },
+    {
+      "id": "S16",
+      "file": "存档.zip",
+      "bytes": 14113,
+      "sha256": "4c3e18aa0f8c77ec8799017cad2ca430569b85006ec439b223fe3fdefe142818",
+      "role": "第二话Linux五份BKR",
+      "published_original": false,
+      "zip_members": 5,
+      "crc_ok": true
+    },
+    {
+      "id": "S17",
+      "file": "SSF_第三话通关_已击坠希罗_20261027.zip",
+      "bytes": 232741,
+      "sha256": "ba2108a55ca35708dc46c2fbaf3b755f05b5b5319840eebb7cc3f4d99a24c259",
+      "role": "第三话前后存档与来源运行记录",
+      "published_original": false,
+      "zip_members": 26,
+      "crc_ok": true
+    },
+    {
+      "id": "S18",
+      "file": "SSF_第四话通关_已击坠希罗_20261027.zip",
+      "bytes": 780380,
+      "sha256": "bd604be72e5115057d02a2b73441c0104216756f089d3ed12db8049acac08c91",
+      "role": "第四话击坠与保存",
+      "published_original": false,
+      "zip_members": 49,
+      "crc_ok": true
+    },
+    {
+      "id": "S19",
+      "file": "SSF_第五话通关_真实系.bkr",
+      "bytes": 32768,
+      "sha256": "e6ef727c57404f0c5c0e90262293f4a2981e7b9b5e0e1b2822a2d90609ea3fc8",
+      "role": "第五话普通过关卡",
+      "published_original": false
+    },
+    {
+      "id": "S20",
+      "file": "SSF_第五话P48_3点2点_实际运行证据_20261027.zip",
+      "bytes": 15141849,
+      "sha256": "818d9a7a30d70ea31687466a42749db27e955a905ca90928a1b9405735e87ed4",
+      "role": "第五话原生2/3点运行证据",
+      "published_original": false,
+      "zip_members": 152,
+      "crc_ok": true
+    },
+    {
+      "id": "S21",
+      "file": "SSF_第六话_开场1回合_固定十人_战场中断.zip",
+      "bytes": 39814,
+      "sha256": "50af5a9af6d2cd94f32d2fe14935c0ecd7dc4187ea15787a80c737bfe6b09ce7",
+      "role": "第六话开场",
+      "published_original": false,
+      "zip_members": 6,
+      "crc_ok": true
+    },
+    {
+      "id": "S22",
+      "file": "SSF_第六话通关_真实系.zip",
+      "bytes": 87149,
+      "sha256": "ae51b39b45b112e51e1425046626bd3a16fdbe956b69b3063dfe89b2cdec3dc9",
+      "role": "第六话通关",
+      "published_original": false,
+      "zip_members": 7,
+      "crc_ok": true
+    },
+    {
+      "id": "S23",
+      "file": "SSF_第七话通关_真实系.zip",
+      "bytes": 53922,
+      "sha256": "43a9977476cedaafbd0c9597ec6f6a1e654505abff690285ed12716be8eee45a",
+      "role": "第七话通关",
+      "published_original": false,
+      "zip_members": 6,
+      "crc_ok": true
+    },
+    {
+      "id": "S24",
+      "file": "SSF_第八话通关_真实系.zip",
+      "bytes": 54670,
+      "sha256": "716e7c488100bf231e199745cd9afc682dc1dc4c392a3813e9d963e89aef8fb5",
+      "role": "第八话通关",
+      "published_original": false,
+      "zip_members": 6,
+      "crc_ok": true
+    },
+    {
+      "id": "S25",
+      "file": "SSF_第九话通关_VB5候选_存档与验收记录.zip",
+      "bytes": 112360,
+      "sha256": "e56d57373414b0b5333f2bda1a38b75b80a4415012f3dfe50fe7cbcf895c7d2d",
+      "role": "第九话通关/第十话关前",
+      "published_original": false,
+      "zip_members": 14,
+      "crc_ok": true
+    },
+    {
+      "id": "S26",
+      "file": "HVM_第6至9话存档与共用区复核_20261028.zip",
+      "bytes": 29326,
+      "sha256": "9d1a3e07078bd08d32d200a548ba072e850b23db9745be12c78c173645397ac4",
+      "role": "第六至九话及共用结构审计",
+      "published_original": false,
+      "zip_members": 9,
+      "crc_ok": true
+    },
+    {
+      "id": "S27",
+      "file": "SSF_Lecee_Readonly_Checker_20261027.zip",
+      "bytes": 81820,
+      "sha256": "cbafb9975a274a8b71cee17fae11200f18bb17d3a19cdb4bd88dcac7fe16f768",
+      "role": "第十话只读查询器",
+      "published_original": false,
+      "zip_members": 37,
+      "crc_ok": true
+    },
+    {
+      "id": "S28",
+      "file": "Lecee_Offline_Review_Full_Handoff_20261028.zip",
+      "bytes": 120040,
+      "sha256": "af7d5e7bba73cba612bca09e4927944f82f5053c50553d283c5e2773756cb6f1",
+      "role": "原件交接包，不含A-D",
+      "published_original": false,
+      "zip_members": 7,
+      "crc_ok": true
+    },
+    {
+      "id": "S29",
+      "file": "SSF_第二话_新旧存档复核_20261025.zip",
+      "bytes": 10254,
+      "sha256": "2629588a8f208957a957d9d8ebf498c1fc748dd5694ca5e37397fe5703b98561",
+      "role": "旧四卡分数与偏移复查",
+      "published_original": false,
+      "zip_members": 4,
+      "crc_ok": true
+    },
+    {
+      "id": "S30",
+      "file": "HVM_CH03_R5_击坠与未击坠存档对照_20261020.zip",
+      "bytes": 40602,
+      "sha256": "38af882798993a33658c4040785c4b1a7791c15a2e9aa848b291edae5b69767b",
+      "role": "旧第三话两条路线存档",
+      "published_original": false,
+      "zip_members": 18,
+      "crc_ok": true
+    }
+  ],
+  "note": "Only metadata is public. CRC verifies archive integrity, not gameplay or all internal manifests."
+}

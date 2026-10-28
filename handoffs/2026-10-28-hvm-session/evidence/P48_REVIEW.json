@@ -1,0 +1,82 @@
+{
+  "scope": "Independent file audit of supplied runtime captures, not a new emulator run",
+  "verified_manifest_members": 151,
+  "runs": [
+    {
+      "input_points": 2,
+      "D0_r0": 2,
+      "F5_r1": 2,
+      "F5_r2": 3,
+      "F5_T": 0,
+      "enemy_ID_counts": {
+        "00D8": 12,
+        "00D6": 5,
+        "0041": 1
+      },
+      "AtollV": [
+        {
+          "unit_id": "0041",
+          "pilot_id": "00A7",
+          "position": [
+            28,
+            3
+          ],
+          "HP": 7900,
+          "EN": 140,
+          "body_grades": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "weapon_storage_first_three": [
+            2,
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "input_points": 3,
+      "D0_r0": 3,
+      "F5_r1": 3,
+      "F5_r2": 3,
+      "F5_T": 1,
+      "enemy_ID_counts": {
+        "00D8": 9,
+        "00D3": 4,
+        "00D2": 4,
+        "0041": 1
+      },
+      "AtollV": [
+        {
+          "unit_id": "0041",
+          "pilot_id": "00A7",
+          "position": [
+            28,
+            3
+          ],
+          "HP": 8500,
+          "EN": 170,
+          "body_grades": [
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          "weapon_storage_first_three": [
+            5,
+            5,
+            5
+          ]
+        }
+      ]
+    }
+  ],
+  "taken_target_register_R7_relative": "0x0879",
+  "target_cursor_store_observed_committed": false,
+  "exact_normal_0791_immediate_breakpoint_captured": false
+}

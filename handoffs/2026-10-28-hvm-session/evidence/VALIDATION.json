@@ -1,0 +1,55 @@
+{
+  "schema": "HVM_SESSION_VALIDATION_V1",
+  "date": "2026-10-28",
+  "scope": "Current review software and read-only artifact checks only",
+  "inputs": {
+    "identified_sources": 30,
+    "zip_sources": 29,
+    "all_source_hashes_unchanged_after_review": true,
+    "zip_crc_all_pass": true,
+    "real_CH10_AD_sample_sets_available": 0
+  },
+  "executed": {
+    "original_lecee_checker_synthetic_integration_tests": {
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0
+    },
+    "existing_campaign_readonly_tests": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0
+    },
+    "CH02_CH09_final_native_game_records_reparsed": 8,
+    "CH06_CH09_game_records_checksum_valid": 12,
+    "CH06_CH09_unique_payloads": 9,
+    "CH06_CH09_manifest_members_verified": 29,
+    "P48_manifest_members_verified": 151,
+    "P48_D0_results": [
+      2,
+      3
+    ],
+    "P48_F5_T": [
+      0,
+      1
+    ],
+    "original_scenes_revalidated": 52,
+    "normalized_common_blocks": 51
+  },
+  "not_executed": {
+    "new_emulator_gameplay": 0,
+    "native_SH2_11case_suite_rerun": false,
+    "CH10_real_AD_inspect_or_compare": false,
+    "new_ROM_writes": 0,
+    "original_save_writes": 0,
+    "hvm04_integration_or_gate_change": false,
+    "Korean_WASM_build": false
+  },
+  "publication": {
+    "raw_ROM_BIOS_assets_fonts_saves_RAM_included": false,
+    "private_paths_and_account_identifiers_included": false,
+    "historic_internal_reports_rewritten": true,
+    "reviewed_payload_only": true,
+    "old_repository_allowlist_or_checker_findings_not_silently_certified": true
+  }
+}

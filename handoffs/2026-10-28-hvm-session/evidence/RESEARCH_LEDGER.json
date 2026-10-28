@@ -1,0 +1,320 @@
+{
+  "schema": "HVM_SESSION_RESEARCH_LEDGER_V1",
+  "date": "2026-10-28",
+  "published_auto_event_count": 0,
+  "current_review_new_emulator_runs": 0,
+  "entries": [
+    {
+      "id": "HVM-CORE",
+      "topic": "原hvm04主线与证据门禁",
+      "source_ids": [
+        "S01",
+        "S02"
+      ],
+      "status": "EXISTING_SOFTWARE",
+      "supported": "已具目录、预览、CLI及语义后端；未重建第三框架",
+      "limit_or_next": "完整Auto写入及自然招募未开放"
+    },
+    {
+      "id": "VM-SEMANTICS",
+      "topic": "谓词、数值、回调与等待",
+      "source_ids": [
+        "S01",
+        "S09",
+        "S12"
+      ],
+      "status": "BOUNDED_NATIVE_AND_STATIC",
+      "supported": "分别追踪整数结果和失败位；登记不是消费",
+      "limit_or_next": "自然调度与跨等待状态需要实际轨迹"
+    },
+    {
+      "id": "COUNTER-MODEL",
+      "topic": "跨关四位累计",
+      "source_ids": [
+        "S03",
+        "S07"
+      ],
+      "status": "STATIC_AND_BOUNDED_NATIVE",
+      "supported": "GS+0540高四位；payload+A0；15递增回卷",
+      "limit_or_next": "不是6004号Flag；不据此授权任意写入"
+    },
+    {
+      "id": "CH02",
+      "topic": "奈伊击坠与8回合",
+      "source_ids": [
+        "S07",
+        "S16"
+      ],
+      "status": "SAVE_RESULT_RECHECKED",
+      "supported": "第7回合击坠并等到第8回合的来源路线最终保存1点",
+      "limit_or_next": "精确加点帧未取得；第8PP边界不由该样本独证"
+    },
+    {
+      "id": "CH03",
+      "topic": "希罗击坠与第二点",
+      "source_ids": [
+        "S17"
+      ],
+      "status": "SAVE_RESULT_RECHECKED",
+      "supported": "第三话普通档累计2",
+      "limit_or_next": "战斗轨迹来自随包记录；本轮未重新运行"
+    },
+    {
+      "id": "CH04",
+      "topic": "希罗击坠与第三点",
+      "source_ids": [
+        "S18"
+      ],
+      "status": "SAVE_RESULT_RECHECKED",
+      "supported": "中断及过关档累计3，E0置位",
+      "limit_or_next": "精确P04加点PC未在本轮观测"
+    },
+    {
+      "id": "NOHP",
+      "topic": "R5第三话取消HP撤退",
+      "source_ids": [
+        "S04",
+        "S05",
+        "S06"
+      ],
+      "status": "HISTORICAL_PATCH_RUNTIME_SCOPE",
+      "supported": "已有定点补丁与用户低HP继续攻击/击坠保存结果",
+      "limit_or_next": "不推广全关卡；公共清理函数未全局禁用"
+    },
+    {
+      "id": "RETREAT-PATTERNS",
+      "topic": "全场景HP与第一话战舰",
+      "source_ids": [
+        "S08"
+      ],
+      "status": "HISTORICAL_BOUNDED_NATIVE",
+      "supported": "20组比例结构、15场景；第一话固定5/6与同一清理原语",
+      "limit_or_next": "同一HP查询不代表同一业务结果"
+    },
+    {
+      "id": "P48",
+      "topic": "第五话2点/3点对照",
+      "source_ids": [
+        "S20"
+      ],
+      "status": "USER_RUNTIME_EVIDENCE_RECHECKED",
+      "supported": "D0=2/3、T=0/1及普通/强化对象差异；151项清单再核验",
+      "limit_or_next": "3点store前暂停、2点精确入口断点缺失；不是全18机统一等级"
+    },
+    {
+      "id": "CH06",
+      "topic": "第六话开场与通关",
+      "source_ids": [
+        "S21",
+        "S22"
+      ],
+      "status": "SAVE_RESULT_RECHECKED",
+      "supported": "累计3；开场资料已存在",
+      "limit_or_next": "未发现已知同型强化，不等于排除所有间接机制"
+    },
+    {
+      "id": "CH07",
+      "topic": "第七话加布雷相关累计",
+      "source_ids": [
+        "S23",
+        "S26"
+      ],
+      "status": "SAVE_RESULT_RECHECKED",
+      "supported": "中断3、通关4",
+      "limit_or_next": "击坠时序来自来源报告；未新捕获P06+08CF"
+    },
+    {
+      "id": "CH08-09",
+      "topic": "第八九话连续保存",
+      "source_ids": [
+        "S24",
+        "S25",
+        "S26"
+      ],
+      "status": "SAVE_RESULT_RECHECKED",
+      "supported": "累计均4；第九话普通档指向实际第十话/P09",
+      "limit_or_next": "VB5版本分界和恢复历史保留；P08未做P48式成对验证"
+    },
+    {
+      "id": "ANYFRIENDLY",
+      "topic": "四入口说得者资格放宽",
+      "source_ids": [
+        "S12"
+      ],
+      "status": "BOUNDED_NATIVE_CANDIDATE",
+      "supported": "P09/P12/P30/P47源ID零通配候选，保留其他资格",
+      "limit_or_next": "不是Auto，也不是已发正确奖励"
+    },
+    {
+      "id": "P09-REWARD",
+      "topic": "雷西两模板与状态转换",
+      "source_ids": [
+        "S13",
+        "S27"
+      ],
+      "status": "STATIC_AND_SYNTHETIC_CONTRACT",
+      "supported": "机师0098/机体00D2，全1兜底及全4出场；E2两路共用",
+      "limit_or_next": "自然说得奖励与完整后效待真实A-D"
+    },
+    {
+      "id": "CH10-CHECKER",
+      "topic": "第十话只读查询器",
+      "source_ids": [
+        "S27",
+        "S28"
+      ],
+      "status": "SOFTWARE_RERUN_PASS",
+      "supported": "本轮18项原合成集成测试通过",
+      "limit_or_next": "真实A-D未取得；不把selftest当实际说得"
+    },
+    {
+      "id": "CH10-A-D",
+      "topic": "第十话封存结果复核",
+      "source_ids": [
+        "S25",
+        "S27",
+        "S28"
+      ],
+      "status": "INPUT_MISSING_FOR_CURRENT_REVIEW",
+      "supported": "已备好关前基线、版本合同与四阶段验收",
+      "limit_or_next": "当前没有第十话真实RAM/BKR/日志；不宣告成功或失败"
+    },
+    {
+      "id": "FLAG-0016",
+      "topic": "共享Flag调用器、资源消费者、入边",
+      "source_ids": [
+        "S02",
+        "S09",
+        "S10",
+        "S11"
+      ],
+      "status": "STATIC_AND_BOUNDED_NATIVE",
+      "supported": "7E第四表index23及0016置位；资源目录分流；直接入边零命中",
+      "limit_or_next": "自然上游仍未知；不能当托德独占条件"
+    },
+    {
+      "id": "TODD-HAMAN",
+      "topic": "0113/0109保存与FF消费",
+      "source_ids": [
+        "S02",
+        "S12"
+      ],
+      "status": "PARTIAL_STATIC",
+      "supported": "F候选完成位与保存映射已定位",
+      "limit_or_next": "全路线成功、合法继承及FF读取者未闭合"
+    },
+    {
+      "id": "SHARED-2163",
+      "topic": "跨场景归一化共用结构",
+      "source_ids": [
+        "S08",
+        "S26"
+      ],
+      "status": "STATIC_RERUN_PASS",
+      "supported": "51块2163字节，52个root6到0224，固定309字节",
+      "limit_or_next": "EE.0F寻址未原生验证；整块不是已解码完整函数"
+    },
+    {
+      "id": "ROOT13",
+      "topic": "P09相对根指针修正",
+      "source_ids": [
+        "S26"
+      ],
+      "status": "STATIC_RERUN_PASS",
+      "supported": "0034+13FA=142E，共用区之外",
+      "limit_or_next": "不能把存储相对数值直接当入口"
+    },
+    {
+      "id": "SAVE-LAYOUT",
+      "topic": "BKR/SSF容器、缓存保存与校验",
+      "source_ids": [
+        "S01",
+        "S26",
+        "S29"
+      ],
+      "status": "READONLY_RECHECKED",
+      "supported": "普通5632、中断12624；原生sum前后边界；机师机体完整表",
+      "limit_or_next": "不包含所有变体兼容；设置记录单独处理"
+    },
+    {
+      "id": "OLD-ZERO",
+      "topic": "旧第二话0分样本复核",
+      "source_ids": [
+        "S29",
+        "S30"
+      ],
+      "status": "READONLY_RECHECKED",
+      "supported": "旧程序实际用payload+A0，26300/34000资金样本仍为0",
+      "limit_or_next": "不能将旧0一概撤销；表示层误写与实际计算分开"
+    },
+    {
+      "id": "JUMP-ROLLBACK",
+      "topic": "跳关与后期档逆向回退",
+      "source_ids": [],
+      "status": "HISTORICAL_EXPERIMENT_AND_PLAN",
+      "supported": "场景入口可改不补队伍；后期回退需撤销事件状态",
+      "limit_or_next": "任意关卡完整开局/回退自然通关未完成"
+    },
+    {
+      "id": "PS-SAVES",
+      "topic": "PSF/PSFF卡与继承配对",
+      "source_ids": [
+        "S14"
+      ],
+      "status": "HISTORICAL_CONTAINER_AUDIT",
+      "supported": "12844含12PSF+1PSFF，另卡9PSFF；目录/块链线索",
+      "limit_or_next": "不等于12通关档或真实父子继承"
+    },
+    {
+      "id": "CROSS-GAME",
+      "topic": "YZZL/第四次/第四次S结构参照",
+      "source_ids": [],
+      "status": "HISTORICAL_RESEARCH_LEADS",
+      "supported": "对象与菜单邻近模块可辅助定位",
+      "limit_or_next": "编号和代码不能直接跨平台套用"
+    },
+    {
+      "id": "MERGE-01",
+      "topic": "Saturn FF运行F剧情",
+      "source_ids": [],
+      "status": "HISTORICAL_BOUNDED_RUNTIME",
+      "supported": "迁入13428字节、9条B3/B4由FF原程序执行",
+      "limit_or_next": "未完成第一话战斗、保存与完整两部战役"
+    },
+    {
+      "id": "PS-MERGE",
+      "topic": "PSFF母版接入PSF",
+      "source_ids": [],
+      "status": "PROPOSED_VALIDATION_PATH",
+      "supported": "已有数据/汉化/存档基础，优先做第一话闭环",
+      "limit_or_next": "本会话无PSFF执行PSF完整关卡证据"
+    },
+    {
+      "id": "KOREAN",
+      "topic": "韩版查询与运行时线索",
+      "source_ids": [],
+      "status": "HISTORICAL_SOURCE_REVIEW",
+      "supported": "C0.11旧值、D0.02位查询、C0.12写副作用、RAM互通",
+      "limit_or_next": "FF结论不直接移植F；未编译韩版WASM"
+    },
+    {
+      "id": "INTEGRATION",
+      "topic": "工具整合与接口边界",
+      "source_ids": [
+        "S15",
+        "S27"
+      ],
+      "status": "PARTIALLY_CONNECTED",
+      "supported": "现有只读工作台与查询工具各自可用",
+      "limit_or_next": "韩版转换层/Agent/VMTRACE未全量联调"
+    },
+    {
+      "id": "VISUAL",
+      "topic": "字体/姓名/窗口及B3残留",
+      "source_ids": [],
+      "status": "SEPARATE_PENDING_VALIDATION",
+      "supported": "会话内提出的视觉问题单独登记",
+      "limit_or_next": "隐藏事件验证不认证视觉问题全部修复"
+    }
+  ]
+}

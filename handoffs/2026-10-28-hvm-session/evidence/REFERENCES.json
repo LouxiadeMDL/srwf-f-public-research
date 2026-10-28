@@ -1,0 +1,73 @@
+{
+  "schema": "HVM_SESSION_REFERENCE_INDEX_V1",
+  "date": "2026-10-28",
+  "scope": "Descriptive source locations only. No third-party code or private content redistributed. Historical reviews are not reclassified as current online verification.",
+  "references": [
+    {
+      "id": "R01",
+      "repository": "aiichiroandr/ss_srwf_kor_patch",
+      "ref": "267c26b91f051577b0bf90a13182fd770de6c249",
+      "paths": [
+        "docs/EDITOR_PILOT_QUERY_RUNTIME.md",
+        "docs/EDITOR_PILOT_OBJECTIVE_CONTRACT.md",
+        "docs/EDITOR_PHASE_CALLBACK_RESEARCH.md",
+        "docs/EDITOR_SCENARIO_F_RUNTIME_PROGRESS.md",
+        "docs/WEB_PORT_RAM_SAVES.md",
+        "docs/WEB_PORT_TEST.md",
+        "web-port/ram-save.mjs",
+        "web-port/saves.mjs",
+        "assets/editor-core.mjs",
+        "assets/editor-weapon-links.mjs"
+      ],
+      "evidence": "Earlier source review in this conversation; not a new Oct 28 repository-status poll",
+      "limits": "FF observations and bounded product support are not automatically F equivalence; no runtime-source archive build performed here"
+    },
+    {
+      "id": "R02",
+      "repository": "callumjenkins/saturn-recomp",
+      "ref_prefix": "532fd6054",
+      "paths": [
+        "src/saturnrecomp/agent.py",
+        "src/saturnrecomp/recomp/__main__.py",
+        "src/saturnrecomp/recomp/emit.py",
+        "runtime/src/machine/agent.cpp",
+        "runtime/src/machine/machine.cpp",
+        "runtime/include/saturn/sh2.h"
+      ],
+      "evidence": "Earlier inspected upstream implementation",
+      "limits": "Agent/watch/hook capability is not integration into hvm04 or proof the Korean source snapshot contains every upstream feature"
+    },
+    {
+      "id": "R03",
+      "repository": "satorukishi/SRWF-Savegame-Editor",
+      "paths": [
+        "Satoru.SRWF.Savegame.Service/Provider/SaveProvider.cs",
+        "Satoru.SRWF.Savegame.Service/Provider/UnitProviderCache.cs",
+        "Satoru.SRWF.Savegame.Service/units.csv"
+      ],
+      "ref_status": "Prior master snapshot reviewed in this conversation; full commit not fixed here",
+      "evidence": "Cross-source clues only",
+      "limits": "Unfinished unit writer and filename-based checksum adjustment are not copied as native authority"
+    },
+    {
+      "id": "R04",
+      "document": "MERGE-01 REPORT_CN and SRWF_F_FF_MERGE01_NATIVE_STORY_ACCEPTANCE_V1",
+      "recorded_date": "2026-10-15",
+      "evidence": "Library report and acceptance record retrieved during this review",
+      "facts": {
+        "host": "Saturn FF RevA10M original executable",
+        "donor": "Saturn F RevB21M compressed slots 1 and 51",
+        "transferred_bytes": 13428,
+        "native_dialogues": 9,
+        "source_RAM_matches": 4
+      },
+      "limits": "Bounded story execution; not full first-battle/save validation; PS compatibility not proven"
+    },
+    {
+      "id": "R05",
+      "document": "逐话剧情目录、日文攻略与隐藏要素说明",
+      "evidence": "Historical supporting references for chapter mapping and gameplay hypotheses",
+      "limits": "Guide claims are not counted as source-code execution; this release is grounded in archived component and save evidence"
+    }
+  ]
+}

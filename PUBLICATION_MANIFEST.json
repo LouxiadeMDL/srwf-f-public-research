@@ -1,5 +1,5 @@
 {
-  "review_date": "2026-10-25",
+  "review_date": "2026-10-28",
   "scope": "Original utilities and rewritten/public-safe documentation and machine-readable summaries only; no inherited private history",
   "files": {
     ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
@@ -48,7 +48,23 @@
     "docs/2026-10-25-ssff-animation-hp-bd01.md": "a1468d375b1c0365e40f42219be464d8513f2cbc043ec363237f6d967af59ab4",
     "docs/2026-10-25-ssff-hp-v3-active-palette.md": "46addcc709bb7f81dcfbaa633e44b3b466ffb925ab7e434288f8831c74e67513",
     "docs/2026-10-25-ssf-r13-native-font.md": "079bcca5e508265d739488689c5510d52315df5a3475a2638c114f9a1e485bac",
-    "evidence/specialized/2026-10-25/RECORD_DIGESTS.json": "c32a35cbb819a868411efadf20635d53fc50e09f2894ef68ed45a12cb63fbe70"
+    "evidence/specialized/2026-10-25/RECORD_DIGESTS.json": "c32a35cbb819a868411efadf20635d53fc50e09f2894ef68ed45a12cb63fbe70",
+    "handoffs/2026-10-28-hvm-session/README.md": "26bb717516dfdfbe8b07afc8a4b6980e9fd323ff2acf98a1387425930ed996b6",
+    "handoffs/2026-10-28-hvm-session/SHA256SUMS.txt": "923a92b7ef588b0aba23e0f6dd13b6ecfaf94f24391a9b375b36761e4ad6c308",
+    "handoffs/2026-10-28-hvm-session/docs/CH10_REVIEW_CN.md": "eb87627eb3b586fd7272ce16fc8569c1a334601d46748bfa6435643980d80308",
+    "handoffs/2026-10-28-hvm-session/docs/CORRECTIONS_CN.md": "0478f9083b14be5fe530eb3d569aa04d5dc1614581d663510bec0bd5453c61e9",
+    "handoffs/2026-10-28-hvm-session/docs/FULL_RESEARCH_REPORT_CN.md": "a5e5b19d796f96c1bbb2776f2a74bb9edf3a6525f083248854e3ce8da740175c",
+    "handoffs/2026-10-28-hvm-session/docs/README_CN.md": "6a4da6129744d925a4aa2cefae4a9bb034857e9e96a667519de96bc1ee808bf0",
+    "handoffs/2026-10-28-hvm-session/docs/REPRODUCTION_CN.md": "90a67e15b2f25f8736b36d7eb592d7d7ec0acb6a0d89cc899a4b8491baa6acab",
+    "handoffs/2026-10-28-hvm-session/evidence/CAMPAIGN_SUMMARY.json": "5ce269ea8b56ed74b0fc4a9f232200852570d84cc5a298cec9172ab60966d5c6",
+    "handoffs/2026-10-28-hvm-session/evidence/OLD_SCORE_RECHECK.json": "3b446e531ed69dc6e06cc82df366a67a3ff7b433a3da9fc2798675dd236136cf",
+    "handoffs/2026-10-28-hvm-session/evidence/P48_REVIEW.json": "d09fe4ba5a2d0242e74ae4789eba3faecf91e95e8e10e440ec77b0d59e976c75",
+    "handoffs/2026-10-28-hvm-session/evidence/REFERENCES.json": "7fa80fcfc71d1fd90ed9bdf941e08cb3bb31ae2e6fcdb093c1b77d1dd7f08038",
+    "handoffs/2026-10-28-hvm-session/evidence/RESEARCH_LEDGER.json": "d96b2d41b3a3cd65e4c6f1157d4283f4dc3b0a4b7d36c8260bd6ed5e2beb402f",
+    "handoffs/2026-10-28-hvm-session/evidence/SHARED_STRUCTURE_REVIEW.json": "5b8ad9870d804c77ba49c60ca21d3531e6e473f04978bb65d4f46bb632c7f64c",
+    "handoffs/2026-10-28-hvm-session/evidence/SOURCE_CATALOG.json": "46b2e7f3b3b8a1b88c0f5302c268506f075d04e3270aac9a9183421280146a34",
+    "handoffs/2026-10-28-hvm-session/evidence/VALIDATION.json": "757f0f0b12680340c95b7509e6e4fcc16cfe318889233e6d5b2058c2d2160e42",
+    "handoffs/2026-10-28-hvm-session/evidence/checker_selftest_rerun.json": "75032c45b37208a44e0f58b3cd707aa27f031a500210ad3520ea1a1f2863718a"
   },
   "handoff_note": "New 2026-09-22 packet reviewed separately; preexisting checker findings retained.",
   "publication_update_2026_10_25": {
@@ -70,5 +86,31 @@
       ".gitignore"
     ],
     "retrospective_boundary": "Pre-existing earlier unlisted/changed paths are outside this review; old allowlist/checker reservations are not silently certified."
+  },
+  "publication_update_2026_10_28": {
+    "scope": "Rewritten full-session HVM reports and factual summaries; original checker synthetic tests and read-only audits rerun; no new emulator gameplay or CH10 real A-D input",
+    "new_paths": [
+      "handoffs/2026-10-28-hvm-session/README.md",
+      "handoffs/2026-10-28-hvm-session/SHA256SUMS.txt",
+      "handoffs/2026-10-28-hvm-session/docs/CH10_REVIEW_CN.md",
+      "handoffs/2026-10-28-hvm-session/docs/CORRECTIONS_CN.md",
+      "handoffs/2026-10-28-hvm-session/docs/FULL_RESEARCH_REPORT_CN.md",
+      "handoffs/2026-10-28-hvm-session/docs/README_CN.md",
+      "handoffs/2026-10-28-hvm-session/docs/REPRODUCTION_CN.md",
+      "handoffs/2026-10-28-hvm-session/evidence/CAMPAIGN_SUMMARY.json",
+      "handoffs/2026-10-28-hvm-session/evidence/OLD_SCORE_RECHECK.json",
+      "handoffs/2026-10-28-hvm-session/evidence/P48_REVIEW.json",
+      "handoffs/2026-10-28-hvm-session/evidence/REFERENCES.json",
+      "handoffs/2026-10-28-hvm-session/evidence/RESEARCH_LEDGER.json",
+      "handoffs/2026-10-28-hvm-session/evidence/SHARED_STRUCTURE_REVIEW.json",
+      "handoffs/2026-10-28-hvm-session/evidence/SOURCE_CATALOG.json",
+      "handoffs/2026-10-28-hvm-session/evidence/VALIDATION.json",
+      "handoffs/2026-10-28-hvm-session/evidence/checker_selftest_rerun.json"
+    ],
+    "updated_paths": [
+      "PUBLICATION_MANIFEST.json"
+    ],
+    "retrospective_boundary": "All prior allowlist entries and reservations retained unchanged. New scoped content review does not certify pre-existing unlisted or changed repository files.",
+    "excluded": "ROM, BIOS, fonts, game assets, raw RAM, saves, private paths, internal logs, and inherited source archives are not published."
   }
 }

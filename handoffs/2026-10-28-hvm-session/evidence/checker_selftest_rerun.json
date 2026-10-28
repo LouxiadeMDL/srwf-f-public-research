@@ -1,0 +1,105 @@
+{
+  "scope": "Synthetic integration checks, no natural gameplay",
+  "passed": 18,
+  "cases": [
+    {
+      "case": "before_can_already_have_four_upgrades",
+      "passed": true,
+      "observed_verdict": "PASS_BASELINE_CHECKS",
+      "all_input_bytes_unchanged": true
+    },
+    {
+      "case": "after_four_upgrades_and_linked_allied_modes",
+      "passed": true,
+      "observed_verdict": "PASS_STATE_CHECKS",
+      "all_input_bytes_unchanged": true
+    },
+    {
+      "case": "four_to_four_enemy_to_ally_transition",
+      "passed": true,
+      "observed_verdict": "PASS_STATE_COMPARISON"
+    },
+    {
+      "case": "one_upgrade_fallback_does_not_pass_four_reward",
+      "passed": true,
+      "observed_verdict": "FAIL_STATE_CHECKS",
+      "all_input_bytes_unchanged": true
+    },
+    {
+      "case": "E2_alone_does_not_pass",
+      "passed": true,
+      "observed_verdict": "FAIL_STATE_CHECKS",
+      "all_input_bytes_unchanged": true
+    },
+    {
+      "case": "wrong_pilot_link_is_not_silently_selected",
+      "passed": true,
+      "observed_verdict": "HOLD_INCOMPLETE_OR_AMBIGUOUS",
+      "all_input_bytes_unchanged": true
+    },
+    {
+      "case": "duplicate_ID98_exposes_ambiguity",
+      "passed": true,
+      "observed_verdict": "HOLD_INCOMPLETE_OR_AMBIGUOUS",
+      "all_input_bytes_unchanged": true
+    },
+    {
+      "case": "reverse_link_from_other_unit_is_not_missed",
+      "passed": true,
+      "observed_verdict": "HOLD_INCOMPLETE_OR_AMBIGUOUS",
+      "all_input_bytes_unchanged": true
+    },
+    {
+      "case": "two_units_bound_to_same_pilot_require_review",
+      "passed": true,
+      "observed_verdict": "HOLD_INCOMPLETE_OR_AMBIGUOUS",
+      "all_input_bytes_unchanged": true
+    },
+    {
+      "case": "unrelated_packed_bits_do_not_change_levels",
+      "passed": true,
+      "observed_verdict": "PASS_STATE_CHECKS",
+      "all_input_bytes_unchanged": true
+    },
+    {
+      "case": "changed_code_has_HOLD_precedence_over_field_fail",
+      "passed": true,
+      "observed_verdict": "HOLD_INCOMPLETE_OR_AMBIGUOUS",
+      "all_input_bytes_unchanged": true
+    },
+    {
+      "case": "changed_weapon_profile_requires_review",
+      "passed": true,
+      "observed_verdict": "HOLD_INCOMPLETE_OR_AMBIGUOUS",
+      "all_input_bytes_unchanged": true
+    },
+    {
+      "case": "reload_relocates_slots_no_actor_and_E2_clear",
+      "passed": true,
+      "observed_verdict": "PASS_STATE_CHECKS",
+      "all_input_bytes_unchanged": true
+    },
+    {
+      "case": "reload_compares_semantics_not_addresses_or_E2",
+      "passed": true,
+      "observed_verdict": "PASS_STATE_COMPARISON"
+    },
+    {
+      "case": "distinct_body_and_weapon_field_order",
+      "passed": true
+    },
+    {
+      "case": "missing_low_RAM_refused_without_zero_fill",
+      "passed": true
+    },
+    {
+      "case": "overlapping_P0_P1_aliases_refused",
+      "passed": true
+    },
+    {
+      "case": "CLI_reads_capture_and_refuses_input_overwrite",
+      "passed": true
+    }
+  ],
+  "natural_gameplay_runs": 0
+}

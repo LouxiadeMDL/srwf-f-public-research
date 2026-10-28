@@ -1,0 +1,162 @@
+{
+  "scope": "Re-execution of original read-only parser; already uses payload A0. Do not classify every old zero as an offset error.",
+  "cards": [
+    {
+      "file": "SSFF_原内置.bin",
+      "sha256": "e8e0a35f89f98c696fa9d082916913d0c6bbb4f334c3d9288c664c0e29d28d22",
+      "records": []
+    },
+    {
+      "file": "SSF_原卡带.bin",
+      "sha256": "520883788bc2611571faed314c632e0f508fc8c6fa93a41575e3df65471e46af",
+      "records": [
+        {
+          "name": "SROBOT_F_01",
+          "stage_display": 2,
+          "selector": 2,
+          "completed": 1,
+          "score": 0,
+          "funds": 6300,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_02",
+          "stage_display": 3,
+          "selector": 3,
+          "completed": 2,
+          "score": 0,
+          "funds": 26300,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_03",
+          "stage_display": 3,
+          "selector": 3,
+          "completed": 2,
+          "score": 0,
+          "funds": 26300,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_04",
+          "stage_display": 3,
+          "selector": 3,
+          "completed": 2,
+          "score": 0,
+          "funds": 26300,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_05",
+          "stage_display": 4,
+          "selector": 4,
+          "completed": 3,
+          "score": 1,
+          "funds": 41300,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_06",
+          "stage_display": 4,
+          "selector": 4,
+          "completed": 3,
+          "score": 1,
+          "funds": 41300,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_07",
+          "stage_display": 4,
+          "selector": 4,
+          "completed": 3,
+          "score": 0,
+          "funds": 38300,
+          "checksum_valid": true
+        }
+      ]
+    },
+    {
+      "file": "SSF_原内置.bin",
+      "sha256": "a5c9067475653eec904956a76bc857b7acb053488f5e3eb11640871439ae8e4f",
+      "records": [
+        {
+          "name": "SROBOT_F_00",
+          "stage_display": 2,
+          "selector": 2,
+          "completed": 1,
+          "score": 0,
+          "funds": 14100,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_01",
+          "stage_display": 2,
+          "selector": 2,
+          "completed": 1,
+          "score": 0,
+          "funds": 6300,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_02",
+          "stage_display": 3,
+          "selector": 3,
+          "completed": 2,
+          "score": 0,
+          "funds": 34000,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_03",
+          "stage_display": 4,
+          "selector": 4,
+          "completed": 3,
+          "score": 1,
+          "funds": 41300,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_04",
+          "stage_display": 4,
+          "selector": 4,
+          "completed": 3,
+          "score": 1,
+          "funds": 41300,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_05",
+          "stage_display": 4,
+          "selector": 4,
+          "completed": 3,
+          "score": 0,
+          "funds": 38300,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_06",
+          "stage_display": 4,
+          "selector": 4,
+          "completed": 3,
+          "score": 1,
+          "funds": 41300,
+          "checksum_valid": true
+        },
+        {
+          "name": "SROBOT_F_07",
+          "stage_display": 2,
+          "selector": 2,
+          "completed": 1,
+          "score": 0,
+          "funds": 6300,
+          "checksum_valid": true
+        }
+      ]
+    },
+    {
+      "file": "SSFF_原卡带.bin",
+      "sha256": "230df47589f483f6fbd703940208247f1104a1159bb0f54e69c71110b6ab6434",
+      "records": []
+    }
+  ]
+}

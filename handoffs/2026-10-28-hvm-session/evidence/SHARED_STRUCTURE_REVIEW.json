@@ -1,0 +1,28 @@
+{
+  "source_scene_bytes": 556606,
+  "raw_common_prefix_bytes": 58,
+  "normalized_common_prefix_bytes": 2163,
+  "mask_zero_based_positions": [
+    58,
+    59
+  ],
+  "normalized_sha256": "db57d18cb11518c7196e67ac3c2bb7d983e18c851cf8b8f931fb64c57b17da88",
+  "all_52_root6_resolve_to_0x0224": true,
+  "fixed_at_0x0224_common_bytes": 309,
+  "P09_root13_correction": {
+    "cell_hex": "0x0034",
+    "stored_relative_hex": "0x000013FA",
+    "resolved_target_hex": "0x142E",
+    "common_range_inclusive": [
+      "0x0BB9",
+      "0x142B"
+    ],
+    "root13_inside_range": false,
+    "root9_crosscheck": {
+      "cell_hex": "0x0024",
+      "stored_relative_hex": "00000B1B",
+      "resolved_target_hex": "0x0B3F"
+    },
+    "basis": "All roots use the pointer cell as signed-BE32 relative base; raw offset is not an absolute scene target."
+  }
+}
