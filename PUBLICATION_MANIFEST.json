@@ -49,12 +49,12 @@
     "docs/2026-10-25-ssff-hp-v3-active-palette.md": "46addcc709bb7f81dcfbaa633e44b3b466ffb925ab7e434288f8831c74e67513",
     "docs/2026-10-25-ssf-r13-native-font.md": "079bcca5e508265d739488689c5510d52315df5a3475a2638c114f9a1e485bac",
     "evidence/specialized/2026-10-25/RECORD_DIGESTS.json": "c32a35cbb819a868411efadf20635d53fc50e09f2894ef68ed45a12cb63fbe70",
-    "handoffs/2026-10-28-hvm-session/README.md": "26bb717516dfdfbe8b07afc8a4b6980e9fd323ff2acf98a1387425930ed996b6",
-    "handoffs/2026-10-28-hvm-session/SHA256SUMS.txt": "923a92b7ef588b0aba23e0f6dd13b6ecfaf94f24391a9b375b36761e4ad6c308",
-    "handoffs/2026-10-28-hvm-session/docs/CH10_REVIEW_CN.md": "eb87627eb3b586fd7272ce16fc8569c1a334601d46748bfa6435643980d80308",
+    "handoffs/2026-10-28-hvm-session/README.md": "c3d4bf73e9ea68283f6af7255d8d727730985188928e52783147c4e9e06871b8",
+    "handoffs/2026-10-28-hvm-session/SHA256SUMS.txt": "752baea724fcf1c732640f7df37bdd60bc4e02fe96b55359c108b27e30e72deb",
+    "handoffs/2026-10-28-hvm-session/docs/CH10_REVIEW_CN.md": "b36698be38f3c047aca0c26100eff427daa6f335e16c794af18720072acde857",
     "handoffs/2026-10-28-hvm-session/docs/CORRECTIONS_CN.md": "0478f9083b14be5fe530eb3d569aa04d5dc1614581d663510bec0bd5453c61e9",
-    "handoffs/2026-10-28-hvm-session/docs/FULL_RESEARCH_REPORT_CN.md": "a5e5b19d796f96c1bbb2776f2a74bb9edf3a6525f083248854e3ce8da740175c",
-    "handoffs/2026-10-28-hvm-session/docs/README_CN.md": "6a4da6129744d925a4aa2cefae4a9bb034857e9e96a667519de96bc1ee808bf0",
+    "handoffs/2026-10-28-hvm-session/docs/FULL_RESEARCH_REPORT_CN.md": "f2ade85cd4d99484e1e9a38961b8b58e30348f3a297cc67f73782314cebf8b9d",
+    "handoffs/2026-10-28-hvm-session/docs/README_CN.md": "03bd4c4e7b98969c7ddf2f5a3cf2fb9cf1bbca8c0c3d9fd77574e85c38329ff0",
     "handoffs/2026-10-28-hvm-session/docs/REPRODUCTION_CN.md": "90a67e15b2f25f8736b36d7eb592d7d7ec0acb6a0d89cc899a4b8491baa6acab",
     "handoffs/2026-10-28-hvm-session/evidence/CAMPAIGN_SUMMARY.json": "5ce269ea8b56ed74b0fc4a9f232200852570d84cc5a298cec9172ab60966d5c6",
     "handoffs/2026-10-28-hvm-session/evidence/OLD_SCORE_RECHECK.json": "3b446e531ed69dc6e06cc82df366a67a3ff7b433a3da9fc2798675dd236136cf",
@@ -64,7 +64,10 @@
     "handoffs/2026-10-28-hvm-session/evidence/SHARED_STRUCTURE_REVIEW.json": "5b8ad9870d804c77ba49c60ca21d3531e6e473f04978bb65d4f46bb632c7f64c",
     "handoffs/2026-10-28-hvm-session/evidence/SOURCE_CATALOG.json": "46b2e7f3b3b8a1b88c0f5302c268506f075d04e3270aac9a9183421280146a34",
     "handoffs/2026-10-28-hvm-session/evidence/VALIDATION.json": "757f0f0b12680340c95b7509e6e4fcc16cfe318889233e6d5b2058c2d2160e42",
-    "handoffs/2026-10-28-hvm-session/evidence/checker_selftest_rerun.json": "75032c45b37208a44e0f58b3cd707aa27f031a500210ad3520ea1a1f2863718a"
+    "handoffs/2026-10-28-hvm-session/evidence/checker_selftest_rerun.json": "75032c45b37208a44e0f58b3cd707aa27f031a500210ad3520ea1a1f2863718a",
+    "handoffs/2026-10-28-hvm-session/docs/FULL_RESEARCH_REPORT_PRE_AD_CN.md": "a5e5b19d796f96c1bbb2776f2a74bb9edf3a6525f083248854e3ce8da740175c",
+    "handoffs/2026-10-28-hvm-session/docs/CH10_REVIEW_PRE_AD_CN.md": "eb87627eb3b586fd7272ce16fc8569c1a334601d46748bfa6435643980d80308",
+    "handoffs/2026-10-28-hvm-session/evidence/CH10_ACTUAL_AD_REVIEW.json": "f9de31be107f33f4a683ec169c127a544bf886dcf3e92c92c8643e56c0418f56"
   },
   "handoff_note": "New 2026-09-22 packet reviewed separately; preexisting checker findings retained.",
   "publication_update_2026_10_25": {
@@ -112,5 +115,31 @@
     ],
     "retrospective_boundary": "All prior allowlist entries and reservations retained unchanged. New scoped content review does not certify pre-existing unlisted or changed repository files.",
     "excluded": "ROM, BIOS, fonts, game assets, raw RAM, saves, private paths, internal logs, and inherited source archives are not published."
+  },
+  "publication_update_2026_10_28_actual_AD": {
+    "scope": "Actual user-supplied CH10 A-D snapshots reviewed offline with unchanged original checker; no fresh emulator gameplay. Supersedes input-unavailable status.",
+    "new_paths": [
+      "handoffs/2026-10-28-hvm-session/evidence/CH10_ACTUAL_AD_REVIEW.json",
+      "handoffs/2026-10-28-hvm-session/docs/FULL_RESEARCH_REPORT_PRE_AD_CN.md",
+      "handoffs/2026-10-28-hvm-session/docs/CH10_REVIEW_PRE_AD_CN.md"
+    ],
+    "updated_paths": [
+      "handoffs/2026-10-28-hvm-session/SHA256SUMS.txt",
+      "handoffs/2026-10-28-hvm-session/README.md",
+      "handoffs/2026-10-28-hvm-session/docs/README_CN.md",
+      "handoffs/2026-10-28-hvm-session/docs/CH10_REVIEW_CN.md",
+      "handoffs/2026-10-28-hvm-session/docs/FULL_RESEARCH_REPORT_CN.md",
+      "PUBLICATION_MANIFEST.json"
+    ],
+    "previous_commit": "8ae57a7d6cc0a9ad4b5aef68f58c314dbcf12bad",
+    "original_cli_runs": 7,
+    "repeat_outputs_identical": 7,
+    "sample_payload_files_verified": 116,
+    "independent_checks": {
+      "passed": 174,
+      "failed": 0
+    },
+    "retrospective_boundary": "Unchanged ledger, source catalog and validation files retain their earlier-round scope. CH10_ACTUAL_AD_REVIEW is the current CH10 result; no new certification of unrelated pre-existing files.",
+    "excluded": "No ROM, BIOS, fonts, saves, raw RAM, screenshots, private execution logs, local paths or source-archive payloads."
   }
 }

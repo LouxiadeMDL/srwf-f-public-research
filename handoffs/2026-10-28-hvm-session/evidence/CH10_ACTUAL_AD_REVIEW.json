@@ -1,0 +1,210 @@
+{
+  "schema": "HVM_CH10_ACTUAL_AD_REVIEW_V1",
+  "date": "2026-10-28",
+  "status": "PASS_BOUNDED_ACTUAL_STATE_SAVE_RELOAD_REVIEW",
+  "supersedes": "Prior CH10 input-unavailable status; no Auto patch approval implied.",
+  "inputs": {
+    "sample_zip": "SSF_CH10_LECEE_TEST_20261028.zip",
+    "sample_sha256": "e9b066c21112564a35f361f279a4c5d58a8d6d88409d0161fb0f7ffc06583c51",
+    "sample_bytes": 5581441,
+    "zip_members": 117,
+    "manifest_members_verified": 116,
+    "original_checker_zip_sha256": "cbafb9975a274a8b71cee17fae11200f18bb17d3a19cdb4bd88dcac7fe16f768",
+    "checker_manifest_members_verified": 36,
+    "frozen_A_members_verified": 11,
+    "reported_Track1_sha256": "99ebae4d98f6c81e8676a5f79bdf1cc949667eed37ff5d870cbc148fad85a631"
+  },
+  "execution": {
+    "original_inspect_runs": 4,
+    "original_compare_runs": 3,
+    "all_exit_codes": 0,
+    "second_run_outputs_byte_identical": 7,
+    "original_checker_or_profile_modified": false,
+    "independent_audit_checks_passed": 174,
+    "independent_audit_checks_failed": 0,
+    "emulator_runs_in_this_review": 0
+  },
+  "states": {
+    "A_before": {
+      "frame": 88922,
+      "original_checker_verdict": "PASS_BASELINE_CHECKS",
+      "pilot_slot": 41,
+      "unit_slot": 45,
+      "pilot_mode": 0,
+      "unit_mode": 0,
+      "unit_faction": 1,
+      "actor_slots": [
+        62
+      ],
+      "actor_factions": [
+        1
+      ],
+      "body_grades": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "active_weapon_grades": [
+        4,
+        4,
+        4
+      ],
+      "E2": false,
+      "counter": 4,
+      "scene_selector": 9
+    },
+    "B_after": {
+      "frame": 92672,
+      "original_checker_verdict": "PASS_STATE_CHECKS",
+      "pilot_slot": 41,
+      "unit_slot": 45,
+      "pilot_mode": 1,
+      "unit_mode": 1,
+      "unit_faction": 0,
+      "actor_slots": [
+        62
+      ],
+      "actor_factions": [
+        0
+      ],
+      "body_grades": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "active_weapon_grades": [
+        4,
+        4,
+        4
+      ],
+      "E2": true,
+      "counter": 4,
+      "scene_selector": 9
+    },
+    "C_clear": {
+      "frame": 188720,
+      "original_checker_verdict": "PASS_STATE_CHECKS",
+      "pilot_slot": 41,
+      "unit_slot": 45,
+      "pilot_mode": 1,
+      "unit_mode": 1,
+      "unit_faction": 0,
+      "actor_slots": [],
+      "actor_factions": [],
+      "body_grades": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "active_weapon_grades": [
+        4,
+        4,
+        4
+      ],
+      "E2": true,
+      "counter": 4,
+      "scene_selector": 10
+    },
+    "D_cold_reload": {
+      "frame": 8688,
+      "original_checker_verdict": "PASS_STATE_CHECKS",
+      "pilot_slot": 41,
+      "unit_slot": 45,
+      "pilot_mode": 1,
+      "unit_mode": 1,
+      "unit_faction": 0,
+      "actor_slots": [],
+      "actor_factions": [],
+      "body_grades": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "active_weapon_grades": [
+        4,
+        4,
+        4
+      ],
+      "E2": false,
+      "counter": 4,
+      "scene_selector": 10
+    }
+  },
+  "native_saves": {
+    "cards": 3,
+    "game_records_checked": 9,
+    "game_checksum_passed": 9,
+    "complete_unit_pool_bytes": 3840,
+    "complete_pilot_pool_bytes": 1536,
+    "each_ABC_save_pools_equal_corresponding_RAM": true,
+    "D_pools_equal_C_ordinary_record01": true,
+    "CH02_historical_record02_retained": true,
+    "clear_total_turns": 98,
+    "clear_funds": 2226000,
+    "next_chapter_display": 11,
+    "next_scene_selector": 10,
+    "chapter11_entered": false
+  },
+  "current_P09_bindings": [
+    {
+      "stage": "A_before",
+      "P09_length": 19828,
+      "sha256": "b0767eb7cee0454d57843ff15fc66981c73fcaf46f7cb4ebde12b064e87bccfc",
+      "matches_current_build": true,
+      "literal_windows_match": true,
+      "root_table_matches": true
+    },
+    {
+      "stage": "B_after",
+      "P09_length": 19828,
+      "sha256": "b0767eb7cee0454d57843ff15fc66981c73fcaf46f7cb4ebde12b064e87bccfc",
+      "matches_current_build": true,
+      "literal_windows_match": true,
+      "root_table_matches": true
+    }
+  ],
+  "extra_flag_observation": {
+    "flag": "00F1",
+    "ram_offset": "GS+0x552",
+    "mask": "0x40",
+    "before_byte": "0x80",
+    "after_byte": "0xC0",
+    "reload_byte": "0x00",
+    "business_meaning": "UNRESOLVED; not a verified extra reward or control gate."
+  },
+  "process_scope": {
+    "source": "User-supplied normal-gameplay and process logs plus screenshots; independently cross-checked with RAM/BKR, not replayed here.",
+    "initial_journal_commands": 2422,
+    "cold_reload_journal_commands": 91,
+    "recorded_state_restore_or_memory_write_commands_found": false,
+    "cold_start_binds_C_card_and_prior_exit_receipt": true,
+    "full_instruction_trace_claimed": false
+  },
+  "limits": [
+    "Bound to the supplied VB5 run, not a new stock RevB full-game test.",
+    "State sampling does not prove the fallback branch never executed.",
+    "No new no-persuasion fallback run.",
+    "No Auto or AnyFriendly runtime modification tested.",
+    "Cumulative hidden count is not the persuasion reward criterion.",
+    "Whole stock TSR/P09 hashes differ; eight relevant code spans and the D2 contract match in all four snapshots."
+  ],
+  "publication_excludes": [
+    "ROM",
+    "BIOS",
+    "fonts",
+    "saves",
+    "raw RAM",
+    "screenshots",
+    "private logs",
+    "local paths",
+    "full executable or dialogue payloads"
+  ]
+}
