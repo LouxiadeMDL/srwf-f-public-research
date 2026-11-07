@@ -1,0 +1,73 @@
+{
+  "schema": "HVM_KOR_PUBLIC_SOURCES_V1",
+  "research_date": "2026-11-07",
+  "upstream_commit": "3e4e516b01dcc8670e69c8767b47e63a4813a6be",
+  "publication_basis_package": {
+    "name": "HVM_韩版源码交叉研究与原函数复算_20261107.zip",
+    "bytes": 21100,
+    "sha256": "3d451b117a14292fd8252c810c5e4e1f80491c487d645955dc4ef79f693942f6"
+  },
+  "private_inputs_not_distributed": {
+    "archive": "HVM04B_H02_Semantics_20261018.zip",
+    "EXEC0_sha256": "a7e9a648641d728dcf6f60a778d6a1e5ccfebc77c92a0d3fd64cbcd5f19db409",
+    "executor_sha256": "588686ebb6a16c7a9f5bc2d0b893d492c79ea3334c02e5a001a7921add3edf30",
+    "original_probe_result_sha256": "32a8adeadcd3dad2187f043749a6d40e4c6b3c221bec73b36d72237433fe6c08"
+  },
+  "upstream_sources": [
+    {
+      "id": "S01",
+      "path": "docs/EDITOR_ROSTER_COMMAND_SEMANTICS_20261023.md",
+      "url": "https://github.com/aiichiroandr/ss_srwf_kor_patch/blob/3e4e516b01dcc8670e69c8767b47e63a4813a6be/docs/EDITOR_ROSTER_COMMAND_SEMANTICS_20261023.md"
+    },
+    {
+      "id": "S02",
+      "path": "docs/EDITOR_D0_ONCE_FLAG_RESEARCH_20261023.md",
+      "url": "https://github.com/aiichiroandr/ss_srwf_kor_patch/blob/3e4e516b01dcc8670e69c8767b47e63a4813a6be/docs/EDITOR_D0_ONCE_FLAG_RESEARCH_20261023.md"
+    },
+    {
+      "id": "S03",
+      "path": "docs/EDITOR_PICKUP_CALLBACK_CONTRACT_20261023.md",
+      "url": "https://github.com/aiichiroandr/ss_srwf_kor_patch/blob/3e4e516b01dcc8670e69c8767b47e63a4813a6be/docs/EDITOR_PICKUP_CALLBACK_CONTRACT_20261023.md"
+    },
+    {
+      "id": "S04",
+      "path": "docs/EDITOR_SCENARIO_F_RUNTIME_PROGRESS.md",
+      "url": "https://github.com/aiichiroandr/ss_srwf_kor_patch/blob/3e4e516b01dcc8670e69c8767b47e63a4813a6be/docs/EDITOR_SCENARIO_F_RUNTIME_PROGRESS.md"
+    },
+    {
+      "id": "S05",
+      "path": "docs/EDITOR_B1_SPEAKER_CONTRACT_20261023.md",
+      "url": "https://github.com/aiichiroandr/ss_srwf_kor_patch/blob/3e4e516b01dcc8670e69c8767b47e63a4813a6be/docs/EDITOR_B1_SPEAKER_CONTRACT_20261023.md"
+    },
+    {
+      "id": "S06",
+      "path": "docs/DICTIONARY_HERO_PORTRAITS.md",
+      "url": "https://github.com/aiichiroandr/ss_srwf_kor_patch/blob/3e4e516b01dcc8670e69c8767b47e63a4813a6be/docs/DICTIONARY_HERO_PORTRAITS.md"
+    },
+    {
+      "id": "S07",
+      "path": "assets/editor-public-features.mjs",
+      "url": "https://github.com/aiichiroandr/ss_srwf_kor_patch/blob/3e4e516b01dcc8670e69c8767b47e63a4813a6be/assets/editor-public-features.mjs"
+    },
+    {
+      "id": "S08",
+      "path": "manifest/releases.json",
+      "url": "https://github.com/aiichiroandr/ss_srwf_kor_patch/blob/3e4e516b01dcc8670e69c8767b47e63a4813a6be/manifest/releases.json"
+    }
+  ],
+  "upstream_fix_commit": "https://github.com/aiichiroandr/ss_srwf_kor_patch/commit/8af7f3fb4e920abb318c491f253446ae6031720b",
+  "historical_evidence_limits": [
+    "HVM04L/M reports were reviewed in the research phase; their incremental ZIPs were not acquired or rerun.",
+    "P09 2026-10-29 native submission/return study is prior evidence, not a new emulator run in this publication.",
+    "2026-11-05 Korean-source review and its 12 JavaScript tests are prior work, not counted among these 19 cases."
+  ],
+  "excluded": [
+    "game executable and scene payloads",
+    "ROM/BIOS/disc tracks",
+    "fonts/graphics/dialogue dumps",
+    "saves or real RAM captures",
+    "private paths/account IDs/messages",
+    "legacy executor source pending redistribution-rights review",
+    "detailed synthetic stack write logs"
+  ]
+}

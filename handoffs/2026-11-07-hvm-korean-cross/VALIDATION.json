@@ -1,0 +1,27 @@
+{
+  "schema": "HVM_KOR_PUBLICATION_VALIDATION_V1",
+  "date": "2026-11-07",
+  "scope": "Original F native functions on synthetic RAM; published-code replay and structural checks. No new emulator gameplay.",
+  "native_function_cases": 15,
+  "alignment_cases": 4,
+  "research_outcomes_passed": 19,
+  "research_outcomes_failed": 0,
+  "publication_tool_tests_passed": 9,
+  "publication_tool_tests_failed": 0,
+  "original_package_manifest_members_verified": 10,
+  "original_recorded_probe_bytes_match_replay": true,
+  "public_summary_runs": 2,
+  "public_summaries_byte_identical_to_frozen": true,
+  "root11_scenes_recomputed": 3,
+  "root11_pairs_recomputed": 6,
+  "public_root11_output_matches_frozen": true,
+  "new_gameplay_runs": 0,
+  "ROM_or_save_edits": 0,
+  "source_game_and_executor_files_excluded": true,
+  "historical_scope_not_recertified": true,
+  "notes": [
+    "19 research cases and 9 publication-tool regressions are distinct categories, not 28 gameplay tests.",
+    "StrictMemory rejects unaligned accesses; it does not emulate hardware exception vectors.",
+    "Prior natural-gameplay evidence remains version-bound; no Auto permission is granted."
+  ]
+}

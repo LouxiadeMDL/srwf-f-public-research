@@ -1,0 +1,292 @@
+{
+  "scope": "original F native functions on synthetic RAM only",
+  "cases": [
+    {
+      "type": "EB.01",
+      "pair": [
+        3,
+        5
+      ],
+      "selectors": [
+        "0x7e",
+        "0x84"
+      ],
+      "instructions": 2637,
+      "R0": "0x6005",
+      "predicate_bit7": false,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "6fc478ad6c9bf2bce4f422bde998adfd84cf29681152967ff639dc6fdaa5cb20",
+      "store_count": 36,
+      "low_stores": []
+    },
+    {
+      "type": "EB.01",
+      "pair": [
+        5,
+        3
+      ],
+      "selectors": [
+        "0x7e",
+        "0x84"
+      ],
+      "instructions": 1327,
+      "R0": "0x6005",
+      "predicate_bit7": true,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "8742e117c07af6a176beac78ecc05ed5807b7c604ab5699defdd9dd24453bdb4",
+      "store_count": 21,
+      "low_stores": []
+    },
+    {
+      "type": "EB.01",
+      "pair": [
+        3,
+        5
+      ],
+      "selectors": [
+        "0x84",
+        "0x7e"
+      ],
+      "instructions": 1340,
+      "R0": "0x6005",
+      "predicate_bit7": true,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "30a33da727b3966f4ba00c42874fa6a5bb81202ad22f2a61cc8e20968863d170",
+      "store_count": 21,
+      "low_stores": []
+    },
+    {
+      "type": "EB.01",
+      "pair": [
+        5,
+        3
+      ],
+      "selectors": [
+        "0x84",
+        "0x7e"
+      ],
+      "instructions": 2637,
+      "R0": "0x6005",
+      "predicate_bit7": false,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "3e91325357587f5aa91c468de453c1d8e8705d1c57e49c0aa5c0fdaeb2f07cf8",
+      "store_count": 36,
+      "low_stores": []
+    },
+    {
+      "type": "EB.01",
+      "pair": [
+        3,
+        3
+      ],
+      "selectors": [
+        "0x7e",
+        "0x84"
+      ],
+      "instructions": 2626,
+      "R0": "0x6005",
+      "predicate_bit7": true,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "c6bb7d04f35b38574830db08b33401230c920a2b5512ffdaf42a74e97338b45c",
+      "store_count": 34,
+      "low_stores": []
+    },
+    {
+      "type": "EB.01",
+      "pair": [
+        3,
+        3
+      ],
+      "selectors": [
+        "0x7e",
+        "0x7e"
+      ],
+      "instructions": 2624,
+      "R0": "0x6005",
+      "predicate_bit7": false,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "a68c76c6a3b46e448f7057af886f185b368ecb3f70f660fade5581b946f9c734",
+      "store_count": 36,
+      "low_stores": []
+    },
+    {
+      "type": "C2.0E",
+      "item": 10,
+      "initial": 0,
+      "after": 1,
+      "instructions": 50,
+      "R0": "0x6002",
+      "predicate_bit7": false,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "0c1a4ead3ffc1046d55142db35d1a99a8eb3d0d61cea8a182203a7d2ec746934",
+      "store_count": 7,
+      "low_stores": [
+        {
+          "pc": "0x0602BBB2",
+          "address": "0x2020057E",
+          "size": 1,
+          "before": "00",
+          "after": "01",
+          "region": "low"
+        }
+      ]
+    },
+    {
+      "type": "C2.0E",
+      "item": 10,
+      "initial": 8,
+      "after": 9,
+      "instructions": 50,
+      "R0": "0x6002",
+      "predicate_bit7": false,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "0c1a4ead3ffc1046d55142db35d1a99a8eb3d0d61cea8a182203a7d2ec746934",
+      "store_count": 7,
+      "low_stores": [
+        {
+          "pc": "0x0602BBB2",
+          "address": "0x2020057E",
+          "size": 1,
+          "before": "08",
+          "after": "09",
+          "region": "low"
+        }
+      ]
+    },
+    {
+      "type": "C2.0E",
+      "item": 10,
+      "initial": 9,
+      "after": 9,
+      "instructions": 37,
+      "R0": "0x6002",
+      "predicate_bit7": true,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "8f0e592c829326d36a2200547b12cf1047181c70c416db221efa8cd2ae2afe37",
+      "store_count": 4,
+      "low_stores": []
+    },
+    {
+      "type": "C2.0E",
+      "item": 10,
+      "initial": 255,
+      "after": 255,
+      "instructions": 37,
+      "R0": "0x6002",
+      "predicate_bit7": true,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "8f0e592c829326d36a2200547b12cf1047181c70c416db221efa8cd2ae2afe37",
+      "store_count": 4,
+      "low_stores": []
+    },
+    {
+      "type": "C2.0E",
+      "item": 29,
+      "initial": 0,
+      "after": 1,
+      "instructions": 50,
+      "R0": "0x6002",
+      "predicate_bit7": false,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "0c1a4ead3ffc1046d55142db35d1a99a8eb3d0d61cea8a182203a7d2ec746934",
+      "store_count": 7,
+      "low_stores": [
+        {
+          "pc": "0x0602BBB2",
+          "address": "0x20200591",
+          "size": 1,
+          "before": "00",
+          "after": "01",
+          "region": "low"
+        }
+      ]
+    },
+    {
+      "type": "C2.0E",
+      "item": 30,
+      "initial": 0,
+      "after": 0,
+      "instructions": 26,
+      "R0": "0x6002",
+      "predicate_bit7": true,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "cbd1c0d82c4514a8a5e10d64c384287bf4a5a9dfa6d35841109fbe5652f1c6c7",
+      "store_count": 4,
+      "low_stores": []
+    },
+    {
+      "type": "C1.0A",
+      "selector": "0x7e",
+      "instructions": 79,
+      "R0": "0x6003",
+      "predicate_bit7": false,
+      "numeric": 100,
+      "hooks": [],
+      "trace_sha256": "89a87e80740c07d7c4190a3d75755e25b070af64e36ece5db463d89a211556ba",
+      "store_count": 8,
+      "low_stores": []
+    },
+    {
+      "type": "C1.0A",
+      "selector": "0x84",
+      "instructions": 92,
+      "R0": "0x6003",
+      "predicate_bit7": false,
+      "numeric": 100,
+      "hooks": [],
+      "trace_sha256": "436dd0dad55840f1f01c8589633e1c9b2c76fcbc503ed658df4928aaca66b785",
+      "store_count": 8,
+      "low_stores": []
+    },
+    {
+      "type": "C1.0A",
+      "selector": "0x1ee",
+      "instructions": 1712,
+      "R0": "0x6003",
+      "predicate_bit7": true,
+      "numeric": 2004318071,
+      "hooks": [],
+      "trace_sha256": "b737c7a2fe2999c2a81722374eb9b0f943d069e39cba6cf8d1d9014a5cca75ff",
+      "store_count": 5,
+      "low_stores": []
+    }
+  ],
+  "alignment": [
+    {
+      "memory": "Memory",
+      "address": "0x20000000",
+      "outcome": "RETURNED",
+      "value": "0x10203"
+    },
+    {
+      "memory": "Memory",
+      "address": "0x20000002",
+      "outcome": "RETURNED",
+      "value": "0x2030405"
+    },
+    {
+      "memory": "StrictMemory",
+      "address": "0x20000000",
+      "outcome": "RETURNED",
+      "value": "0x10203"
+    },
+    {
+      "memory": "StrictMemory",
+      "address": "0x20000002",
+      "outcome": "REJECTED",
+      "message": "unaligned read 20000002/4"
+    }
+  ]
+}

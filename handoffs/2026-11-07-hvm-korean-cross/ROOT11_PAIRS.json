@@ -1,0 +1,68 @@
+[
+  {
+    "scene": "P12",
+    "sha256": "481c1eca6c675824bb8e9e985528d4199d3f51c1e5aaef12ccca84c452b8e148",
+    "root11": "0xc0b",
+    "root12": "0xc6b",
+    "ordered_pairs": [
+      {
+        "offset": "0xc0b",
+        "first": "007E",
+        "second": "0084",
+        "F0_target": "0xc21",
+        "target_flag": "00E2"
+      },
+      {
+        "offset": "0xc15",
+        "first": "0084",
+        "second": "007E",
+        "F0_target": "0xc21",
+        "target_flag": "00E2"
+      }
+    ]
+  },
+  {
+    "scene": "P30",
+    "sha256": "cf6fbf72e8328c06ea9f93e554b231222307b0c40f52ce031a1366aea7d7abaf",
+    "root11": "0x9ae",
+    "root12": "0xa40",
+    "ordered_pairs": [
+      {
+        "offset": "0x9ae",
+        "first": "0025",
+        "second": "0017",
+        "F0_target": "0x9c4",
+        "target_flag": "00E1"
+      },
+      {
+        "offset": "0x9b8",
+        "first": "0025",
+        "second": "0016",
+        "F0_target": "0x9f9",
+        "target_flag": "00E2"
+      }
+    ]
+  },
+  {
+    "scene": "P47",
+    "sha256": "a7cb85e1dfec73ce282b8082e6c0b3227599d3caa77a419b1c3b055f135f2f50",
+    "root11": "0x855",
+    "root12": "0x8e7",
+    "ordered_pairs": [
+      {
+        "offset": "0x855",
+        "first": "0025",
+        "second": "0017",
+        "F0_target": "0x86b",
+        "target_flag": "00E1"
+      },
+      {
+        "offset": "0x85f",
+        "first": "0025",
+        "second": "0016",
+        "F0_target": "0x8a0",
+        "target_flag": "00E2"
+      }
+    ]
+  }
+]

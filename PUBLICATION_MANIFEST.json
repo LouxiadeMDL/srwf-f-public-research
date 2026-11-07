@@ -22,7 +22,7 @@
     "evidence/cross_reference/2026-09-20-dic-codec-source-audit.json": "8c11b940dcd92fec664a703aa8ccd8680b7637a9a819b6d6c0ae93d540e07c8a",
     "examples/evidence-record.json": "9e006ca2a6c2199ba52d62fe9295d74aa6704e2c64d2f0af0928b1b25fae617b",
     "LICENSE": "68d4e9ecad930e7b1c94ac15bcc044f2211139b42fc394ca5d58a3a018c9f594",
-    "README.md": "03f5334c9fa45fb43ea6bf2c8899543153b52fac8da1e37b5b99b03ace01f291",
+    "README.md": "f5e1f7151012047008f1d1331c42220ad9af35574539e899e9c5ded1b2fcef16",
     "SECURITY.md": "57593740d1e5ad7be7206a6cd31bd8504784453d5c736751090a22ee8dcfcffa",
     "tools/check_dic_codec_vectors.py": "aa9f9851a91d0c466f13c888064d1ba8ef3bfe650cc35662b05554200549c659",
     "tools/check_layout.py": "ee44b882efb55b04271fbb4dfab0aeac93291b5a6fc190140aaedadf8c0aef93",
@@ -67,7 +67,21 @@
     "handoffs/2026-10-28-hvm-session/evidence/checker_selftest_rerun.json": "75032c45b37208a44e0f58b3cd707aa27f031a500210ad3520ea1a1f2863718a",
     "handoffs/2026-10-28-hvm-session/docs/FULL_RESEARCH_REPORT_PRE_AD_CN.md": "a5e5b19d796f96c1bbb2776f2a74bb9edf3a6525f083248854e3ce8da740175c",
     "handoffs/2026-10-28-hvm-session/docs/CH10_REVIEW_PRE_AD_CN.md": "eb87627eb3b586fd7272ce16fc8569c1a334601d46748bfa6435643980d80308",
-    "handoffs/2026-10-28-hvm-session/evidence/CH10_ACTUAL_AD_REVIEW.json": "f9de31be107f33f4a683ec169c127a544bf886dcf3e92c92c8643e56c0418f56"
+    "handoffs/2026-10-28-hvm-session/evidence/CH10_ACTUAL_AD_REVIEW.json": "f9de31be107f33f4a683ec169c127a544bf886dcf3e92c92c8643e56c0418f56",
+    "handoffs/2026-11-07-hvm-korean-cross/.gitignore": "b461dcc8da8f27b0be3fac80f1972fef2290b1e446c2c326c0455b5de1dc8eef",
+    "handoffs/2026-11-07-hvm-korean-cross/PROBES_SUMMARY.json": "1092a217a3ca8448aeabae9b44cfbecc8966e45fe0763d745da08bfa9826b55a",
+    "handoffs/2026-11-07-hvm-korean-cross/README.md": "e46705236720bc8a70e61117944731e79ef051882fc267d59542793226360e77",
+    "handoffs/2026-11-07-hvm-korean-cross/REPORT_CN.md": "c2de55a5b21f77bea683108e8b4f16c63f02634e37a7f4f91fcfc0fbd259df69",
+    "handoffs/2026-11-07-hvm-korean-cross/REPRODUCE_CN.md": "802f5edfbfc28893d26b006118b0f136f4500e54a9870345763f7eedf0bfad4c",
+    "handoffs/2026-11-07-hvm-korean-cross/ROOT11_PAIRS.json": "e4d3fbbd8e239cbfe6dfe0315634adae170731f91f8027da682dd0f17216b5a8",
+    "handoffs/2026-11-07-hvm-korean-cross/SOURCES.json": "e68d0575b2bba0860b6f7c98a1f18e88ff3e18a7efa757a9306ce55e9a7556c6",
+    "handoffs/2026-11-07-hvm-korean-cross/VALIDATION.json": "f033a277271a712ea4211013417c7bcce45183c61e64388f73d377dbc7428219",
+    "handoffs/2026-11-07-hvm-korean-cross/cross_probe.py": "542cd12572117c6b8b01b325475c54f184b1018689bc6240a37beb591af79e8f",
+    "handoffs/2026-11-07-hvm-korean-cross/prepare_input.py": "e6fffb16253b31857ee47da227379a05c7e056048fc4f405a306aad728af4eb0",
+    "handoffs/2026-11-07-hvm-korean-cross/root11_probe.py": "ae7bba3463778e5a5fe48154c24522cb49b9a13125a67a66b5e5f3f30e26a2dc",
+    "handoffs/2026-11-07-hvm-korean-cross/test_public_tools.py": "dfe6d8095344ee22f7f4f4106004f7ddf66c8af6c1cc3b7b828a4c2b7666535d",
+    "handoffs/2026-11-07-hvm-korean-cross/validate_probes.py": "a8516ab9dfa475f91c59c49134255f1beb19e9e8774300abfe0df3b31fddb15f",
+    "handoffs/2026-11-07-hvm-korean-cross/SHA256SUMS.txt": "5cb797b06bee736c768e7b6f5ac8f773c7181b7e5946ded7d251a19b37b20460"
   },
   "handoff_note": "New 2026-09-22 packet reviewed separately; preexisting checker findings retained.",
   "publication_update_2026_10_25": {
@@ -141,5 +155,34 @@
     },
     "retrospective_boundary": "Unchanged ledger, source catalog and validation files retain their earlier-round scope. CH10_ACTUAL_AD_REVIEW is the current CH10 result; no new certification of unrelated pre-existing files.",
     "excluded": "No ROM, BIOS, fonts, saves, raw RAM, screenshots, private execution logs, local paths or source-archive payloads."
+  },
+  "publication_update_2026_11_07_hvm_korean_cross": {
+    "scope": "Public rewrite and reproduction probes for source-bound EB.01, C2.0E, C1.0A, callback distinctions and alignment tests; no game binaries or legacy executor source.",
+    "base_commit": "6b303b286ceaa23b48510c15d379c3dd074720ee",
+    "new_paths": [
+      "handoffs/2026-11-07-hvm-korean-cross/.gitignore",
+      "handoffs/2026-11-07-hvm-korean-cross/PROBES_SUMMARY.json",
+      "handoffs/2026-11-07-hvm-korean-cross/README.md",
+      "handoffs/2026-11-07-hvm-korean-cross/REPORT_CN.md",
+      "handoffs/2026-11-07-hvm-korean-cross/REPRODUCE_CN.md",
+      "handoffs/2026-11-07-hvm-korean-cross/ROOT11_PAIRS.json",
+      "handoffs/2026-11-07-hvm-korean-cross/SOURCES.json",
+      "handoffs/2026-11-07-hvm-korean-cross/VALIDATION.json",
+      "handoffs/2026-11-07-hvm-korean-cross/cross_probe.py",
+      "handoffs/2026-11-07-hvm-korean-cross/prepare_input.py",
+      "handoffs/2026-11-07-hvm-korean-cross/root11_probe.py",
+      "handoffs/2026-11-07-hvm-korean-cross/test_public_tools.py",
+      "handoffs/2026-11-07-hvm-korean-cross/validate_probes.py",
+      "handoffs/2026-11-07-hvm-korean-cross/SHA256SUMS.txt"
+    ],
+    "updated_paths": [
+      "README.md",
+      "PUBLICATION_MANIFEST.json"
+    ],
+    "research_cases": 19,
+    "publication_tool_tests": 9,
+    "new_gameplay_runs": 0,
+    "retrospective_boundary": "Prior allowlist hashes and reservations are preserved except the reviewed README update. This scoped publication does not certify unrelated repository contents.",
+    "excluded": "ROM, BIOS, game assets, fonts, scene byte windows, saves, real RAM, private paths, private messages, full stack traces and unreviewed legacy dependencies."
   }
 }

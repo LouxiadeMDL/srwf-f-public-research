@@ -15,6 +15,12 @@ This is a research roadmap, not a verified execution graph. In particular, TSR/f
 
 ## Progress and limits
 
+### 2026-11-07 HVM / Korean-source cross-study / 隐藏事件交叉研究
+
+The [new research packet](handoffs/2026-11-07-hvm-korean-cross/README.md) publishes source-bound observations for ordered EB.01 object pairs, C2.0E item counters, C1.0A stale-result handling, callback reentry differences, and a bounded-executor alignment blind spot. It includes rewritten explanations, structural JSON summaries and reproduction probes for 15 native-function fixtures plus 4 alignment cases, with 9 separate publication-tool regressions. No new emulator gameplay or Auto ROM patch is claimed. Game inputs and the legacy executor are not distributed; local reproduction requires the documented, hash-bound private inputs.
+
+The [2026-10-28 HVM session and CH10 A–D report](handoffs/2026-10-28-hvm-session/README.md) remains available as dated evidence; this update does not reset its verified results.
+
 ### 2026-10-25 specialized Saturn F / F Final studies / 专项研究
 
 The new [public-safe specialized research index](docs/2026-10-25-specialized-ff-f-release-index.md) links separate, dated write-ups for **SSFF R15 RC1 and R16 RC2**, **SSF G3 S/Ex-S R4/R5**, **SSFF S/Ex-S V1**, **BD01 battle animation/effective HP**, **V3 color recovery**, and **SSF R13 native font/layout**. Each note carries its exact version identity, bounded runtime claims and open reservations. The source digests are public; no game image, binary patch, game assets, private test saves or raw capture records are distributed.
