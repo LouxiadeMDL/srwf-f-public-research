@@ -15,6 +15,10 @@ This is a research roadmap, not a verified execution graph. In particular, TSR/f
 
 ## Progress and limits
 
+### 2026-11-08 F → F Final native inheritance / 原生存档继承研究
+
+The [2026-11-08 public-safe research handoff](handoffs/2026-11-08-f-to-ff-inheritance/README.md) adds a rewritten HVM-to-Final study, SHA-identified native F→SSFF normal-save inheritance, a 22-byte ordinary-record / 44-byte whole-card difference classification, persistent prerequisite-flag tracking, and S/EX-S model/weapon/animation resource matrices. It publishes no game data or raw saves. **FF later recruitment, a separately exported post-cold-load RAM comparison, full 18-position battle-animation acceptance, generalized Auto ROM patches, and PS Recompiled natural F73 remain open.** Existing report dates and scope are preserved.
+
 ### 2026-11-07 HVM / Korean-source cross-study / 隐藏事件交叉研究
 
 The [new research packet](handoffs/2026-11-07-hvm-korean-cross/README.md) publishes source-bound observations for ordered EB.01 object pairs, C2.0E item counters, C1.0A stale-result handling, callback reentry differences, and a bounded-executor alignment blind spot. It includes rewritten explanations, structural JSON summaries and reproduction probes for 15 native-function fixtures plus 4 alignment cases, with 9 separate publication-tool regressions. No new emulator gameplay or Auto ROM patch is claimed. Game inputs and the legacy executor are not distributed; local reproduction requires the documented, hash-bound private inputs.

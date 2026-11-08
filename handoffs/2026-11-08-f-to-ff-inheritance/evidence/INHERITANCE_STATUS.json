@@ -1,0 +1,107 @@
+{
+  "schema": "SRWF_PUBLIC_F_TO_FF_NATIVE_INHERITANCE_V1",
+  "publication_date": "2026-11-08",
+  "evidence_basis": "Retrospective public rewrite of the dated full report and read-only verification appendix; no new gameplay in this publication.",
+  "platform": "Sega Saturn",
+  "source_f": {
+    "version": "SSF VB8 G2 DIC1, stage 34 clear",
+    "native_card_sha256": "c4505e0d426ca504d6871b3ba4987ba7c6fd608ce67a236a69c2c90d1b13c266",
+    "card_bytes": 32768
+  },
+  "target_ff": {
+    "version": "SSFF T28 DIC1",
+    "native_card_sha256": "5cd23987e83cb8ba4e36a5fcb3ca8a07a287de842d87ef31da0a83eb7ba46c4d",
+    "card_bytes": 32768
+  },
+  "validation": {
+    "inheritance": "PASS_SCOPED",
+    "ordinary_slot_01_load_and_resave": "PASS_SCOPED",
+    "subsequent_normal_cold_load": "ARCHIVED_LOG_SCREEN_AND_CARD",
+    "separate_wram_from_subsequent_cold_load": "NOT_ARCHIVED",
+    "new_game_execution_during_publication": false,
+    "new_rom_patch_during_publication": false,
+    "ram_bit_comparison_source": "First FF inherited-and-saved state; not the later cold-load process"
+  },
+  "campaign": {
+    "last_completed_f_stage": 34,
+    "accumulated_turns": 389,
+    "funds": 521990,
+    "hidden_counter": 7,
+    "flags_persistent": {
+      "0109": true,
+      "0113": true,
+      "0114": true,
+      "010B": false,
+      "010C": false
+    },
+    "flags_transient_f_before_ff": {
+      "00E0": true,
+      "00F1": true
+    },
+    "flags_transient_ff_after_resave": {
+      "00E0": false,
+      "00F1": false
+    },
+    "characters_recruited_from_these_flags": "NOT_ESTABLISHED"
+  },
+  "identity": {
+    "effective_pilot_id_entries": 56,
+    "effective_robot_id_entries": 58,
+    "pilot_cache_bytes_identical": 1536,
+    "unit_id_multiset_identical": true,
+    "pilot_id_multiset_identical": true,
+    "upgrades_preserved": true,
+    "three_current_hp_en_records_changed": true,
+    "not_simultaneous_deployable_counts": true
+  },
+  "differential": {
+    "whole_card_changed_bytes": 44,
+    "ordinary_01_payload_bytes": 5632,
+    "ordinary_01_changed_bytes": 22,
+    "groups": [
+      {
+        "kind": "internal_checksum",
+        "changed_bytes": 2,
+        "payload_offsets": [
+          "0x0002",
+          "0x0003"
+        ]
+      },
+      {
+        "kind": "three_scene_callback_rebindings",
+        "changed_bytes": 9,
+        "field_offsets": [
+          "0x0084",
+          "0x0088",
+          "0x008C"
+        ],
+        "ff_root_ids": [
+          4,
+          5,
+          8
+        ]
+      },
+      {
+        "kind": "two_transient_bits_cleared",
+        "changed_bytes": 2,
+        "offsets": [
+          "0x00B0",
+          "0x00B2"
+        ]
+      },
+      {
+        "kind": "three_current_hp_en_record_updates",
+        "changed_bytes": 9,
+        "upgrades_changed": false
+      }
+    ],
+    "timing_note": "Differences describe the cumulative conversion, FF load and in-game resave path, not solely the conversion prompt."
+  },
+  "pending": [
+    "FF cold-load independent RAM dump",
+    "FF later Haman/Todd recruitment consumers",
+    "18 S/EX-S weapon-position dynamic animation checks",
+    "cross-ROM and hardware generalization"
+  ],
+  "copyright": "No card bytes, images, dialogue, save states, ROM data or private URLs included."
+}

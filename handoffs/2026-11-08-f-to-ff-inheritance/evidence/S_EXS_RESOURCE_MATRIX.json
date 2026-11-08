@@ -1,0 +1,187 @@
+{
+  "schema": "SRWF_S_EXS_F_FF_PUBLIC_RESOURCE_MATRIX_V1",
+  "date": "2026-11-08",
+  "observation": "Scoped native-save / active-cache and static media resource comparison. Menu values include upgrades and parts; no all-weapons battle pass implied.",
+  "forms": [
+    {
+      "name": "S standard",
+      "unit_id": "0x01C0",
+      "model_f": "0x0131",
+      "model_ff": "0x0171",
+      "hp": 5600,
+      "en": 220,
+      "movement": 6,
+      "mobility": 130,
+      "armor": 1850,
+      "limit": 430
+    },
+    {
+      "name": "S cruise",
+      "unit_id": "0x01C1",
+      "model_f": "0x0138",
+      "model_ff": "0x0138",
+      "hp": 5600,
+      "en": 220,
+      "movement": 8,
+      "mobility": 120,
+      "armor": 1850,
+      "limit": 430
+    },
+    {
+      "name": "EX-S standard",
+      "unit_id": "0x01C2",
+      "model_f": "0x0132",
+      "model_ff": "0x0172",
+      "hp": 7000,
+      "en": 230,
+      "movement": 7,
+      "mobility": 140,
+      "armor": 2300,
+      "limit": 440
+    },
+    {
+      "name": "EX-S cruise",
+      "unit_id": "0x01C3",
+      "model_f": "0x0139",
+      "model_ff": "0x0139",
+      "hp": 7000,
+      "en": 230,
+      "movement": 9,
+      "mobility": 130,
+      "armor": 2300,
+      "limit": 440
+    }
+  ],
+  "linked_pilots": [
+    {
+      "unit": "S",
+      "pilot": "Judau",
+      "level": 30,
+      "sp": 118
+    },
+    {
+      "unit": "EX-S",
+      "pilot": "Amuro",
+      "level": 32,
+      "sp": 122
+    }
+  ],
+  "native_records": {
+    "per_robot_bytes": 30,
+    "per_linked_pilot_bytes": 12,
+    "same_before_and_after": true
+  },
+  "weapons": {
+    "form_specific_menu_positions": 18,
+    "effective_base_records": 16,
+    "base_weapon_id_f_range": "0x04E0-0x04EF",
+    "base_weapon_id_ff_range": "0x0580-0x058F",
+    "id_delta_hex": "0xA0",
+    "bytes_per_record": 17,
+    "identical_full_records": 13,
+    "animation_selector_only_changed_records": 3,
+    "non_animation_parameters_preserved": true,
+    "full_dynamic_validation": "PENDING_18_POSITION_MATRIX"
+  },
+  "models": {
+    "standard_s_full_package_equal": true,
+    "standard_s_package_bytes": 2454,
+    "standard_exs_full_package_equal": true,
+    "standard_exs_package_bytes": 2536,
+    "cruise_encoded_container_sizes_differ": true,
+    "cruise_decoded_model_difference_proven": false
+  },
+  "animation_groups": [
+    {
+      "group": "beam_saber",
+      "selector_f": "0x011A",
+      "selector_ff": "0x011A",
+      "d_anime_equal": false,
+      "d_anime_bytes_f": 2406,
+      "d_anime_bytes_ff": 2414,
+      "e_spr_equal": false,
+      "e_spr_bytes_f": 1946,
+      "e_spr_bytes_ff": 2805
+    },
+    {
+      "group": "vulcan",
+      "selector_f": "0x0500",
+      "selector_ff": "0x0500",
+      "d_anime_equal": true,
+      "d_anime_bytes_f": 1552,
+      "d_anime_bytes_ff": 1552,
+      "e_spr_equal": true,
+      "e_spr_bytes_f": 5667,
+      "e_spr_bytes_ff": 5667
+    },
+    {
+      "group": "cruise_smart_beam_rifle",
+      "selector_f": "0x005A",
+      "selector_ff": "0x005A",
+      "d_anime_equal": true,
+      "d_anime_bytes_f": 4238,
+      "d_anime_bytes_ff": 4238,
+      "e_spr_equal": true,
+      "e_spr_bytes_f": 0,
+      "e_spr_bytes_ff": 0
+    },
+    {
+      "group": "cruise_beam_cannon",
+      "selector_f": "0x007A",
+      "selector_ff": "0x057F",
+      "d_anime_equal": false,
+      "d_anime_bytes_f": 8269,
+      "d_anime_bytes_ff": 4238,
+      "e_spr_equal": true,
+      "e_spr_bytes_f": 0,
+      "e_spr_bytes_ff": 0
+    },
+    {
+      "group": "incom",
+      "selector_f": "0x0419",
+      "selector_ff": "0x0419",
+      "d_anime_equal": true,
+      "d_anime_bytes_f": 4900,
+      "d_anime_bytes_ff": 4900,
+      "e_spr_equal": true,
+      "e_spr_bytes_f": 5740,
+      "e_spr_bytes_ff": 5740
+    },
+    {
+      "group": "missile_launcher",
+      "selector_f": "0x0150",
+      "selector_ff": "0x0150",
+      "d_anime_equal": true,
+      "d_anime_bytes_f": 2620,
+      "d_anime_bytes_ff": 2620,
+      "e_spr_equal": true,
+      "e_spr_bytes_f": 0,
+      "e_spr_bytes_ff": 0
+    },
+    {
+      "group": "reflector_incom",
+      "selector_f": "0x057D",
+      "selector_ff": "0x0411",
+      "d_anime_equal": false,
+      "d_anime_bytes_f": 3064,
+      "d_anime_bytes_ff": 3064,
+      "d_anime_different_byte_count": 13,
+      "e_spr_equal": true,
+      "e_spr_bytes_f": 6761,
+      "e_spr_bytes_ff": 6761
+    },
+    {
+      "group": "standard_smart_rifle_and_beam_cannon",
+      "selector_f": "0x057E",
+      "selector_ff": "0x057E",
+      "d_anime_equal": true,
+      "d_anime_bytes_f": 4238,
+      "d_anime_bytes_ff": 4238,
+      "e_spr_equal": true,
+      "e_spr_bytes_f": 0,
+      "e_spr_bytes_ff": 0
+    }
+  ],
+  "dynamic_caution": "Previous diagnostic 0x057D freeze vs 0x0411 control did not constitute natural reflector-INCOM selection. Video/index and complete 18-position result were not independently obtained in the 2026-11-08 full report.",
+  "copyright": "No game assets, animation bytes, source save rows, screenshots or videos included."
+}
