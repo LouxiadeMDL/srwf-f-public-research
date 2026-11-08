@@ -1,5 +1,5 @@
 {
-  "review_date": "2026-10-28",
+  "review_date": "2026-11-08",
   "scope": "Original utilities and rewritten/public-safe documentation and machine-readable summaries only; no inherited private history",
   "files": {
     ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c",
@@ -9,7 +9,7 @@
     "docs/provenance.md": "30a3f651bf36bb70c2e6e4785b3c744dc909ad83f6ef123aaa7f7afd488a0100",
     "docs/publication-policy.md": "5d2d87f4d2f11ab14fcfdaa562ab13de78ef10ca387805f94cc39001ac227538",
     "docs/reproduce.md": "f024abe6947f9d02a76242acfabd11dadb1f05bdb6bb57951d9c8aa5215c3351",
-    "docs/status.md": "25f4a829b013661fdd1ed04ae5a63d5a00115506d60a0027758b8a967d10b378",
+    "docs/status.md": "1e9a6f643fc9f9e20a16dedc24c574d7c5dcc692dd6a6478e0a0628050652c62",
     "docs/2026-09-13-baseline-and-patch-experiment.md": "b81ec63298b7f9fe92b6c19a46b9dfe92bb93b0b9f5d0dabfe22755f743cd564",
     "docs/2026-09-19-p-reference-r1-r5-summary-new-clues.md": "fd696bcd874884474e147550b4b89d7dbb70146c9093c31343e3eaab7655adef",
     "docs/2026-09-20-a14-pre-formal-translation-batch.md": "59c8712d264f6689e34d426d8ef07a62efffc0c7a0f8a6999a272f200c7fa0b1",
@@ -22,7 +22,7 @@
     "evidence/cross_reference/2026-09-20-dic-codec-source-audit.json": "8c11b940dcd92fec664a703aa8ccd8680b7637a9a819b6d6c0ae93d540e07c8a",
     "examples/evidence-record.json": "9e006ca2a6c2199ba52d62fe9295d74aa6704e2c64d2f0af0928b1b25fae617b",
     "LICENSE": "68d4e9ecad930e7b1c94ac15bcc044f2211139b42fc394ca5d58a3a018c9f594",
-    "README.md": "f5e1f7151012047008f1d1331c42220ad9af35574539e899e9c5ded1b2fcef16",
+    "README.md": "2b3c8cc93450616e6d896c448a4fbbd585a88fc4686b23365039562ee51e8b93",
     "SECURITY.md": "57593740d1e5ad7be7206a6cd31bd8504784453d5c736751090a22ee8dcfcffa",
     "tools/check_dic_codec_vectors.py": "aa9f9851a91d0c466f13c888064d1ba8ef3bfe650cc35662b05554200549c659",
     "tools/check_layout.py": "ee44b882efb55b04271fbb4dfab0aeac93291b5a6fc190140aaedadf8c0aef93",
@@ -81,7 +81,14 @@
     "handoffs/2026-11-07-hvm-korean-cross/root11_probe.py": "ae7bba3463778e5a5fe48154c24522cb49b9a13125a67a66b5e5f3f30e26a2dc",
     "handoffs/2026-11-07-hvm-korean-cross/test_public_tools.py": "dfe6d8095344ee22f7f4f4106004f7ddf66c8af6c1cc3b7b828a4c2b7666535d",
     "handoffs/2026-11-07-hvm-korean-cross/validate_probes.py": "a8516ab9dfa475f91c59c49134255f1beb19e9e8774300abfe0df3b31fddb15f",
-    "handoffs/2026-11-07-hvm-korean-cross/SHA256SUMS.txt": "5cb797b06bee736c768e7b6f5ac8f773c7181b7e5946ded7d251a19b37b20460"
+    "handoffs/2026-11-07-hvm-korean-cross/SHA256SUMS.txt": "5cb797b06bee736c768e7b6f5ac8f773c7181b7e5946ded7d251a19b37b20460",
+    "handoffs/2026-11-08-f-to-ff-inheritance/README.md": "bc8440bbc941f803a405443c59a462a721eac2c51b6cf367dce9b071cc522343",
+    "handoffs/2026-11-08-f-to-ff-inheritance/docs/FULL_RESEARCH_REPORT_CN.md": "e59a249eff2c88ad55507e45933230738bd91d4bfd10c6bac0358da8ed26ebec",
+    "handoffs/2026-11-08-f-to-ff-inheritance/docs/TEST_PLAN_CN.md": "52f3c3dc55e673d66e3540f4988520d7ff0a8a5c1ea0149a4f7ea17ae116e67c",
+    "handoffs/2026-11-08-f-to-ff-inheritance/evidence/INHERITANCE_STATUS.json": "a1dfb1387ca97552c4b29eaababbc50503764a3e542fa484d366eda7924f0fc1",
+    "handoffs/2026-11-08-f-to-ff-inheritance/evidence/HVM_FLAG_MATRIX.json": "5177339659b5f02ef7c69c3b36e0439c157c66c6d8da0fef011ece4bb3976236",
+    "handoffs/2026-11-08-f-to-ff-inheritance/evidence/S_EXS_RESOURCE_MATRIX.json": "cfdfb282202e8148a86f7aab4480295e5f66ce0a0e41c0169c312239c1aad638",
+    "handoffs/2026-11-08-f-to-ff-inheritance/SHA256SUMS.txt": "8707be657d80b3041d29bbd7f072dbbee50098f28bf94415e1bc1ee5de6fa726"
   },
   "handoff_note": "New 2026-09-22 packet reviewed separately; preexisting checker findings retained.",
   "publication_update_2026_10_25": {
@@ -184,5 +191,35 @@
     "new_gameplay_runs": 0,
     "retrospective_boundary": "Prior allowlist hashes and reservations are preserved except the reviewed README update. This scoped publication does not certify unrelated repository contents.",
     "excluded": "ROM, BIOS, game assets, fonts, scene byte windows, saves, real RAM, private paths, private messages, full stack traces and unreviewed legacy dependencies."
+  },
+  "publication_update_2026_11_08_f_to_ff_inheritance": {
+    "scope": "Public-safe rewritten HVM and F→FF inheritance report; source and archive provenance summarized with version-locked limits. No new emulator gameplay in publication.",
+    "base_commit": "ffb39d8d78a210a7c7c4d7a3f2f91c1868fe2911",
+    "new_paths": [
+      "handoffs/2026-11-08-f-to-ff-inheritance/README.md",
+      "handoffs/2026-11-08-f-to-ff-inheritance/SHA256SUMS.txt",
+      "handoffs/2026-11-08-f-to-ff-inheritance/docs/FULL_RESEARCH_REPORT_CN.md",
+      "handoffs/2026-11-08-f-to-ff-inheritance/docs/TEST_PLAN_CN.md",
+      "handoffs/2026-11-08-f-to-ff-inheritance/evidence/HVM_FLAG_MATRIX.json",
+      "handoffs/2026-11-08-f-to-ff-inheritance/evidence/INHERITANCE_STATUS.json",
+      "handoffs/2026-11-08-f-to-ff-inheritance/evidence/S_EXS_RESOURCE_MATRIX.json"
+    ],
+    "updated_paths": [
+      "README.md",
+      "docs/status.md",
+      "PUBLICATION_MANIFEST.json"
+    ],
+    "inherited_preexisting_unlisted_paths": 53,
+    "inherited_preexisting_unlisted_paths_note": "Baseline repository already contained 53 paths omitted from global allowlist. They are not silently approved; whole-repository checker remains incomplete.",
+    "standalone_sha256_index": "handoffs/2026-11-08-f-to-ff-inheritance/SHA256SUMS.txt",
+    "certification": "Reviewed newly authored text and structural metadata only; no source ROM/save/asset payloads, no independent rerun of historical claims.",
+    "exclusions": [
+      "ROM/ISO/disc binaries",
+      "commercial assets and fonts",
+      "save cards/SRM/BKR/state/RAM",
+      "game dialogues and screenshots/videos",
+      "private local paths/account URLs",
+      "third-party EXE and unreviewed source"
+    ]
   }
 }

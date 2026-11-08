@@ -1,0 +1,99 @@
+{
+  "schema": "SRWF_HVM_FLAG_MAPPING_PUBLIC_V1",
+  "date": "2026-11-08",
+  "platform": "Saturn F RevB21M research semantics; specific inherited endpoint additionally observed",
+  "addressing": "Offsets below refer to DECODED NORMAL SAVE PAYLOAD, never absolute .bkr/.srm offsets. GS offsets refer to the game-state object, not an immutable physical memory address.",
+  "save": {
+    "native_card_bytes": 32768,
+    "ordinary_payload_bytes": 5632,
+    "interrupt_payload_bytes": 12624,
+    "flag_pool_payload_offset": "0x0094",
+    "flag_pool_gs_offset": "0x0534",
+    "flag_pool_bytes": 64
+  },
+  "entries": [
+    {
+      "name": "hidden_counter",
+      "payload_offset": "0x00A0",
+      "gs_offset": "0x0540",
+      "mask": "high_nibble",
+      "in_f_clear": 7,
+      "in_ff_resave": 7,
+      "interpretation": "shared count; not independent flag 0063"
+    },
+    {
+      "name": "0016",
+      "payload_offset": "0x0096",
+      "gs_offset": "0x0536",
+      "mask": "0x02",
+      "interpretation": "shared control also used by native resource selection; do not force globally"
+    },
+    {
+      "name": "00E2",
+      "payload_offset": "0x00B0",
+      "gs_offset": "0x0550",
+      "mask": "0x20",
+      "interpretation": "scene-local P09 condition; may clear across scenes; not a permanent four-upgrade certificate"
+    },
+    {
+      "name": "0109",
+      "payload_offset": "0x00B5",
+      "gs_offset": "0x0555",
+      "mask": "0x40",
+      "in_f_clear": true,
+      "in_ff_resave": true,
+      "interpretation": "Haman prerequisite history, not proof of recruitment"
+    },
+    {
+      "name": "010B",
+      "payload_offset": "0x00B5",
+      "gs_offset": "0x0555",
+      "mask": "0x10",
+      "in_f_clear": false,
+      "in_ff_resave": false,
+      "interpretation": "independent FF37 sample uses its own branch; do not mix"
+    },
+    {
+      "name": "010C",
+      "payload_offset": "0x00B5",
+      "gs_offset": "0x0555",
+      "mask": "0x08",
+      "in_f_clear": false,
+      "in_ff_resave": false,
+      "interpretation": "separate FF37 historical branch; not proof of joining"
+    },
+    {
+      "name": "0113",
+      "payload_offset": "0x00B6",
+      "gs_offset": "0x0556",
+      "mask": "0x10",
+      "in_f_clear": true,
+      "in_ff_resave": true,
+      "interpretation": "Todd prerequisite history, not proof of recruitment"
+    },
+    {
+      "name": "0114",
+      "payload_offset": "0x00B6",
+      "gs_offset": "0x0556",
+      "mask": "0x08",
+      "in_f_clear": true,
+      "in_ff_resave": true,
+      "interpretation": "finale process candidate; not proven necessary and sufficient inheritance switch"
+    }
+  ],
+  "scene_callbacks": {
+    "normal_payload_fields": [
+      "0x0084",
+      "0x0088",
+      "0x008C"
+    ],
+    "ff_roots": [
+      4,
+      5,
+      8
+    ],
+    "note": "FF rebinding is part of inheritance; avoid reusing F absolute script addresses."
+  },
+  "caution": "Synthetic native handler tests and flag preservation are not complete natural-event recruitment acceptance.",
+  "publication_scope": "Structural offsets, masks and booleans only; no copied save payload."
+}
