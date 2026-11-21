@@ -58,3 +58,13 @@ python tools/n02_u1_baseline_builder.py \
 - GitHub Actions synthetic test: [run 44864614704](https://github.com/LouxiadeMDL/srwf-f-public-research/actions/runs/44864614704) — conclusion SUCCESS. The job's explicit synthetic verification step also returned SUCCESS.
 - **This proves only the public-safe sample pipeline, not private production migration.** The full 1.69 GB N03 database and both real guide SQLite databases still need the same checks in a working file-execution runtime. Actual latest N08/N09 revisions, 4,857 R2 source bindings, term occurrences, 35-category signoff and real guide normalization remain OPEN.
 - Current outcome: `N02_U1_PARTIAL`. Do not freeze the candidate as the unique N08/UETS source or claim completed game/run-time verification.
+
+
+## 2026-11-21 real-input recovery and audit hardening (follow-up)
+
+- Read-only opened the **real** F guide SQLite (50,843,648 B) and FF guide SQLite (65,470,464 B). Both returned SQLite integrity_check=ok. Actual counts: F 1,062 pages / 59,398 lines; FF 812 pages / 42,865 lines / 44 QA resolutions / 109 crosschecks.
+- Located the actual N03/N04 2026-11-19 delivery ZIP (343,039,408 B), v1.1r2 full static delivery ZIP (159,001,857 B), N08 R1 MasterData ZIP (223,913,748 B), and final R2 TSV (61,734 B) in the user's private file library. The 1,690,554,368-B parent SQLite has not yet been extracted and freshly hashed in this follow-up.
+- Read all 1,392 R2 TSV data rows; each entity ID is unique. Category distribution: 333 PERSON, 425 UNIT, 634 WEAPON. One numeric-looking canonical name was flagged for manual identity review, not edited and not copied into this public report.
+- Improved independent verifier: source guide page/line original text, IDs, positions, and FF QA/crosscheck raw records now have independent full-record digests, in addition to legacy-table and R2 checks. Synthetic regression now alters an imported guide line and FF QA record; both must be rejected.
+- **Execution blocker:** after the large private archives were staged, the container/code-execution interface returned system-level errors, including on simple commands. No production N03-to-U1 migration, original N03 SHA verification, or 68,240-manuscript review was completed. Earlier successful synthetic-file stress tests do not prove the private-archive execution path is healthy.
+- Safety gate remains **N02_U1_PARTIAL**. Do not publish private records, treat synthetic CI as formal acceptance, freeze a canonical master, or feed an unverified candidate to N08/UETS. Code changes are committed; independently confirm their GitHub Actions outcome before treating the new regression as passing.
