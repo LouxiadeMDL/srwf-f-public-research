@@ -140,7 +140,8 @@ def main():
         with sqlite3.connect(candidate) as db:
             db.execute(
                 "UPDATE GUIDE_TEXT_NORMALIZED SET original_text='原文被篡改' "
-                "WHERE rowid=(SELECT rowid FROM GUIDE_TEXT_NORMALIZED LIMIT 1)")
+                "WHERE rowid=(SELECT rowid FROM GUIDE_TEXT_NORMALIZED "
+                "WHERE guide_key='F_v0.2::F' ORDER BY rowid LIMIT 1)")
         guide_report = w / "guide_tamper_audit.json"
         run(auditor, "--parent", parent, "--candidate", candidate,
             "--r2", r2, "--guide-f", guide_f, "--guide-ff", guide_ff,
