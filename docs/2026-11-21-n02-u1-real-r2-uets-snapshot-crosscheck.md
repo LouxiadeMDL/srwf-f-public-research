@@ -60,3 +60,36 @@
 **N02_U1_PARTIAL。** 本轮真实跨源快照4,857条通过≠Speed3最新SQLite独立SQL通过≠全35类文字或游戏运行验收完成。原始私人TSV、攻略、镜像和大型数据库不得上传公开仓库。
 
 恢复归档：Google Drive 中的原始 R2 ZIP（97,628字节）、UETS设计工程 ZIP（1,924,678字节）以及 Speed3 3卷归档。正式库在用户私有本机或私有网盘恢复后才能进一步完成真实SQL核验。
+
+## 5. 完整独立复现命令
+
+第一步：仅核对两份私有 ZIP 的来源绑定快照，不需要 1.48GB 数据库：
+
+```powershell
+python tools/n02_u1_r2_uets_archive_compare.py `
+  --r2-zip "R2原始ZIP所在文件夹\SRW_F_FF_最终统一定名_20261119_R2.zip" `
+  --uets-source-zip "UETS设计源码所在文件夹\UETS_设计源码汇总_20261121.zip" `
+  --report "D:\SSFFWORD\N02_U1\R2_UETS_REAL_ARCHIVE_AUDIT.json"
+```
+
+这个程序强制检查两份归档的**精确 SHA-256**、ZIP成员 CRC32、4,857个原始来源ID的身份／类别／正式中文等值。对不一致、重复、缺失、损坏和错误版本采用拒绝策略，不会写入正式 SQLite。
+
+第二步：在 Windows 本机对最新 Speed3 正式库执行只读 SQL 检查，要求原始R2 ZIP、正式SQLite、合并回执和七条验收清单均为验证通过的**原始版本**：
+
+```powershell
+python tools/n02_u1_real_r2_preflight.py `
+  --r2-zip "R2原始ZIP所在文件夹\SRW_F_FF_最终统一定名_20261119_R2.zip" `
+  --formal-db "D:\CodexArchives\20261121_UETS_P045\outputs\UETS\catalog\UETS_TEXT_CATALOG.sqlite" `
+  --expected-formal-db-sha256 09e125aafb44712e91d0110fc0f2aae0dea648562a4ea0097d2d3a9557c8472b `
+  --speed3-merge-receipt "已恢复的UETS_SPEED3_FORMAL_MERGE.json完整路径" `
+  --speed3-acceptance-tsv "已恢复的UETS_SPEED3_FORMAL_ACCEPTANCE.tsv完整路径" `
+  --out-dir "D:\SSFFWORD\N02_U1\R2_SPEED3_FINAL_CHECK_NEW"
+```
+
+本轮修改后的正式预审会把 `n08_name_binding` 的四个字段全部逐条比较，并将 `TEXT_SOURCE.cn_final` 与 `approved_cn` 的差异放在独立的字段形式审校清单中，不把合法短名误当错误。
+
+`TEXT_ACCEPTANCE` 的总数门禁为1,556，且追加7条验收的 ID、版本、axis、outcome、chronology、`evidence_file.sha256` 必须与原 TSV 一致。**这只证明正式记录及其证据哈希被继承，并不重播 Saturn 原生流程。**
+
+`TEXT_CALLSITE` 的门禁为128,513条登记关系，**不等于128,513个实际游戏运行窗口**。上一节点的392条技术HOLD只作N09 R2历史状态，在Speed3的新增实装与有界运行证据中分别核算。
+
+用户本机可将审计产生的 `REAL_PREFLIGHT_STATUS.json` 及差异TSV打包后交由独立复核；在尚无真实SQL输出的情况下不得标记全工程PASS。
