@@ -283,7 +283,8 @@ def main():
             merge_ok = (merged.get("status")=="PASS_FORMAL_MERGE"
                         and merged.get("total_acceptance_rows")==1556
                         and merged.get("conflicts")==0
-                        and merged.get("database_sha256")==recon["sha256"])
+                        and merged.get("database_sha256")==recon["sha256"]
+                        and recon["checks"]["speed3_acceptance_count"]["pass"])
             recon["checks"]["speed3_formal_merge_receipt"]={
                 "pass":merge_ok,"new_acceptance_rows":merged.get("inserted"),
                 "total_acceptance_rows":merged.get("total_acceptance_rows"),
