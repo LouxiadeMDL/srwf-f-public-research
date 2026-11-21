@@ -301,6 +301,65 @@ def reconcile(formal, staged, out, args):
     )
     return report
 
+SPEED3_MERGE_SHA256 = "2c86c086adcc8a6a10fc11fb4cb5344eb75f43fee2ff569a1c54ecf4ac526810"
+SPEED3_ACCEPTANCE_TSV_SHA256 = "313f9c150118b60a98eba2411bc20cae26f03ce5311b7ca995a669ffbf5334c4"
+
+
+def verify_speed3_seven(formal, merge, acceptance_tsv):
+    """Independent seven-acceptance identity/evidence check, not runtime replay."""
+    fields=("acceptance_id","revision","axis","outcome","chronology","evidence_sha256")
+    if file_sha(acceptance_tsv) != SPEED3_ACCEPTANCE_TSV_SHA256:
+        raise ValueError("Speed3 seven-acceptance TSV differs from pinned CONTENTS.json")
+    with Path(acceptance_tsv).open("r", encoding="utf-8-sig", newline="") as fp:
+        reader=csv.DictReader(fp, delimiter="\t")
+        if not reader.fieldnames or not set(fields).issubset(reader.fieldnames):
+            raise ValueError("Speed3 source TSV has missing acceptance/evidence columns")
+        source_rows=list(reader)
+        if len(source_rows)!=7 or len({r["acceptance_id"] for r in source_rows})!=7:
+            raise ValueError("Speed3 acceptance TSV must have exactly seven unique IDs")
+    incoming=merge.get("mapping")
+    if not isinstance(incoming,list) or len(incoming)!=7:
+        raise ValueError("Speed3 merge receipt missing its seven mapping rows")
+    expected_map={r["acceptance_id"]:(r["revision"],bool(r["historical_only"]))
+                  for r in incoming}
+    if len(expected_map)!=7 or set(expected_map)!={r["acceptance_id"] for r in source_rows}:
+        raise ValueError("Speed3 merge receipt and acceptance TSV disagree")
+    if sum(not historical for _,historical in expected_map.values())!=6:
+        raise ValueError("Speed3 expected six current plus one historical acceptance")
+    with sqlite3.connect(Path(formal).resolve().as_uri()+"?mode=ro",uri=True) as db:
+        db.execute("PRAGMA query_only=ON")
+        if db.execute("SELECT count(*) FROM TEXT_ACCEPTANCE").fetchone()[0]!=1556:
+            raise ValueError("Speed3 formal acceptance count is not 1,556")
+        found={}
+        for row in db.execute(
+            "SELECT a.acceptance_id,a.revision,a.axis,a.outcome,a.chronology,"
+            "f.sha256 FROM TEXT_ACCEPTANCE a "
+            "JOIN evidence_file f ON a.evidence_id=f.evidence_id "
+            "WHERE a.acceptance_id IN ("+",".join("?" for _ in source_rows)+")",
+            [r["acceptance_id"] for r in source_rows]):
+            found[row[0]]=row[1:]
+    failed=[]
+    for row in source_rows:
+        key=row["acceptance_id"]
+        requested=(row["revision"],row["axis"],row["outcome"],
+                   row["chronology"],row["evidence_sha256"])
+        observed=found.get(key)
+        revision,historical=expected_map[key]
+        if revision!=row["revision"]:
+            failed.append({"acceptance_id":key,"problem":"RECEIPT_REVISION_MISMATCH"})
+        if historical!=(row["outcome"]=="HISTORICAL_PASS"):
+            failed.append({"acceptance_id":key,"problem":"HISTORY_SCOPE_MISMATCH"})
+        if observed!=requested:
+            failed.append({"acceptance_id":key,
+                           "problem":"FORMAL_ACCEPTANCE_OR_EVIDENCE_MISMATCH",
+                           "expected":requested, "observed":observed})
+    return {"pass":not failed,"verified_rows":7-len({
+                x["acceptance_id"] for x in failed}),
+            "source_rows":len(source_rows),"historical_rows":1,
+            "speed3_current_rows":6,"mismatches":failed,
+            "evidence_status":"EXACT_DB_ROWS_NOT_RUNTIME_REEXECUTION"}
+
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("--r2-zip",required=True,help="Original 97,628-byte R2 ZIP")
@@ -314,6 +373,8 @@ def main():
                    help="Optional pinned SHA-256 of known official formal DB")
     p.add_argument("--speed3-merge-receipt",
                    help="Optional UETS_SPEED3_FORMAL_MERGE.json")
+    p.add_argument("--speed3-acceptance-tsv",
+                   help="Optional pinned seven-row UETS_SPEED3_FORMAL_ACCEPTANCE.tsv")
     args=p.parse_args()
     archive,dbpath,out=Path(args.r2_zip),Path(args.formal_db),Path(args.out_dir)
     if not archive.is_file() or not dbpath.is_file():
@@ -344,7 +405,11 @@ def main():
                 "actual": recon["sha256"]}
             if not pin_ok:
                 recon["status"] = "REAL_R2_PREFLIGHT_PARTIAL_OR_BLOCKED"
+        if args.speed3_acceptance_tsv and not args.speed3_merge_receipt:
+            raise ValueError("Speed3 acceptance TSV requires original merge receipt")
         if args.speed3_merge_receipt:
+            if file_sha(Path(args.speed3_merge_receipt)) != SPEED3_MERGE_SHA256:
+                raise ValueError("Speed3 merge receipt SHA-256 differs from pinned original")
             merged = json.loads(Path(args.speed3_merge_receipt).read_text(
                 encoding="utf-8-sig"))
             merge_ok = (merged.get("status")=="PASS_FORMAL_MERGE"
@@ -358,6 +423,16 @@ def main():
                 "database_hash_matches":merged.get("database_sha256")==recon["sha256"]}
             if not merge_ok:
                 recon["status"]="REAL_R2_PREFLIGHT_PARTIAL_OR_BLOCKED"
+            if args.speed3_acceptance_tsv:
+                exact_seven = verify_speed3_seven(
+                    dbpath,merged,Path(args.speed3_acceptance_tsv))
+                recon["checks"]["speed3_seven_exact_evidence"] = exact_seven
+                if not exact_seven["pass"]:
+                    recon["status"]="REAL_R2_PREFLIGHT_PARTIAL_OR_BLOCKED"
+            else:
+                recon["checks"]["speed3_seven_exact_evidence"] = {
+                    "pass":False,"status":"NOT_RUN_NO_SPEED3_SEVEN_TSV",
+                    "note":"Summary receipt only; seven actual acceptance rows not separately checked"}
         recon["r2_archive"]={"filename":archive.name,"sha256":EXPECTED_ZIP_SHA,
                               "binding_rows":4857,"canonical_entities":1392}
         (out/"REAL_PREFLIGHT_STATUS.json").write_text(
