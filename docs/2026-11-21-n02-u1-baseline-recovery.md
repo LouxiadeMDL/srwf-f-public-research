@@ -50,3 +50,11 @@ python tools/n02_u1_baseline_builder.py \
 ## 仓库策略
 
 本仓库为 **public-safe research**，只公开通用脚本、合成测试、哈希及边界说明。私人完整数据库和攻略文字不应进入公开版本。
+
+## 2026-11-21 independent verification update
+
+- Added `tools/n02_u1_independent_verify.py`: independent read-only SHA-256, full-table typed-row digest, original-table schema comparison, R2 1,392-name exact match, guide source counts and FF 44-QA inheritance checks. Fails closed on changed source records.
+- Added `tests/test_n02_u1_offline_pipeline.py` and `.github/workflows/n02-u1-regression.yml`. Tests generate synthetic source/guide tables and 1,392 dummy names, build a candidate, verify that original data is unchanged, then deliberately modify an original row and confirm the independent checker marks the candidate BLOCKED.
+- GitHub Actions synthetic test: [run 44864614704](https://github.com/LouxiadeMDL/srwf-f-public-research/actions/runs/44864614704) — conclusion SUCCESS. The job's explicit synthetic verification step also returned SUCCESS.
+- **This proves only the public-safe sample pipeline, not private production migration.** The full 1.69 GB N03 database and both real guide SQLite databases still need the same checks in a working file-execution runtime. Actual latest N08/N09 revisions, 4,857 R2 source bindings, term occurrences, 35-category signoff and real guide normalization remain OPEN.
+- Current outcome: `N02_U1_PARTIAL`. Do not freeze the candidate as the unique N08/UETS source or claim completed game/run-time verification.
