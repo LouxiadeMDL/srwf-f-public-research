@@ -112,7 +112,7 @@ def main():
             if "overwriting should" in str(e):
                 raise
         # Independent negative input fixtures: stage must refuse and leave no DB.
-        for case in ("duplicate", "unbound", "wrong_name", "wrong_type", "bad_source")
+        for case in ("duplicate", "unbound", "wrong_name", "wrong_type", "bad_source"):
             b = folder / f"bindings_{case}.tsv"
             out = folder / f"rejected_{case}.sqlite"
             rcpt = folder / f"rejected_{case}.json"
