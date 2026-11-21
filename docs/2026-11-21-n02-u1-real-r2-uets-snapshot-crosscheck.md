@@ -93,3 +93,14 @@ python tools/n02_u1_real_r2_preflight.py `
 `TEXT_CALLSITE` 的门禁为128,513条登记关系，**不等于128,513个实际游戏运行窗口**。上一节点的392条技术HOLD只作N09 R2历史状态，在Speed3的新增实装与有界运行证据中分别核算。
 
 用户本机可将审计产生的 `REAL_PREFLIGHT_STATUS.json` 及差异TSV打包后交由独立复核；在尚无真实SQL输出的情况下不得标记全工程PASS。
+
+
+## 6. Speed3 合并脚本的只读源码审计（新增证据）
+
+在用户已有的研究仓库（不是本公开库）中检查了
+`projects/uets-p045-20261121/ledger-revisions/speed3-formal-merge-v1-20261121/snapshot/merge/merge_formal.py`。
+该脚本在变更前先对原有非 `UETS_LEDGER:%` 的 `TEXT_ACCEPTANCE` 行计算指纹，执行合并后重新计算指纹并断言相同；写入路径限定于 `evidence_file`、`TEXT_ACCEPTANCE`、`uets_acceptance_ledger_binding` 及 N03/N08 的验收视图。它**没有**对 `n08_name_binding`、`TEXT_SOURCE`、`TEXT_CALLSITE` 的 DML 写入。
+
+这与 Speed3 合并回执 `1,549→1,556` 及7条绑定一致，增强了R2绑定在Speed3升级中保持原样的证据链。但目前仍属于**源码和归档分析**，不能代替对合并后的1,481,125,888字节正式SQLite作独立校验。禁止将这些证明扩大为所有动态消费者、全部图鉴或所有35类运行完成。
+
+最新正式预审支持可选的7条验收TSV逐行核验：`acceptance_id`、`revision`、`axis`、`outcome`、`chronology`、`evidence_file.sha256` 需与本机 `TEXT_ACCEPTANCE` 和 `evidence_file` 一致，校验结果会写入私有的 `REAL_PREFLIGHT_STATUS.json`。
