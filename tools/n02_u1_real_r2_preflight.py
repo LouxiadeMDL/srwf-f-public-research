@@ -243,6 +243,10 @@ def main():
     p.add_argument("--source-column")
     p.add_argument("--binding-table")
     p.add_argument("--binding-source-column")
+    p.add_argument("--expected-formal-db-sha256",
+                   help="Optional pinned SHA-256 of known official formal DB")
+    p.add_argument("--speed3-merge-receipt",
+                   help="Optional UETS_SPEED3_FORMAL_MERGE.json")
     args=p.parse_args()
     archive,dbpath,out=Path(args.r2_zip),Path(args.formal_db),Path(args.out_dir)
     if not archive.is_file() or not dbpath.is_file():
@@ -265,6 +269,27 @@ def main():
             "--names",names,"--bindings",bindings,
             "--stage",staged,"--report",independent])
         recon=reconcile(dbpath,staged,out,args)
+        if args.expected_formal_db_sha256:
+            pin_ok = (recon["sha256"].lower() ==
+                      args.expected_formal_db_sha256.lower())
+            recon["checks"]["formal_sha256_pin"] = {
+                "pass": pin_ok, "expected": args.expected_formal_db_sha256,
+                "actual": recon["sha256"]}
+            if not pin_ok:
+                recon["status"] = "REAL_R2_PREFLIGHT_PARTIAL_OR_BLOCKED"
+        if args.speed3_merge_receipt:
+            merged = json.loads(Path(args.speed3_merge_receipt).read_text(
+                encoding="utf-8-sig"))
+            merge_ok = (merged.get("status")=="PASS_FORMAL_MERGE"
+                        and merged.get("total_acceptance_rows")==1556
+                        and merged.get("conflicts")==0
+                        and merged.get("database_sha256")==recon["sha256"])
+            recon["checks"]["speed3_formal_merge_receipt"]={
+                "pass":merge_ok,"new_acceptance_rows":merged.get("inserted"),
+                "total_acceptance_rows":merged.get("total_acceptance_rows"),
+                "database_hash_matches":merged.get("database_sha256")==recon["sha256"]}
+            if not merge_ok:
+                recon["status"]="REAL_R2_PREFLIGHT_PARTIAL_OR_BLOCKED"
         recon["r2_archive"]={"filename":archive.name,"sha256":EXPECTED_ZIP_SHA,
                               "binding_rows":4857,"canonical_entities":1392}
         (out/"REAL_PREFLIGHT_STATUS.json").write_text(
