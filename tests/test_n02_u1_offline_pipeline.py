@@ -52,8 +52,8 @@ def make_guide(path, ff=False):
             for page in range(1, pages + 1):
                 pid = f"{section}:{page}"
                 raw = "FF原始OCR扫描" if ff else "原始记录"
-            corrected = "FF已校对的文字" if ff else raw
-            db.execute("INSERT INTO pages VALUES(?,?,?,?,?,?)",
+                corrected = "FF已校对的文字" if ff else raw
+                db.execute("INSERT INTO pages VALUES(?,?,?,?,?,?)",
                            (pid, section, page, raw, corrected, "APPROVED"))
                 db.execute("INSERT INTO page_lines VALUES(?,?,?,?,?,?)",
                            (pid, pid, section, page, 1, "示例文字"))
