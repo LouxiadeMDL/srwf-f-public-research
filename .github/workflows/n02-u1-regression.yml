@@ -12,6 +12,7 @@ on:
       - "tests/test_n02_u1_parent_restore.py"
       - "tests/test_n02_u1_r2_binding_stage.py"
       - "tests/test_n02_u1_real_r2_preflight_synthetic.py"
+      - "docs/2026-11-21-n02-u1-real-r2-preflight.md"
       - "docs/2026-11-21-n02-u1-r2-source-binding-stage.md"
       - ".github/workflows/n02-u1-regression.yml"
   workflow_dispatch:
@@ -50,6 +51,7 @@ jobs:
             .github/workflows/n02-u1-regression.yml \
             docs/2026-11-21-n02-u1-baseline-recovery.md \
             docs/2026-11-21-n02-u1-r2-source-binding-stage.md \
+            docs/2026-11-21-n02-u1-real-r2-preflight.md \
             public_backup/
           git rev-parse HEAD > public_backup/GIT_COMMIT_SHA.txt
           (cd public_backup && find . -type f ! -name SOURCE_SHA256SUMS.txt -print0 | sort -z | xargs -0 sha256sum > SOURCE_SHA256SUMS.txt)
