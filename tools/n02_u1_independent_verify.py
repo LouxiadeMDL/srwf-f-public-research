@@ -77,6 +77,74 @@ def check_sqlite(db):
     return integrity, len(fk)
 
 
+
+def row_fingerprint(rows):
+    """Streaming, typed and identity-aware fingerprint (no source text in report)."""
+    d = hashlib.sha256()
+    n = 0
+    for row in rows:
+        n += 1
+        for v in row:
+            if v is None:
+                t, b = b"N", b""
+            elif isinstance(v, bytes):
+                t, b = b"B", v
+            elif isinstance(v, str):
+                t, b = b"S", v.encode("utf-8", "surrogatepass")
+            elif isinstance(v, int):
+                t, b = b"I", str(v).encode("ascii")
+            else:
+                t, b = b"F", repr(v).encode("ascii")
+            d.update(t + len(b).to_bytes(8, "big") + b)
+        d.update(b"\xff")
+    return {"rows": n, "sha256": d.hexdigest()}
+
+
+def guide_source_identity(guide, candidate, version):
+    """Original page and line text, IDs, source and positions must match."""
+    raw_page = "canonical_text" if version == "FF_v1.0.2" else "transcript_text"
+    queries = {
+        "pages": (
+            "SELECT (? || '::' || source_id),CAST(page_id AS TEXT),page_number,"
+            "COALESCE(" + raw_page + ",'') FROM pages "
+            "ORDER BY source_id,CAST(page_id AS TEXT)",
+            "SELECT guide_key,page_id,page_number,original_transcript FROM GUIDE_PAGE "
+            "WHERE guide_key LIKE ? ORDER BY guide_key,page_id"),
+        "lines": (
+            "SELECT (? || '::' || source_id),CAST(line_id AS TEXT),CAST(page_id AS TEXT),"
+            "page_number,line_number,COALESCE(line_text,'') FROM page_lines "
+            "ORDER BY source_id,CAST(line_id AS TEXT)",
+            "SELECT guide_key,line_id,page_id,page_number,line_number,original_text "
+            "FROM GUIDE_TEXT_NORMALIZED WHERE guide_key LIKE ? ORDER BY guide_key,line_id"),
+    }
+    return {name: {"source": row_fingerprint(guide.execute(source_sql, (version,))),
+                   "candidate": row_fingerprint(candidate.execute(target_sql, (version + "::%",)))}
+            for name, (source_sql, target_sql) in queries.items()}
+
+
+def ff_evidence_identity(guide, candidate):
+    def records(table):
+        cols = [r[1] for r in guide.execute("PRAGMA table_info(" + quoted(table) + ")")]
+        return [dict(zip(cols, row)) for row in guide.execute("SELECT * FROM " + quoted(table))]
+    qa_source = sorted(
+        [(str(r["page_id"]), str(r.get("original_flag") or ""),
+          json.dumps(r, ensure_ascii=False, default=str))
+         for r in records("qa_resolution")], key=lambda x: x[:2])
+    facts_source = sorted(
+        [(str(r["id"]), str(r.get("page_id")),
+          json.dumps(r, ensure_ascii=False, default=str))
+         for r in records("crosscheck_facts")], key=lambda x: x[0])
+    return {
+        "qa": {"source": row_fingerprint(qa_source),
+               "candidate": row_fingerprint(candidate.execute(
+                   "SELECT page_id,original_flag,raw_json FROM FF_GUIDE_QA_RESOLUTION "
+                   "ORDER BY page_id,original_flag"))},
+        "facts": {"source": row_fingerprint(facts_source),
+                  "candidate": row_fingerprint(candidate.execute(
+                      "SELECT fact_id,page_id,raw_json FROM FF_GUIDE_CROSSCHECK ORDER BY fact_id"))},
+    }
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--parent", required=True, help="Unmodified N03 parent SQLite")
@@ -159,6 +227,10 @@ def main():
                     ig, fk = check_sqlite(guide)
                     pages = guide.execute("SELECT count(*) FROM pages").fetchone()[0]
                     lines = guide.execute("SELECT count(*) FROM page_lines").fetchone()[0]
+                    source_identity = guide_source_identity(guide, dst, k)
+                for item, pair in source_identity.items():
+                    assertion(k + "_" + item + "_original_identity",
+                              pair["source"] == pair["candidate"], pair)
                 pcount = dst.execute(
                     "SELECT count(*) FROM GUIDE_PAGE WHERE guide_key LIKE ?", (k + "::%",)
                 ).fetchone()[0]
@@ -175,6 +247,10 @@ def main():
             with connect_ro(inp["guide_ff"]) as guide:
                 ff_qa = guide.execute("SELECT count(*) FROM qa_resolution").fetchone()[0]
                 ff_facts = guide.execute("SELECT count(*) FROM crosscheck_facts").fetchone()[0]
+                qa_identity = ff_evidence_identity(guide, dst)
+            for item, pair in qa_identity.items():
+                assertion("FF_v1.0.2_" + item + "_original_identity",
+                          pair["source"] == pair["candidate"], pair)
             qa = dst.execute("SELECT count(*) FROM FF_GUIDE_QA_RESOLUTION").fetchone()[0] if "FF_GUIDE_QA_RESOLUTION" in target_tables else -1
             facts = dst.execute("SELECT count(*) FROM FF_GUIDE_CROSSCHECK").fetchone()[0] if "FF_GUIDE_CROSSCHECK" in target_tables else -1
             assertion("ff_qa44_inherited", ff_qa == 44 and qa == ff_qa and facts == ff_facts,
