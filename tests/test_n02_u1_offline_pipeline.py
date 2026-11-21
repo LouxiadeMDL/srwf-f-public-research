@@ -94,6 +94,13 @@ def main():
         assert obj["checks"]["r2_exact_names"]["pass"], obj
         assert obj["checks"]["ff_qa44_inherited"]["pass"], obj
         assert obj["checks"]["legacy_table_byte_semantics_preserved"]["pass"], obj
+        for check in ("F_v0.2_pages_original_identity",
+                      "F_v0.2_lines_original_identity",
+                      "FF_v1.0.2_pages_original_identity",
+                      "FF_v1.0.2_lines_original_identity",
+                      "FF_v1.0.2_qa_original_identity",
+                      "FF_v1.0.2_facts_original_identity"):
+            assert obj["checks"][check]["pass"], (check, obj["checks"][check])
         with sqlite3.connect(candidate) as db:
             db.execute("UPDATE example_source SET original_text='被篡改' WHERE source_id='SSF:STORY:1'")
         bad_report = w / "bad_audit.json"
@@ -103,7 +110,29 @@ def main():
         failed = json.loads(bad_report.read_text(encoding="utf-8"))
         assert failed["status"] == "N02_U1_BLOCKED", failed
         assert not failed["checks"]["legacy_table_byte_semantics_preserved"]["pass"], failed
-        print("N02-U1 synthetic tests PASS: untouched data preserved, tamper detected.")
+        # A mutated guide original_text must fail even when page and line counts match.
+        with sqlite3.connect(candidate) as db:
+            db.execute(
+                "UPDATE GUIDE_TEXT_NORMALIZED SET original_text='原文被篡改' "
+                "WHERE rowid=(SELECT rowid FROM GUIDE_TEXT_NORMALIZED LIMIT 1)")
+        guide_report = w / "guide_tamper_audit.json"
+        run(auditor, "--parent", parent, "--candidate", candidate,
+            "--r2", r2, "--guide-f", guide_f, "--guide-ff", guide_ff,
+            "--report", guide_report, ok=2)
+        guide_failed = json.loads(guide_report.read_text(encoding="utf-8"))
+        assert not guide_failed["checks"]["F_v0.2_lines_original_identity"]["pass"], guide_failed
+        # Changing an imported historical QA record must also fail closed.
+        with sqlite3.connect(candidate) as db:
+            db.execute(
+                "UPDATE FF_GUIDE_QA_RESOLUTION SET raw_json='{}' "
+                "WHERE rowid=(SELECT rowid FROM FF_GUIDE_QA_RESOLUTION LIMIT 1)")
+        qa_report = w / "qa_tamper_audit.json"
+        run(auditor, "--parent", parent, "--candidate", candidate,
+            "--r2", r2, "--guide-f", guide_f, "--guide-ff", guide_ff,
+            "--report", qa_report, ok=2)
+        qa_failed = json.loads(qa_report.read_text(encoding="utf-8"))
+        assert not qa_failed["checks"]["FF_v1.0.2_qa_original_identity"]["pass"], qa_failed
+        print("N02-U1 synthetic tests PASS: originals preserved; parent/guide/QA tampering rejected.")
         print("NOTE: synthetic PASS is not a production-database acceptance.")
 
 
