@@ -105,7 +105,9 @@ def choose_table(db, tables, *, kind, requested=None, column=None, count=None):
         if table.startswith("sqlite_"):
             continue
         cols = [r[1] for r in db.execute(f"PRAGMA table_info({quoted(table)})")]
-        src = column if column in cols else next((x for x in keys if x in cols), None)
+        # An explicit column is authoritative; never fall back silently.
+        src = (column if column in cols else None) if column else next(
+            (x for x in keys if x in cols), None)
         ent = next((x for x in ENT_ALIASES if x in cols), None)
         if kind == "binding" and not ent:
             continue
@@ -166,7 +168,8 @@ def reconcile(formal, staged, out, args):
                 "table":src["table"],"column":src["source_col"],
                 "real_source_rows":src["rows"],"unique_source_ids":len(sids),
                 "r2_checked":len(expected),"missing_count":len(missing),
-                "pass":len(missing)==0 and len(sids)==src["rows"]}
+                "pass":len(missing)==0 and len(sids)==src["rows"]
+                       and src["rows"]==90099}
         else:
             report["checks"]["source_identity"] = {
                 "pass":False,"reason":"HOLD_SCHEMA: explicit/unique 90,099 source table not established"}
@@ -199,7 +202,8 @@ def reconcile(formal, staged, out, args):
                 "formal_bindings_rows":bind["rows"],
                 "missing":len(unmatched),"conflict":len(conflict),
                 "duplicate":len(duplicates),"extra":len(extra),
-                "pass":not(unmatched or conflict or duplicates or extra)}
+                "pass":bind["rows"]==4857
+                       and not(unmatched or conflict or duplicates or extra)}
         else:
             report["checks"]["binding_identity"]={
                 "pass":False,"reason":"HOLD_SCHEMA: explicit/unique 4,857 binding table not established"}
