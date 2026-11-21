@@ -1,0 +1,22 @@
+name: N02-U1 public-safe regression
+on:
+  push:
+    paths:
+      - "tools/n02_u1_baseline_builder.py"
+      - "tools/n02_u1_independent_verify.py"
+      - "tests/test_n02_u1_offline_pipeline.py"
+      - ".github/workflows/n02-u1-regression.yml"
+  workflow_dispatch:
+jobs:
+  synthetic-only:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify builder and independent audit (synthetic data only)
+        run: python tests/test_n02_u1_offline_pipeline.py
