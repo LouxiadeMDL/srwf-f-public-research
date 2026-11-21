@@ -5,8 +5,12 @@ on:
       - "tools/n02_u1_baseline_builder.py"
       - "tools/n02_u1_independent_verify.py"
       - "tools/n02_u1_restore_parent.py"
+      - "tools/n02_u1_r2_binding_stage.py"
+      - "tools/n02_u1_r2_binding_verify.py"
       - "tests/test_n02_u1_offline_pipeline.py"
       - "tests/test_n02_u1_parent_restore.py"
+      - "tests/test_n02_u1_r2_binding_stage.py"
+      - "docs/2026-11-21-n02-u1-r2-source-binding-stage.md"
       - ".github/workflows/n02-u1-regression.yml"
   workflow_dispatch:
 jobs:
@@ -24,6 +28,7 @@ jobs:
         run: |
           python tests/test_n02_u1_parent_restore.py
           python tests/test_n02_u1_offline_pipeline.py
+          python tests/test_n02_u1_r2_binding_stage.py
       - name: Package public-safe N02-U1 source snapshot
         run: |
           set -eu
@@ -32,10 +37,14 @@ jobs:
             tools/n02_u1_baseline_builder.py \
             tools/n02_u1_independent_verify.py \
             tools/n02_u1_restore_parent.py \
+            tools/n02_u1_r2_binding_stage.py \
+            tools/n02_u1_r2_binding_verify.py \
             tests/test_n02_u1_offline_pipeline.py \
             tests/test_n02_u1_parent_restore.py \
+            tests/test_n02_u1_r2_binding_stage.py \
             .github/workflows/n02-u1-regression.yml \
             docs/2026-11-21-n02-u1-baseline-recovery.md \
+            docs/2026-11-21-n02-u1-r2-source-binding-stage.md \
             public_backup/
           git rev-parse HEAD > public_backup/GIT_COMMIT_SHA.txt
           (cd public_backup && find . -type f ! -name SOURCE_SHA256SUMS.txt -print0 | sort -z | xargs -0 sha256sum > SOURCE_SHA256SUMS.txt)
