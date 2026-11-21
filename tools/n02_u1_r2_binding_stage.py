@@ -118,7 +118,9 @@ def stage(names_path, bindings_path, target, receipt, *,
             raise ValueError(f"Duplicate original source ID: {source}")
         if entity not in entities:
             raise ValueError(f"Binding row {i} references unknown entity: {entity}")
-        cn = entities[entity][1]
+        canonical_type, cn = entities[entity]
+        if "类别" in binding_headers and row["类别"] != canonical_type:
+            raise ValueError(f"Binding row {i} disagrees with R2 entity category")
         if name_col is not None and row[name_col] != cn:
             raise ValueError(f"Binding row {i} disagrees with R2 canonical name")
         seen.add(source)
