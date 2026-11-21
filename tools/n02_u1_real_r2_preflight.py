@@ -148,16 +148,19 @@ def reconcile(formal, staged, out, args):
         tables = [r[0] for r in db.execute(
             "SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'")]
         src,sc = choose_table(db,tables,kind="source",
-                              requested=args.source_table,column=args.source_column,
+                              requested=args.source_table or "TEXT_SOURCE",column=args.source_column,
                               count=90099)
         bind,bc = choose_table(db,tables,kind="binding",
-                               requested=args.binding_table,column=args.binding_source_column,
+                               requested=args.binding_table or "n08_name_binding",column=args.binding_source_column,
                                count=4857)
         report["schema_candidates"]["source"] = sc
         report["schema_candidates"]["binding"] = bc
         with sqlite3.connect(staged.resolve().as_uri()+"?mode=ro",uri=True) as st:
-            expected = {sid:(eid,cn) for sid,eid,cn in
-                        st.execute("SELECT original_source_id,entity_id,canonical_cn FROM R2_SOURCE_BINDING")}
+            expected = {
+                sid: (eid, cn, kind) for sid, eid, cn, kind in st.execute(
+                    "SELECT b.original_source_id,b.entity_id,b.canonical_cn,e.entity_type "
+                    "FROM R2_SOURCE_BINDING b JOIN R2_ENTITY e USING(entity_id)")
+            }
         if src:
             sids = {str(r[0]) for r in db.execute(
                 f"SELECT {quoted(src['source_col'])} FROM {quoted(src['table'])}")}
@@ -174,62 +177,126 @@ def reconcile(formal, staged, out, args):
             report["checks"]["source_identity"] = {
                 "pass":False,"reason":"HOLD_SCHEMA: explicit/unique 90,099 source table not established"}
         if bind:
-            actual = {}
-            for sid,eid in db.execute(
-                f"SELECT {quoted(bind['source_col'])},{quoted(bind['entity_col'])}"
-                f" FROM {quoted(bind['table'])}"):
-                actual.setdefault(str(sid),[]).append(str(eid))
-            unmatched,conflict,duplicates=[],[],[]
-            for sid,(eid,cn) in expected.items():
-                got=actual.get(sid)
-                if not got:
-                    unmatched.append((sid,eid,cn))
-                elif len(got)!=1:
-                    duplicates.append((sid,eid,";".join(got)))
-                elif got[0]!=eid:
-                    conflict.append((sid,eid,got[0]))
-            write_rows(out/"BINDINGS_MISSING.tsv",
-                       ("original_source_id","entity_id","canonical_cn"),unmatched)
-            write_rows(out/"BINDINGS_CONFLICT.tsv",
-                       ("original_source_id","r2_entity_id","formal_entity_id"),conflict)
-            write_rows(out/"BINDINGS_DUPLICATE.tsv",
-                       ("original_source_id","r2_entity_id","formal_entity_ids"),duplicates)
-            extra=sorted(set(actual)-set(expected))
-            write_rows(out/"FORMAL_BINDINGS_EXTRA.tsv",("original_source_id",),
-                       ((sid,) for sid in extra))
-            report["checks"]["binding_identity"]={
-                "table":bind["table"],"column":bind["source_col"],
-                "formal_bindings_rows":bind["rows"],
-                "missing":len(unmatched),"conflict":len(conflict),
-                "duplicate":len(duplicates),"extra":len(extra),
-                "pass":bind["rows"]==4857
-                       and not(unmatched or conflict or duplicates or extra)}
+            # UETS catalog/schema.sql is authoritative. It defines all four
+            # identity fields, not merely source_id/entity_id.
+            columns = {r[1] for r in db.execute(
+                f"PRAGMA table_info({quoted(bind['table'])})")}
+            required = {bind["source_col"],bind["entity_col"],
+                        "name_kind","approved_cn"}
+            if not required.issubset(columns):
+                report["checks"]["binding_identity"] = {
+                    "pass":False,"reason":"HOLD_SCHEMA: actual name_kind/approved_cn absent",
+                    "missing_columns":sorted(required-columns)}
+            else:
+                actual = {}
+                for sid,eid,kind,cn in db.execute(
+                    f"SELECT {quoted(bind['source_col'])},{quoted(bind['entity_col'])},"
+                    f"name_kind,approved_cn FROM {quoted(bind['table'])}"):
+                    actual.setdefault(str(sid),[]).append(
+                        (str(eid),str(kind),str(cn)))
+                unmatched,entity_conflicts,kind_conflicts,cn_conflicts,duplicates = (
+                    [],[],[],[],[])
+                for sid,(eid,cn,kind) in expected.items():
+                    got=actual.get(sid)
+                    if not got:
+                        unmatched.append((sid,eid,kind,cn))
+                    elif len(got)!=1:
+                        duplicates.append((sid,eid,";".join(str(v) for v in got)))
+                    else:
+                        observed_eid,observed_kind,observed_cn=got[0]
+                        if observed_eid!=eid:
+                            entity_conflicts.append((sid,eid,observed_eid))
+                        if observed_kind!=kind:
+                            kind_conflicts.append((sid,kind,observed_kind))
+                        if observed_cn!=cn:
+                            cn_conflicts.append((sid,cn,observed_cn))
+                write_rows(out/"BINDINGS_MISSING.tsv",
+                           ("source_id","entity_id","kind","canonical_cn"),unmatched)
+                write_rows(out/"BINDINGS_CONFLICT.tsv",
+                           ("source_id","r2_entity_id","formal_entity_id"),
+                           entity_conflicts)
+                write_rows(out/"BINDINGS_CATEGORY_CONFLICT.tsv",
+                           ("source_id","r2_category","formal_category"),kind_conflicts)
+                write_rows(out/"BINDINGS_CN_CONFLICT.tsv",
+                           ("source_id","r2_canonical_cn","formal_approved_cn"),cn_conflicts)
+                write_rows(out/"BINDINGS_DUPLICATE.tsv",
+                           ("source_id","r2_entity_id","formal_entries"),duplicates)
+                extra=sorted(set(actual)-set(expected))
+                write_rows(out/"FORMAL_BINDINGS_EXTRA.tsv",("source_id",),
+                           ((sid,) for sid in extra))
+                report["checks"]["binding_identity"]={
+                    "table":bind["table"],"column":bind["source_col"],
+                    "formal_bindings_rows":bind["rows"],
+                    "missing":len(unmatched),"entity_conflict":len(entity_conflicts),
+                    "category_conflict":len(kind_conflicts),
+                    "canonical_cn_conflict":len(cn_conflicts),
+                    "duplicate":len(duplicates),"extra":len(extra),
+                    "exact_four_field_matches":(
+                        len(expected)-len(unmatched)-len(duplicates)-
+                        len({sid for sid,_,_ in entity_conflicts+kind_conflicts+
+                             cn_conflicts})),
+                    "pass":bind["rows"]==4857
+                           and not(unmatched or entity_conflicts or kind_conflicts
+                                   or cn_conflicts or duplicates or extra)}
+                # N08 R2 canonical name is a semantic target; source.cn_final
+                # can have controlled per-field variants. Report, never replace.
+                source_cols={r[1] for r in db.execute(
+                    "PRAGMA table_info(TEXT_SOURCE)")}
+                required_source={"source_id","cn_final","authoring_revision",
+                                 "freeze_status"}
+                if required_source.issubset(source_cols):
+                    form_review=[]
+                    for sid,actual_cn,revision,freeze in db.execute(
+                        "SELECT s.source_id,s.cn_final,s.authoring_revision,"
+                        "s.freeze_status FROM TEXT_SOURCE s "
+                        "JOIN n08_name_binding b USING(source_id)"):
+                        entry=expected.get(str(sid))
+                        if entry and actual_cn!=entry[1]:
+                            form_review.append((sid,entry[1],actual_cn,revision,freeze))
+                    write_rows(out/"SOURCE_CN_FINAL_FORM_REVIEW.tsv",
+                               ("source_id","r2_approved_cn","source_cn_final",
+                                "authoring_revision","freeze_status"),
+                               form_review)
+                    report["checks"]["field_form_review"]={
+                        "count":len(form_review),
+                        "status":"REVIEW_LEGAL_VARIANT_NOT_AUTOMATIC_ERROR",
+                        "writes_to_formal_database":0}
+                else:
+                    report["checks"]["field_form_review"]={
+                        "count":None,"status":"HOLD_SCHEMA_FIELD_FORM",
+                        "missing_columns":sorted(required_source-source_cols)}
         else:
             report["checks"]["binding_identity"]={
-                "pass":False,"reason":"HOLD_SCHEMA: explicit/unique 4,857 binding table not established"}
-        # Optional acceptance table: do not claim Speed3 acceptance from file names alone.
-        ac=[]
-        for table in tables:
-            if any(k in table.lower() for k in ACC_WORDS):
-                try:
-                    cnt=db.execute(f"SELECT count(*) FROM {quoted(table)}").fetchone()[0]
-                    if cnt==1556:
-                        ac.append({"table":table,"rows":cnt})
-                except sqlite3.DatabaseError:
-                    continue
-        report["schema_candidates"]["speed3_acceptance"] = ac
+                "pass":False,"reason":"HOLD_SCHEMA: n08_name_binding not established"}
+        # Use exact source-schema table names. A count alone is not natural
+        # gameplay evidence; only validates a formal ledger's record inventory.
+        if "TEXT_CALLSITE" in tables:
+            callsites=db.execute("SELECT count(*) FROM TEXT_CALLSITE").fetchone()[0]
+        else:
+            callsites=None
+        report["checks"]["registered_callsite_count"]={
+            "pass":callsites==128513,
+            "rows":callsites,"evidence_status":"REGISTERED_RELATIONS_NOT_RUNTIME"}
+        if "TEXT_ACCEPTANCE" in tables:
+            acceptance=db.execute("SELECT count(*) FROM TEXT_ACCEPTANCE").fetchone()[0]
+        else:
+            acceptance=None
         report["checks"]["speed3_acceptance_count"]={
-            "pass":len(ac)==1,
-            "table":ac[0]["table"] if len(ac)==1 else None,
-            "row_count":1556 if len(ac)==1 else None,
-            "scope":"COUNT_ONLY_NOT_RUNTIME_REEXECUTION",
-        }
+            "pass":acceptance==1556,"table":"TEXT_ACCEPTANCE"
+                   if acceptance is not None else None,
+            "row_count":acceptance,
+            "scope":"LEDGER_COUNT_ONLY_NOT_RUNTIME_REEXECUTION"}
+        report["schema_candidates"]["speed3_acceptance"] = (
+            [{"table":"TEXT_ACCEPTANCE","rows":acceptance}]
+            if acceptance is not None else [])
     report["status"] = (
         "REAL_R2_TO_FORMAL_BINDING_PASS_PENDING_OTHER_U1"
         if report["checks"]["integrity"]=="ok"
         and report["checks"]["foreign_keys"]==0
         and report["checks"]["source_identity"]["pass"]
         and report["checks"]["binding_identity"]["pass"]
+        and report["checks"]["registered_callsite_count"]["pass"]
+        and report["checks"]["speed3_acceptance_count"]["pass"]
         else "REAL_R2_PREFLIGHT_PARTIAL_OR_BLOCKED"
     )
     return report
