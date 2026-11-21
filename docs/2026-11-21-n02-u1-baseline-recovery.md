@@ -68,3 +68,13 @@ python tools/n02_u1_baseline_builder.py \
 - Improved independent verifier: source guide page/line original text, IDs, positions, and FF QA/crosscheck raw records now have independent full-record digests, in addition to legacy-table and R2 checks. Synthetic regression now alters an imported guide line and FF QA record; both must be rejected.
 - **Execution blocker:** after the large private archives were staged, the container/code-execution interface returned system-level errors, including on simple commands. No production N03-to-U1 migration, original N03 SHA verification, or 68,240-manuscript review was completed. Earlier successful synthetic-file stress tests do not prove the private-archive execution path is healthy.
 - Safety gate remains **N02_U1_PARTIAL**. Do not publish private records, treat synthetic CI as formal acceptance, freeze a canonical master, or feed an unverified candidate to N08/UETS. Code changes are committed; independently confirm their GitHub Actions outcome before treating the new regression as passing.
+
+
+## 2026-11-21 OCR 原始层与校对层分离（独立分支）
+
+- **发现并修复**：旧构建器曾把 FF v1.0.2 的 `canonical_text`（已校对）作为 `GUIDE_PAGE.original_transcript`，使原始 OCR 转录与校对层身份混淆。新版本要求来源存在 `transcript_text`，原样保留在 `original_transcript`；校对后的 `canonical_text` 独立存入 `GUIDE_PAGE_CORRECTION_SOURCE.corrected_source_text`，同时作为尚未做实体替换的规范化起点。
+- **拒绝自我认证**：基线构建阶段 `U1_ORIGINAL_PRESERVED` 状态由未获独立核验的 `PASS` 改成 `PENDING_INDEPENDENT_AUDIT`；N02-U1 仍不得转为最终 PASS。
+- **增加独立证据检查**：逐条检查 FF 原始 OCR 与单独保存的校对来源，核对构建输入清单中的 SHA-256/文件大小/名称；来源区分采用精确前缀，而不是把下划线作为 SQL LIKE 通配符。
+- **负向测试**：模拟数据上，篡改旧主表、攻略原始行、FF 44项 QA、FF 校对来源和输入回执，应全部拒绝通过；同时确认 F v0.2 中重复的旧 FF 812页标记为仅归档，FF v1.0.2 为首选。
+- **GitHub Actions synthetic-only PASS**：[run 44876385373](https://github.com/LouxiadeMDL/srwf-f-public-research/actions/runs/44876385373)，提交 `5a7266c9cfbff29d2b7c505741a01f617a644dc8`。早期运行失败并通过日志修复测试语法与不确定行号问题；不隐瞒失败历史。
+- **边界**：上述通过仅证明模拟数据和独立检查器的行为；尚未在实际 1.69GB N03、真实 F/FF 攻略库、4,857项 R2 来源绑定或 N08/N09 最新主稿上运行。状态保持 `N02_U1_PARTIAL`；没有生成或批准正式数据库，没有改写 ISO/BIN/CUE，未公开游戏或攻略正文。

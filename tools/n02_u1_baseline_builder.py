@@ -50,6 +50,13 @@ CREATE TABLE IF NOT EXISTS GUIDE_PAGE (
   source_qa_state TEXT,
   PRIMARY KEY(guide_key,page_id)
 );
+CREATE TABLE IF NOT EXISTS GUIDE_PAGE_CORRECTION_SOURCE (
+  guide_key TEXT NOT NULL,
+  page_id TEXT NOT NULL,
+  corrected_source_text TEXT NOT NULL,
+  PRIMARY KEY (guide_key,page_id),
+  FOREIGN KEY(guide_key,page_id) REFERENCES GUIDE_PAGE(guide_key,page_id)
+);
 CREATE TABLE IF NOT EXISTS GUIDE_TEXT_NORMALIZED (
   guide_key TEXT NOT NULL, line_id TEXT NOT NULL,
   page_id TEXT NOT NULL, page_number INTEGER, line_number INTEGER,
@@ -115,8 +122,11 @@ def record_input(db,role,path):
 
 def check_db(path):
     with ro(path) as db:
-        verdict=db.execute("PRAGMA quick_check").fetchone()[0]
-        if verdict!='ok': raise ValueError(f"SQLite quick_check failed: {path}: {verdict}")
+        verdict=db.execute("PRAGMA integrity_check").fetchone()[0]
+        if verdict!='ok': raise ValueError(f"SQLite integrity_check failed: {path}: {verdict}")
+        fk_error=db.execute("PRAGMA foreign_key_check").fetchone()
+        if fk_error is not None:
+            raise ValueError(f"SQLite foreign_key_check failed: {path}: {fk_error}")
         return {name:int(db.execute('SELECT count(*) FROM "'+name+'"').fetchone()[0])
                 for (name,) in db.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name NOT LIKE '%_fts%'")}
 
@@ -144,13 +154,25 @@ def import_guide(db,path,version,prefer):
         db.execute("INSERT INTO GUIDE_DOCUMENT VALUES(?,?,?,?,?,?,?)",
             (guide_key,version,sid,src.get('title'),src.get('pdf_sha256'),src.get('page_count'),policy))
     pkeys=[x[1] for x in raw.execute("PRAGMA table_info(pages)")]
+    if 'transcript_text' not in pkeys:
+        raise ValueError("Guide source has no transcript_text column; raw text cannot be preserved")
+    if version=='FF_v1.0.2' and 'canonical_text' not in pkeys:
+        raise ValueError("FF guide lacks canonical_text column; reviewed source layer missing")
     page_rows=0
     for record in raw.execute("SELECT * FROM pages"):
         p=dict(zip(pkeys,record)); sid=str(p['source_id']); guide_key=version+'::'+sid
-        original=p.get('canonical_text') if version=='FF_v1.0.2' else p.get('transcript_text')
+        # Original OCR/transcription is immutable; source-approved corrections
+        # are a separate layer and must never masquerade as the raw scan.
+        original=p['transcript_text'] if p['transcript_text'] is not None else ''
+        corrected=(p['canonical_text'] if p['canonical_text'] is not None else original) if version=='FF_v1.0.2' else original
+        status=('SOURCE_CORRECTIONS_ONLY_PENDING_ENTITY_BINDING'
+                if corrected != original else 'IDENTITY_PENDING_ENTITY_BINDING')
         db.execute("INSERT INTO GUIDE_PAGE VALUES(?,?,?,?,?,?,?)",
-            (guide_key,str(p['page_id']),p['page_number'],original or '',original or '',
-             'IDENTITY_PENDING_ENTITY_BINDING',str(p.get('qa_state'))))
+            (guide_key,str(p['page_id']),p['page_number'],original,corrected,
+             status,str(p.get('qa_state'))))
+        if version=='FF_v1.0.2':
+            db.execute("INSERT INTO GUIDE_PAGE_CORRECTION_SOURCE VALUES(?,?,?)",
+                       (guide_key,str(p['page_id']),corrected))
         page_rows+=1
     lkeys=[x[1] for x in raw.execute("PRAGMA table_info(page_lines)")]
     line_rows=0
@@ -203,7 +225,7 @@ def main():
         ff=import_guide(db,inp['GUIDE_FF_V102'],'FF_v1.0.2',True)
         if f['pages']!=1062 or ff['pages']!=812:raise ValueError('Unexpected guide page count')
         db.execute("INSERT INTO QA_RESULT VALUES(?,?,?,?,?)",
-            ('U1_ORIGINAL_PRESERVED','PASS','Original guide text remains byte-for-byte in source files','Never alter input corpus',None))
+            ('U1_ORIGINAL_PRESERVED','PENDING_INDEPENDENT_AUDIT','Source snapshot copied; independent full-table verification required','Never alter input corpus',None))
         db.execute("INSERT INTO QA_RESULT VALUES(?,?,?,?,?)",
             ('U1_AUTOMATIC_GAME_REWRITE','NOT_RUN','0 automatic game text edits','Identity-bound, reviewed changes only','No global replace'))
         db.execute("INSERT INTO QA_RESULT VALUES(?,?,?,?,?)",

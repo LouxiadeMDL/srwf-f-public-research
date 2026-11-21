@@ -102,24 +102,40 @@ def row_fingerprint(rows):
 
 def guide_source_identity(guide, candidate, version):
     """Original page and line text, IDs, source and positions must match."""
-    raw_page = "canonical_text" if version == "FF_v1.0.2" else "transcript_text"
+    raw_page = "transcript_text"  # Raw OCR is never the FF canonical/corrected field.
     queries = {
         "pages": (
             "SELECT (? || '::' || source_id),CAST(page_id AS TEXT),page_number,"
             "COALESCE(" + raw_page + ",'') FROM pages "
             "ORDER BY source_id,CAST(page_id AS TEXT)",
             "SELECT guide_key,page_id,page_number,original_transcript FROM GUIDE_PAGE "
-            "WHERE guide_key LIKE ? ORDER BY guide_key,page_id"),
+            "WHERE substr(guide_key,1,length(?))=? ORDER BY guide_key,page_id"),
         "lines": (
             "SELECT (? || '::' || source_id),CAST(line_id AS TEXT),CAST(page_id AS TEXT),"
             "page_number,line_number,COALESCE(line_text,'') FROM page_lines "
             "ORDER BY source_id,CAST(line_id AS TEXT)",
             "SELECT guide_key,line_id,page_id,page_number,line_number,original_text "
-            "FROM GUIDE_TEXT_NORMALIZED WHERE guide_key LIKE ? ORDER BY guide_key,line_id"),
+            "FROM GUIDE_TEXT_NORMALIZED WHERE substr(guide_key,1,length(?))=? ORDER BY guide_key,line_id"),
     }
+    prefix = version + "::"
     return {name: {"source": row_fingerprint(guide.execute(source_sql, (version,))),
-                   "candidate": row_fingerprint(candidate.execute(target_sql, (version + "::%",)))}
+                   "candidate": row_fingerprint(candidate.execute(target_sql, (prefix, prefix)))}
             for name, (source_sql, target_sql) in queries.items()}
+
+
+def ff_source_correction_identity(guide, candidate):
+    """Verify reviewed source pages separately from immutable OCR transcription."""
+    source = guide.execute(
+        "SELECT (? || '::' || source_id),CAST(page_id AS TEXT),"
+        "COALESCE(canonical_text,transcript_text,'') FROM pages "
+        "ORDER BY source_id,CAST(page_id AS TEXT)", ("FF_v1.0.2",))
+    prefix = "FF_v1.0.2::"
+    target = candidate.execute(
+        "SELECT guide_key,page_id,corrected_source_text "
+        "FROM GUIDE_PAGE_CORRECTION_SOURCE "
+        "WHERE substr(guide_key,1,length(?))=? ORDER BY guide_key,page_id",
+        (prefix, prefix))
+    return {"source": row_fingerprint(source), "candidate": row_fingerprint(target)}
 
 
 def ff_evidence_identity(guide, candidate):
@@ -187,6 +203,27 @@ def main():
         target_tables = tables(dst)
         missing = sorted(set(parent_tables) - set(target_tables))
         assertion("parent_table_names_preserved", not missing, {"missing": missing})
+        observed_receipts = {}
+        if "U1_BUILD_INPUT" in target_tables:
+            observed_receipts = {
+                role: (basename, digest, size)
+                for role, basename, digest, size in dst.execute(
+                    "SELECT role,path_hint,sha256,size_bytes FROM U1_BUILD_INPUT")
+            }
+        expectations = {
+            "N03_PARENT": inp["parent"], "GUIDE_F_V02": inp["guide_f"],
+            "GUIDE_FF_V102": inp["guide_ff"], "R2_NAMES": inp["r2"],
+        }
+        receipts_match = (set(observed_receipts) == set(expectations) and
+                          all(observed_receipts[role] ==
+                              (path.name, result["inputs"][key]["sha256"], path.stat().st_size)
+                              for role, path, key in (
+                                  ("N03_PARENT", inp["parent"], "parent"),
+                                  ("GUIDE_F_V02", inp["guide_f"], "guide_f"),
+                                  ("GUIDE_FF_V102", inp["guide_ff"], "guide_ff"),
+                                  ("R2_NAMES", inp["r2"], "r2"))))
+        assertion("builder_input_receipts_match_actual_files", receipts_match,
+                  {"roles": sorted(observed_receipts), "match": receipts_match})
         for name, sql in parent_tables.items():
             if name not in target_tables:
                 continue
@@ -219,7 +256,8 @@ def main():
                   {"r2_rows": len(rows), "unique_input": len(expected),
                    "actual": len(actual), "only_in_input": len(expected - actual),
                    "only_in_output": len(actual - expected)})
-        have_guide = {"GUIDE_DOCUMENT", "GUIDE_PAGE", "GUIDE_TEXT_NORMALIZED"} <= set(target_tables)
+        have_guide = {"GUIDE_DOCUMENT", "GUIDE_PAGE", "GUIDE_PAGE_CORRECTION_SOURCE",
+                      "GUIDE_TEXT_NORMALIZED"} <= set(target_tables)
         assertion("guide_tables_present", have_guide, "Guide normalized layer required")
         if have_guide:
             for k, path in (("F_v0.2", inp["guide_f"]), ("FF_v1.0.2", inp["guide_ff"])):
@@ -228,15 +266,23 @@ def main():
                     pages = guide.execute("SELECT count(*) FROM pages").fetchone()[0]
                     lines = guide.execute("SELECT count(*) FROM page_lines").fetchone()[0]
                     source_identity = guide_source_identity(guide, dst, k)
+                    corrected_identity = (ff_source_correction_identity(guide, dst)
+                                          if k == "FF_v1.0.2" else None)
                 for item, pair in source_identity.items():
                     assertion(k + "_" + item + "_original_identity",
                               pair["source"] == pair["candidate"], pair)
+                if corrected_identity is not None:
+                    assertion("FF_v1.0.2_corrected_source_identity",
+                              corrected_identity["source"] == corrected_identity["candidate"],
+                              corrected_identity)
+                prefix = k + "::"
                 pcount = dst.execute(
-                    "SELECT count(*) FROM GUIDE_PAGE WHERE guide_key LIKE ?", (k + "::%",)
+                    "SELECT count(*) FROM GUIDE_PAGE WHERE substr(guide_key,1,length(?))=?",
+                    (prefix, prefix)
                 ).fetchone()[0]
                 lcount = dst.execute(
-                    "SELECT count(*) FROM GUIDE_TEXT_NORMALIZED WHERE guide_key LIKE ?",
-                    (k + "::%",)
+                    "SELECT count(*) FROM GUIDE_TEXT_NORMALIZED WHERE substr(guide_key,1,length(?))=?",
+                    (prefix, prefix)
                 ).fetchone()[0]
                 assertion(k + "_pages_lines", ig == "ok" and fk == 0
                           and pcount == pages and lcount == lines
