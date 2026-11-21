@@ -7,9 +7,11 @@ on:
       - "tools/n02_u1_restore_parent.py"
       - "tools/n02_u1_r2_binding_stage.py"
       - "tools/n02_u1_r2_binding_verify.py"
+      - "tools/n02_u1_real_r2_preflight.py"
       - "tests/test_n02_u1_offline_pipeline.py"
       - "tests/test_n02_u1_parent_restore.py"
       - "tests/test_n02_u1_r2_binding_stage.py"
+      - "tests/test_n02_u1_real_r2_preflight_synthetic.py"
       - "docs/2026-11-21-n02-u1-r2-source-binding-stage.md"
       - ".github/workflows/n02-u1-regression.yml"
   workflow_dispatch:
@@ -29,6 +31,7 @@ jobs:
           python tests/test_n02_u1_parent_restore.py
           python tests/test_n02_u1_offline_pipeline.py
           python tests/test_n02_u1_r2_binding_stage.py
+          python tests/test_n02_u1_real_r2_preflight_synthetic.py
       - name: Package public-safe N02-U1 source snapshot
         run: |
           set -eu
@@ -39,9 +42,11 @@ jobs:
             tools/n02_u1_restore_parent.py \
             tools/n02_u1_r2_binding_stage.py \
             tools/n02_u1_r2_binding_verify.py \
+            tools/n02_u1_real_r2_preflight.py \
             tests/test_n02_u1_offline_pipeline.py \
             tests/test_n02_u1_parent_restore.py \
             tests/test_n02_u1_r2_binding_stage.py \
+            tests/test_n02_u1_real_r2_preflight_synthetic.py \
             .github/workflows/n02-u1-regression.yml \
             docs/2026-11-21-n02-u1-baseline-recovery.md \
             docs/2026-11-21-n02-u1-r2-source-binding-stage.md \
