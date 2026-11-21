@@ -33,7 +33,7 @@ def make_names(path):
 def make_bindings(path, *, bad=None):
     with path.open("w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f, delimiter="\t")
-        w.writerow(["原始来源ID", "实体ID", "简体中文定名", "窗口"])
+        w.writerow(["原始来源ID", "实体ID", "类别", "简体中文定名", "窗口"])
         for i in range(4857):
             ent = i % 1392
             sid = f"SSF:NAME:{i:06d}" if i%2 else f"SSFF:NAME:{i:06d}"
@@ -46,7 +46,10 @@ def make_bindings(path, *, bad=None):
                 cn = "错误的合成名"
             if bad == "bad_source" and i == 4856:
                 sid = sid + " "
-            w.writerow([sid, f"ENTITY:{ent:04d}", cn, "测试字段"])
+            typ = "PERSON" if ent % 2 else "UNIT"
+            if bad == "wrong_type" and i == 4856:
+                typ = "PERSON" if typ == "UNIT" else "UNIT"
+            w.writerow([sid, f"ENTITY:{ent:04d}", typ, cn, "测试字段"])
 
 def stage_args(names, bindings, out, receipt):
     return ("--names", names, "--bindings", bindings,
@@ -109,7 +112,7 @@ def main():
             if "overwriting should" in str(e):
                 raise
         # Independent negative input fixtures: stage must refuse and leave no DB.
-        for case in ("duplicate", "unbound", "wrong_name", "bad_source"):
+        for case in ("duplicate", "unbound", "wrong_name", "wrong_type", "bad_source")
             b = folder / f"bindings_{case}.tsv"
             out = folder / f"rejected_{case}.sqlite"
             rcpt = folder / f"rejected_{case}.json"
